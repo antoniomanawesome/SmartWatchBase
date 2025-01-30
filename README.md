@@ -8,3 +8,11 @@ Current goal is to make a custom UART and I2C/SPI IP blocks to communicate with 
 as well as neopixel drivers to communicate to an individually addressable neopixel strip.
 
 Using DE10-Lite FPGA and Quartus and programming in SystemVerilog.
+
+UART:
+115200 baud rate
+8 data bits
+even/odd parity?
+number stop bits?
+flow control?
+
