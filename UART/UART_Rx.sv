@@ -27,7 +27,7 @@ logic [2:0] r_SM_Main = '0;
 
 
 
-always @(posedge clk) begin
+always_ff @(posedge clk) begin
     case(state_r)
         IDLE: begin //Data line is held high during IDLE, so we stay here until a low is received from the line
             r_RX_DV <= 1'b0;
