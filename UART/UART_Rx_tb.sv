@@ -32,14 +32,13 @@ task UART_WRITE_BYTE;
 endtask //UART_WRITE_BYTE
 
 UART_Rx #(
-    .CLKS_PER_BIT(c_CLKS_PER_BIT) UART_RX_INST_l
+    .CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_RX_INST_l
     (
         .clk(r_Clock),
         .i_RX_Serial(r_RX_Serial),
         .o_RX_DV(),
         .o_RX_Byte(w_RX_Byte)
     );
-)
 
 always #(c_CLOCK_PERIOD_NS/2) r_Clock <= !r_Clock;
 
