@@ -1,6 +1,7 @@
+# Compile of UART_Rx_tb.sv was successful.
 vsim -gui work.UART_Rx_tb
 # vsim -gui work.UART_Rx_tb 
-# Start time: 21:06:00 on Feb 04,2025
+# Start time: 23:12:43 on Feb 04,2025
 # Loading sv_std.std
 # Loading work.UART_Rx_tb
 # Loading work.UART_Rx
@@ -14,27 +15,13 @@ add wave -position end  sim:/UART_Rx_tb/UART_RX_INST_l/Clock_Count_r
 add wave -position end  sim:/UART_Rx_tb/UART_RX_INST_l/Bit_Index_r
 add wave -position end  sim:/UART_Rx_tb/UART_RX_INST_l/RX_Byte_r
 add wave -position end  sim:/UART_Rx_tb/UART_RX_INST_l/RX_DV_r
-# Break key hit
 run -all
-# Test Passed - Correct Byte Received
+# Test Failed - Incorrect Byte Received
 # ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87820 ns  Iteration: 1  Instance: /UART_Rx_tb
+#    Time: 86810 ps  Iteration: 1  Instance: /UART_Rx_tb
 # 1
 # Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
 # Compile of UART_Rx_tb.sv was successful.
-restart
-# Closing VCD file "dump.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.UART_Rx_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Test Passed - Correct Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87820 ps  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
 # Compile of UART_Rx_tb.sv was successful.
 restart
 # Closing VCD file "dump.vcd"
@@ -45,85 +32,17 @@ run -all
 # 
 # 
 # Test Failed - Incorrect Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87810 ps  Iteration: 1  Instance: /UART_Rx_tb
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(92)
+#    Time: 86930 ps  Iteration: 1  Instance: /UART_Rx_tb
 # 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
-run -all
-# Compile of UART_Rx_tb.sv was successful.
-restart
-# Closing VCD file "dump.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.UART_Rx_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Test Passed - Correct Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87820 ps  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
-# Compile of UART_Rx_tb.sv was successful.
-restart
-# Closing VCD file "dump.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.UART_Rx_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Test Failed - Incorrect Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87810 ps  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
-# Compile of UART_Rx_tb.sv was successful.
-restart
-# Closing VCD file "dump.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.UART_Rx_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Test Failed - Incorrect Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 174610 ps  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
-# Compile of UART_Rx_tb.sv was successful.
-restart
-# Closing VCD file "dump.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.UART_Rx_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Test Failed - Incorrect Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87810 ps  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
-# Compile of UART_Rx_tb.sv was successful.
-restart
-# Closing VCD file "dump.vcd"
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.UART_Rx_tb
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Test Failed - Incorrect Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87810 ps  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
+# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 92
 # Compile of UART_Rx.sv was successful.
 # Compile of UART_Rx_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
+# Compile of BCD_conv.sv was successful.
+# Compile of UART_toplevel.sv was successful.
+# 4 compiles, 0 failed with no errors.
 restart
+# Closing VCD file "dump.vcd"
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.UART_Rx_tb
 # Loading work.UART_Rx
@@ -132,9 +51,73 @@ run -all
 # 
 # 
 # Test Failed - Incorrect Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(58)
-#    Time: 87810 ps  Iteration: 1  Instance: /UART_Rx_tb
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(92)
+#    Time: 86930 ps  Iteration: 1  Instance: /UART_Rx_tb
 # 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 58
-# End time: 21:24:24 on Feb 04,2025, Elapsed time: 0:18:24
-# Errors: 0, Warnings: 2
+# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 92
+# Compile of UART_Rx_tb.sv failed with 1 errors.
+# Compile of UART_Rx_tb.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Rx_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of UART_Rx_tb.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Rx_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of UART_Rx_tb.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Rx_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Failed - Incorrect Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(95)
+#    Time: 86930 ns  Iteration: 1  Instance: /UART_Rx_tb
+# 1
+# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 95
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Compile of UART_Rx.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Rx
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Passed - Correct Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(95)
+#    Time: 86930 ns  Iteration: 1  Instance: /UART_Rx_tb
+# 1
+# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 95
+# Compile of UART_Rx.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Rx
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Passed - Correct Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv(95)
+#    Time: 86930 ns  Iteration: 1  Instance: /UART_Rx_tb
+# 1
+# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 95

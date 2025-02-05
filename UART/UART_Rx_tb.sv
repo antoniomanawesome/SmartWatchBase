@@ -1,4 +1,4 @@
-//`timescale 1ns/10ps
+`timescale 1ns/10ps
 
 module UART_Rx_tb ();
     //testbench uses same clk as UART
@@ -9,54 +9,92 @@ parameter c_CLOCK_PERIOD_NS = 20; //40 previously, 20 new
 parameter c_CLKS_PER_BIT = 434; //217 previously, 434 new
 parameter c_BIT_PERIOD = 8680; //8680 previously, blank new
 
-logic r_Clock = 0;
+logic r_Clock = 1'b0;
 logic r_RX_Serial = 1'b1;
+logic w_RX_DV;
 logic [7:0] w_RX_Byte;
 
 //Takes in input byte and serializes it
-task UART_WRITE_BYTE;
-    input [7:0] i_Data;
-    begin
-        //Send Start Bit
-        r_RX_Serial <= 1'b0;
-        #(c_BIT_PERIOD);
-        #1000;
+//OLD
+//task UART_WRITE_BYTE;
+//    input [7:0] i_Data;
+//    begin
+//        //Send Start Bit
+//        r_RX_Serial <= 1'b0;
+//        #(c_BIT_PERIOD);
+//        //#1000;
+//
+//        //Send Data Byte
+//        for(int i=0; i<8;i++) begin
+//            r_RX_Serial <= i_Data[i];
+//            #(c_BIT_PERIOD);
+//        end
+//
+//        //Send Stop Bit
+//        r_RX_Serial <= 1'b1;
+//        #(c_BIT_PERIOD);
+//    end
+//endtask //UART_WRITE_BYTE
 
-        //Send Data Byte
-        for(int i=0; i<8;i++) begin
+task UART_WRITE_BYTE(input [7:0] i_Data);
+    begin
+        @(posedge r_Clock); // synchronize start of transmission
+        // Send Start Bit
+        r_RX_Serial <= 1'b0;
+        repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+
+        // Send Data Byte (LSB first)
+        for (int i = 0; i < 8; i++) begin
             r_RX_Serial <= i_Data[i];
-            #(c_BIT_PERIOD);
+            repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
         end
 
-        //Send Stop Bit
+        // Send Stop Bit
         r_RX_Serial <= 1'b1;
-        #(c_BIT_PERIOD);
+        repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
     end
-endtask //UART_WRITE_BYTE
+endtask
 
 UART_Rx #(
     .CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_RX_INST_l
     (
         .clk(r_Clock),
         .i_RX_Serial(r_RX_Serial),
-        .o_RX_DV(),
+        .o_RX_DV(w_RX_DV),
         .o_RX_Byte(w_RX_Byte)
     );
 
 always #(c_CLOCK_PERIOD_NS/2) r_Clock <= !r_Clock;
 
 //main test
+//OLD
+//initial begin
+//    //Send command to UART
+//    @(posedge r_Clock);
+//    UART_WRITE_BYTE(8'h37);
+//    @(posedge r_Clock);
+//
+//    //Check that correct command was received
+//    if(w_RX_Byte == 8'h37) $display("Test Passed - Correct Byte Received");
+//    else $display("Test Failed - Incorrect Byte Received");
+//    $finish();
+//end
+
 initial begin
-    //Send command to UART
     @(posedge r_Clock);
     UART_WRITE_BYTE(8'h37);
-    @(posedge r_Clock);
+    // Wait for a few clock cycles to allow the receiver to process the byte.
+    repeat(5) @(posedge r_Clock);
 
-    //Check that correct command was received
-    if(w_RX_Byte == 8'h37) $display("Test Passed - Correct Byte Received");
-    else $display("Test Failed - Incorrect Byte Received");
+    //@(posedge w_RX_DV);
+
+    if(w_RX_Byte == 8'h37)
+        $display("Test Passed - Correct Byte Received");
+    else
+        $display("Test Failed - Incorrect Byte Received");
     $finish();
 end
+
 
 initial begin
     //Required to dump signals to EPWave

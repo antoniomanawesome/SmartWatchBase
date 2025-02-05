@@ -23,7 +23,7 @@ typedef enum logic [2:0] {
 state_t state_r = IDLE;
 
 //creating registers
-logic [7:0] Clock_Count_r = '0; //counter for the CLKS_PER_BIT
+logic [$floor(CLKS_PER_BIT):0] Clock_Count_r = '0; //counter for the CLKS_PER_BIT, size is determined by the counter number
 logic [2:0] Bit_Index_r = '0; //the index for where we are storing the data stream
 logic [7:0] RX_Byte_r = '0; //reg for o_RX_Byte
 logic       RX_DV_r = 1'b0; //reg for o_RX_DV
