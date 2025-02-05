@@ -20,3 +20,5 @@ run -all
 #    Time: 87020 ps  Iteration: 1  Instance: /UART_Rx_tb
 # 1
 # Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv line 55
+# End time: 19:08:54 on Feb 04,2025, Elapsed time: 0:47:15
+# Errors: 0, Warnings: 1
