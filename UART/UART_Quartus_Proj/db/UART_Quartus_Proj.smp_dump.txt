@@ -1,0 +1,8 @@
+
+State Machine - |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r
+Name state_r.RX_STOP_BIT state_r.RX_DATA_BITS state_r.RX_START_BIT state_r.IDLE state_r.CLEANUP 
+state_r.IDLE 0 0 0 0 0 
+state_r.RX_START_BIT 0 0 1 1 0 
+state_r.RX_DATA_BITS 0 1 0 1 0 
+state_r.RX_STOP_BIT 1 0 0 1 0 
+state_r.CLEANUP 0 0 0 1 1 

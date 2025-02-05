@@ -1,10 +1,13 @@
+`timescale 1ns/10ps
+
 module UART_Rx_tb ();
     //testbench uses same clk as UART
     //Want to interface with 115200 baud
+    //previous values correspond to a 25MHz clock frequency; I'm changing to 50MHz clock frequency which is what the DE10-Lite offers
     
-parameter c_CLOCK_PERIOD_NS = 40;
-parameter c_CLKS_PER_BIT = 217;
-parameter c_BIT_PERIOD = 8600;
+parameter c_CLOCK_PERIOD_NS = 40; //40 previously, 20 new
+parameter c_CLKS_PER_BIT = 217; //217 previously, 434 new
+parameter c_BIT_PERIOD = 8680; //8600 previously, blank new
 
 logic r_Clock = 0;
 logic r_RX_Serial = 1'b1;
