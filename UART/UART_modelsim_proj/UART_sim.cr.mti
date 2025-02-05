@@ -5,12 +5,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	UART_Rx
 
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv
+} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module UART_toplevel
+-- Compiling module UART_Rx_tb
 
 Top level modules:
-	UART_toplevel
+	UART_Rx_tb
 
 } {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -18,5 +18,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	BCD_conv
+
+} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_toplevel
+
+Top level modules:
+	UART_toplevel
 
 } {} {}}

@@ -1,5 +1,5 @@
 module UART_Rx #(
-    parameter int CLKS_PER_BIT = 217 //based on frequency of the clock divided by the uart
+    parameter int CLKS_PER_BIT = 434 //based on frequency of the clock divided by the uart
     // (FPGA clk) / (baud rate) = CLKS_PER_BIT
     //DE10-Lite CLK is 50 MHz
     // CLKS_PER_BIT = (frequency of clk)/(Frequency of UART)
