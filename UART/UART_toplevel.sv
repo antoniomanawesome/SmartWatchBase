@@ -16,12 +16,12 @@ UART_Rx #(
         .o_RX_Byte(RX_Byte)
     );
 
-BCD_conv SevenSeg1(
+BCD_conv SevenSeg1_l(
     .number_in(RX_Byte[7:4]),
     .number_out(SSG1)
 );
 
-BCD_conv SevenSeg2(
+BCD_conv SevenSeg2_l(
     .number_in(RX_Byte[3:0]),
     .number_out(SSG2)
 );

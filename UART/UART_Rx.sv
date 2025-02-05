@@ -13,9 +13,9 @@ module UART_Rx #(
 //defining states for the FSM
 typedef enum logic [2:0] {
     IDLE,
-    RX_START_BIT,
-    RX_DATA_BITS,
-    RX_STOP_BIT,
+    START_BIT,
+    DATA_BITS,
+    STOP_BIT,
     CLEANUP
 } state_t;
 
@@ -35,21 +35,21 @@ always_ff @(posedge clk) begin
             Clock_Count_r <= '0;
             Bit_Index_r <= '0;
 
-            if(i_RX_Serial == 1'b0) state_r <= RX_START_BIT; //Data line is low, indicating we are in the start bit
+            if(i_RX_Serial == 1'b0) state_r <= START_BIT; //Data line is low, indicating we are in the start bit
         end //IDLE
 
-        RX_START_BIT: begin //In the start bit right now
+        START_BIT: begin //In the start bit right now
             if(Clock_Count_r == (CLKS_PER_BIT-1)/2) begin
                 if(i_RX_Serial == 1'b0) begin //When line is pulled low, check middle of start bit to make sure it's still low
                     Clock_Count_r <= '0; //Reset counter because we found the middle of the start bit
-                    state_r <= RX_DATA_BITS;
+                    state_r <= DATA_BITS;
                 end else state_r <= IDLE; //Line is high, go back to IDLE
             end else begin
                 Clock_Count_r <= Clock_Count_r + 1; //Increment the counter until we reach the middle of the bit
             end
         end //RX_START_BIT
 
-        RX_DATA_BITS: begin //Found the start bit, so now we are waiting for the data bits
+        DATA_BITS: begin //Found the start bit, so now we are waiting for the data bits
             if(Clock_Count_r < CLKS_PER_BIT-1) begin //Increment counter if it's not at the max value yet
                 Clock_Count_r <= Clock_Count_r + 1;
             end else begin //Counter is at its max value, which means we are in the middle of the data bit, so we sample
@@ -61,12 +61,12 @@ always_ff @(posedge clk) begin
                     Bit_Index_r <= Bit_Index_r + 1;
                 end else begin
                     Bit_Index_r <= '0;
-                    state_r <= RX_STOP_BIT;
+                    state_r <= STOP_BIT;
                 end
             end
         end //RX_DATA_BITS
 
-        RX_STOP_BIT: begin //Check counter one last time for stop bit and assert data valid
+        STOP_BIT: begin //Check counter one last time for stop bit and assert data valid
             if(Clock_Count_r < CLKS_PER_BIT-1) begin
                 Clock_Count_r <= Clock_Count_r + 1;
             end else begin
