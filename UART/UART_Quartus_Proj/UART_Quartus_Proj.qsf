@@ -69,4 +69,21 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_D15 -to RX_DV
+set_location_assignment PIN_C17 -to SSG1[6]
+set_location_assignment PIN_D17 -to SSG1[5]
+set_location_assignment PIN_E16 -to SSG1[4]
+set_location_assignment PIN_C16 -to SSG1[3]
+set_location_assignment PIN_C15 -to SSG1[2]
+set_location_assignment PIN_E15 -to SSG1[1]
+set_location_assignment PIN_C14 -to SSG1[0]
+set_location_assignment PIN_B17 -to SSG2[6]
+set_location_assignment PIN_A18 -to SSG2[5]
+set_location_assignment PIN_A17 -to SSG2[4]
+set_location_assignment PIN_B16 -to SSG2[3]
+set_location_assignment PIN_E18 -to SSG2[2]
+set_location_assignment PIN_D18 -to SSG2[1]
+set_location_assignment PIN_C18 -to SSG2[0]
+set_location_assignment PIN_W10 -to RX_Serial
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

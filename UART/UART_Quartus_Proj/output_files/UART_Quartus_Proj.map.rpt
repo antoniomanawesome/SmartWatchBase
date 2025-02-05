@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_Quartus_Proj
-Tue Feb 04 20:41:29 2025
+Wed Feb 05 14:47:15 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -18,9 +18,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: UART_Rx:UART_RX_INST_l
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 13. Port Connectivity Checks: "BCD_conv:SevenSeg1_l"
+ 14. Port Connectivity Checks: "BCD_conv:SevenSeg0_l"
+ 15. Port Connectivity Checks: "UART_Rx:UART_RX_INST_l"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +50,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 04 20:41:29 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 05 14:47:15 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UART_Quartus_Proj                           ;
 ; Top-level Entity Name              ; UART_toplevel                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 66                                          ;
-;     Total combinational functions  ; 66                                          ;
-;     Dedicated logic registers      ; 25                                          ;
-; Total registers                    ; 25                                          ;
-; Total pins                         ; 25                                          ;
+; Total logic elements               ; 52                                          ;
+;     Total combinational functions  ; 52                                          ;
+;     Dedicated logic registers      ; 18                                          ;
+; Total registers                    ; 18                                          ;
+; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -185,30 +188,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 66        ;
+; Estimated Total logic elements              ; 52        ;
 ;                                             ;           ;
-; Total combinational functions               ; 66        ;
+; Total combinational functions               ; 52        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 41        ;
-;     -- 3 input functions                    ; 12        ;
-;     -- <=2 input functions                  ; 13        ;
+;     -- 4 input functions                    ; 21        ;
+;     -- 3 input functions                    ; 10        ;
+;     -- <=2 input functions                  ; 21        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 59        ;
-;     -- arithmetic mode                      ; 7         ;
+;     -- normal mode                          ; 43        ;
+;     -- arithmetic mode                      ; 9         ;
 ;                                             ;           ;
-; Total registers                             ; 25        ;
-;     -- Dedicated logic registers            ; 25        ;
+; Total registers                             ; 18        ;
+;     -- Dedicated logic registers            ; 18        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 25        ;
+; I/O pins                                    ; 17        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 25        ;
-; Total fan-out                               ; 339       ;
-; Average fan-out                             ; 2.40      ;
+; Maximum fan-out                             ; 18        ;
+; Total fan-out                               ; 209       ;
+; Average fan-out                             ; 2.01      ;
 +---------------------------------------------+-----------+
 
 
@@ -217,26 +220,23 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                   ; Entity Name   ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
-; |UART_toplevel              ; 66 (0)              ; 25 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |UART_toplevel                        ; UART_toplevel ; work         ;
-;    |BCD_conv:SevenSeg1|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|BCD_conv:SevenSeg1     ; BCD_conv      ; work         ;
-;    |BCD_conv:SevenSeg2|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|BCD_conv:SevenSeg2     ; BCD_conv      ; work         ;
-;    |UART_Rx:UART_RX_INST_l| ; 52 (52)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|UART_Rx:UART_RX_INST_l ; UART_Rx       ; work         ;
+; |UART_toplevel              ; 52 (0)              ; 18 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |UART_toplevel                        ; UART_toplevel ; work         ;
+;    |UART_Rx:UART_RX_INST_l| ; 52 (52)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|UART_Rx:UART_RX_INST_l ; UART_Rx       ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r                                                             ;
-+----------------------+---------------------+----------------------+----------------------+--------------+-----------------+
-; Name                 ; state_r.RX_STOP_BIT ; state_r.RX_DATA_BITS ; state_r.RX_START_BIT ; state_r.IDLE ; state_r.CLEANUP ;
-+----------------------+---------------------+----------------------+----------------------+--------------+-----------------+
-; state_r.IDLE         ; 0                   ; 0                    ; 0                    ; 0            ; 0               ;
-; state_r.RX_START_BIT ; 0                   ; 0                    ; 1                    ; 1            ; 0               ;
-; state_r.RX_DATA_BITS ; 0                   ; 1                    ; 0                    ; 1            ; 0               ;
-; state_r.RX_STOP_BIT  ; 1                   ; 0                    ; 0                    ; 1            ; 0               ;
-; state_r.CLEANUP      ; 0                   ; 0                    ; 0                    ; 1            ; 1               ;
-+----------------------+---------------------+----------------------+----------------------+--------------+-----------------+
++---------------------------------------------------------------------------------------------+
+; State Machine - |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r                               ;
++-------------------+------------------+-------------------+-------------------+--------------+
+; Name              ; state_r.STOP_BIT ; state_r.DATA_BITS ; state_r.START_BIT ; state_r.IDLE ;
++-------------------+------------------+-------------------+-------------------+--------------+
+; state_r.IDLE      ; 0                ; 0                 ; 0                 ; 0            ;
+; state_r.START_BIT ; 0                ; 0                 ; 1                 ; 1            ;
+; state_r.DATA_BITS ; 0                ; 1                 ; 0                 ; 1            ;
+; state_r.STOP_BIT  ; 1                ; 0                 ; 0                 ; 1            ;
++-------------------+------------------+-------------------+-------------------+--------------+
 
 
 +------------------------------------------------------------+
@@ -244,9 +244,10 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
+; UART_Rx:UART_RX_INST_l|state_r~6      ; Lost fanout        ;
 ; UART_Rx:UART_RX_INST_l|state_r~7      ; Lost fanout        ;
 ; UART_Rx:UART_RX_INST_l|state_r~8      ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
+; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -255,12 +256,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 18    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -270,21 +271,49 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Clock_Count_r[0] ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Clock_Count_r[0] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Bit_Index_r      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Selector13       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Selector12       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Selector15       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Selector14       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: UART_Rx:UART_RX_INST_l ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; CLKS_PER_BIT   ; 217   ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
++----------------+----------+-----------------------------------------+
+; Parameter Name ; Value    ; Type                                    ;
++----------------+----------+-----------------------------------------+
+; FPGA_clk_freq  ; 50000000 ; Signed Integer                          ;
+; baudrate       ; 115200   ; Signed Integer                          ;
++----------------+----------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "BCD_conv:SevenSeg1_l" ;
++-----------+-------+----------+-------------------+
+; Port      ; Type  ; Severity ; Details           ;
++-----------+-------+----------+-------------------+
+; number_in ; Input ; Info     ; Stuck at GND      ;
++-----------+-------+----------+-------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "BCD_conv:SevenSeg0_l" ;
++-----------+-------+----------+-------------------+
+; Port      ; Type  ; Severity ; Details           ;
++-----------+-------+----------+-------------------+
+; number_in ; Input ; Info     ; Stuck at GND      ;
++-----------+-------+----------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Rx:UART_RX_INST_l"                                                                  ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; o_RX_Byte ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -292,21 +321,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
-; cycloneiii_ff         ; 25                          ;
-;     ENA SCLR          ; 8                           ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 68                          ;
-;     arith             ; 7                           ;
-;         2 data inputs ; 7                           ;
-;     normal            ; 61                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 41                          ;
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 18                          ;
+;     plain             ; 18                          ;
+; cycloneiii_lcell_comb ; 54                          ;
+;     arith             ; 9                           ;
+;         2 data inputs ; 9                           ;
+;     normal            ; 45                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.96                        ;
+; Average LUT depth     ; 3.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -325,7 +354,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 04 20:41:20 2025
+    Info: Processing started: Wed Feb 05 14:47:07 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_Quartus_Proj -c UART_Quartus_Proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
@@ -336,24 +365,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/bcd_conv.sv
     Info (12023): Found entity 1: BCD_conv File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv Line: 1
 Info (12127): Elaborating entity "UART_toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:UART_RX_INST_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at UART_Rx.sv(48): truncated value with size 32 to match size of target (8) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at UART_Rx.sv(54): truncated value with size 32 to match size of target (8) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv Line: 54
-Warning (10230): Verilog HDL assignment warning at UART_Rx.sv(61): truncated value with size 32 to match size of target (3) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at UART_Rx.sv(71): truncated value with size 32 to match size of target (8) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv Line: 71
-Info (12128): Elaborating entity "BCD_conv" for hierarchy "BCD_conv:SevenSeg1" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 22
+Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:UART_RX_INST_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 18
+Info (12128): Elaborating entity "BCD_conv" for hierarchy "BCD_conv:SevenSeg0_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SSG1[0]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG1[1]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG1[2]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG1[3]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG1[4]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG1[5]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG1[6]" is stuck at VCC File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 5
+    Warning (13410): Pin "SSG2[0]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
+    Warning (13410): Pin "SSG2[1]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
+    Warning (13410): Pin "SSG2[2]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
+    Warning (13410): Pin "SSG2[3]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
+    Warning (13410): Pin "SSG2[4]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
+    Warning (13410): Pin "SSG2[5]" is stuck at GND File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
+    Warning (13410): Pin "SSG2[6]" is stuck at VCC File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 91 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 66 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Tue Feb 04 20:41:29 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 52 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Wed Feb 05 14:47:15 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 

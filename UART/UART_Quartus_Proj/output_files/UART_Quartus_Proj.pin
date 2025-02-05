@@ -86,11 +86,11 @@ RESERVED_INPUT               : A13       :        :                   :         
 RESERVED_INPUT               : A14       :        :                   :         : 7         :                
 RESERVED_INPUT               : A15       :        :                   :         : 7         :                
 RESERVED_INPUT               : A16       :        :                   :         : 7         :                
-RESERVED_INPUT               : A17       :        :                   :         : 7         :                
-RESERVED_INPUT               : A18       :        :                   :         : 7         :                
-SSG2[3]                      : A19       : output : 2.5 V             :         : 7         : N              
+SSG2[4]                      : A17       : output : 2.5 V             :         : 7         : Y              
+SSG2[5]                      : A18       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : A19       :        :                   :         : 7         :                
 RESERVED_INPUT               : A20       :        :                   :         : 7         :                
-RX_Byte[5]                   : A21       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT               : A21       :        :                   :         : 6         :                
 GND                          : A22       : gnd    :                   :         :           :                
 RESERVED_INPUT               : AA1       :        :                   :         : 3         :                
 RESERVED_INPUT               : AA2       :        :                   :         : 3         :                
@@ -151,11 +151,11 @@ RESERVED_INPUT               : B12       :        :                   :         
 GND                          : B13       : gnd    :                   :         :           :                
 RESERVED_INPUT               : B14       :        :                   :         : 7         :                
 RESERVED_INPUT               : B15       :        :                   :         : 7         :                
-RESERVED_INPUT               : B16       :        :                   :         : 7         :                
-SSG2[6]                      : B17       : output : 2.5 V             :         : 7         : N              
+SSG2[3]                      : B16       : output : 2.5 V             :         : 7         : Y              
+SSG2[6]                      : B17       : output : 2.5 V             :         : 7         : Y              
 GND                          : B18       : gnd    :                   :         :           :                
-SSG2[2]                      : B19       : output : 2.5 V             :         : 7         : N              
-SSG1[1]                      : B20       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT               : B19       :        :                   :         : 7         :                
+RESERVED_INPUT               : B20       :        :                   :         : 6         :                
 RESERVED_INPUT               : B21       :        :                   :         : 6         :                
 RESERVED_INPUT               : B22       :        :                   :         : 6         :                
 RESERVED_INPUT               : C1        :        :                   :         : 1B        :                
@@ -171,12 +171,12 @@ RESERVED_INPUT               : C10       :        :                   :         
 RESERVED_INPUT               : C11       :        :                   :         : 7         :                
 RESERVED_INPUT               : C12       :        :                   :         : 7         :                
 RESERVED_INPUT               : C13       :        :                   :         : 7         :                
-RESERVED_INPUT               : C14       :        :                   :         : 7         :                
-RESERVED_INPUT               : C15       :        :                   :         : 7         :                
-RESERVED_INPUT               : C16       :        :                   :         : 7         :                
-RX_DV                        : C17       : output : 2.5 V             :         : 7         : N              
-SSG2[5]                      : C18       : output : 2.5 V             :         : 7         : N              
-SSG2[4]                      : C19       : output : 2.5 V             :         : 7         : N              
+SSG1[0]                      : C14       : output : 2.5 V             :         : 7         : Y              
+SSG1[2]                      : C15       : output : 2.5 V             :         : 7         : Y              
+SSG1[3]                      : C16       : output : 2.5 V             :         : 7         : Y              
+SSG1[6]                      : C17       : output : 2.5 V             :         : 7         : Y              
+SSG2[0]                      : C18       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : C19       :        :                   :         : 7         :                
 RESERVED_INPUT               : C20       :        :                   :         : 6         :                
 RESERVED_INPUT               : C21       :        :                   :         : 6         :                
 RESERVED_INPUT               : C22       :        :                   :         : 6         :                
@@ -194,10 +194,10 @@ GND                          : D11       : gnd    :                   :         
 RESERVED_INPUT               : D12       :        :                   :         : 7         :                
 RESERVED_INPUT               : D13       :        :                   :         : 7         :                
 RESERVED_INPUT               : D14       :        :                   :         : 7         :                
-SSG2[0]                      : D15       : output : 2.5 V             :         : 7         : N              
+RX_DV                        : D15       : output : 2.5 V             :         : 7         : Y              
 GND                          : D16       : gnd    :                   :         :           :                
-RX_Byte[2]                   : D17       : output : 2.5 V             :         : 7         : N              
-SSG1[0]                      : D18       : output : 2.5 V             :         : 6         : N              
+SSG1[5]                      : D17       : output : 2.5 V             :         : 7         : Y              
+SSG2[1]                      : D18       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : D19       :        :                   :         : 6         :                
 GND                          : D20       : gnd    :                   :         :           :                
 RESERVED_INPUT               : D21       :        :                   :         : 6         :                
@@ -216,10 +216,10 @@ RESERVED_INPUT               : E11       :        :                   :         
 RESERVED_INPUT               : E12       :        :                   :         : 7         :                
 RESERVED_INPUT               : E13       :        :                   :         : 7         :                
 RESERVED_INPUT               : E14       :        :                   :         : 7         :                
-RX_Byte[0]                   : E15       : output : 2.5 V             :         : 7         : N              
-RX_Byte[1]                   : E16       : output : 2.5 V             :         : 7         : N              
+SSG1[1]                      : E15       : output : 2.5 V             :         : 7         : Y              
+SSG1[4]                      : E16       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : E17       :        :                   :         : 6         :                
-RX_Byte[4]                   : E18       : output : 2.5 V             :         : 6         : N              
+SSG2[2]                      : E18       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : E19       :        :                   :         : 6         :                
 RESERVED_INPUT               : E20       :        :                   :         : 6         :                
 RESERVED_INPUT               : E21       :        :                   :         : 6         :                
@@ -238,8 +238,8 @@ VCCIO8                       : F11       : power  :                   : 2.5V    
 VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
 GND                          : F13       : gnd    :                   :         :           :                
 VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
-SSG2[1]                      : F15       : output : 2.5 V             :         : 7         : N              
-RX_Byte[3]                   : F16       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT               : F15       :        :                   :         : 7         :                
+RESERVED_INPUT               : F16       :        :                   :         : 7         :                
 RESERVED_INPUT               : F17       :        :                   :         : 6         :                
 RESERVED_INPUT               : F18       :        :                   :         : 6         :                
 RESERVED_INPUT               : F19       :        :                   :         : 6         :                
@@ -262,7 +262,7 @@ VCCIO7                       : G13       : power  :                   : 2.5V    
 VCCIO7                       : G14       : power  :                   : 2.5V    : 7         :                
 GND                          : G15       : gnd    :                   :         :           :                
 VCCD_PLL2                    : G16       : power  :                   : 1.2V    :           :                
-RX_Byte[6]                   : G17       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT               : G17       :        :                   :         : 6         :                
 GND                          : G18       : gnd    :                   :         :           :                
 RESERVED_INPUT               : G19       :        :                   :         : 6         :                
 RESERVED_INPUT               : G20       :        :                   :         : 6         :                
@@ -284,10 +284,10 @@ RESERVED_INPUT               : H13       :        :                   :         
 RESERVED_INPUT               : H14       :        :                   :         : 7         :                
 VCCA2                        : H15       : power  :                   : 2.5V    :           :                
 VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
-RX_Serial                    : H17       : input  : 2.5 V             :         : 6         : N              
-SSG1[2]                      : H18       : output : 2.5 V             :         : 6         : N              
-SSG1[3]                      : H19       : output : 2.5 V             :         : 6         : N              
-SSG1[6]                      : H20       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT               : H17       :        :                   :         : 6         :                
+RESERVED_INPUT               : H18       :        :                   :         : 6         :                
+RESERVED_INPUT               : H19       :        :                   :         : 6         :                
+RESERVED_INPUT               : H20       :        :                   :         : 6         :                
 RESERVED_INPUT               : H21       :        :                   :         : 6         :                
 RESERVED_INPUT               : H22       :        :                   :         : 6         :                
 RESERVED_INPUT               : J1        :        :                   :         : 1B        :                
@@ -303,13 +303,13 @@ RESERVED_INPUT               : J10       :        :                   :         
 RESERVED_INPUT               : J11       :        :                   :         : 7         :                
 RESERVED_INPUT               : J12       :        :                   :         : 7         :                
 RESERVED_INPUT               : J13       :        :                   :         : 7         :                
-SSG1[5]                      : J14       : output : 2.5 V             :         : 6         : N              
-SSG1[4]                      : J15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT               : J14       :        :                   :         : 6         :                
+RESERVED_INPUT               : J15       :        :                   :         : 6         :                
 GND                          : J16       : gnd    :                   :         :           :                
 VCCIO6                       : J17       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT               : J18       :        :                   :         : 6         :                
 GND                          : J19       : gnd    :                   :         :           :                
-RX_Byte[7]                   : J20       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT               : J20       :        :                   :         : 6         :                
 RESERVED_INPUT               : J21       :        :                   :         : 6         :                
 RESERVED_INPUT               : J22       :        :                   :         : 6         :                
 RESERVED_INPUT               : K1        :        :                   :         : 1B        :                
@@ -363,7 +363,7 @@ RESERVED_INPUT               : M4        :        :                   :         
 ~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
 VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
 GND                          : M7        : gnd    :                   :         :           :                
-clk                          : M8        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT               : M8        :        :                   :         : 2         :                
 RESERVED_INPUT               : M9        :        :                   :         : 2         :                
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.2V    :           :                
@@ -410,7 +410,7 @@ VCCIO2                       : P7        : power  :                   : 2.5V    
 RESERVED_INPUT               : P8        :        :                   :         : 2         :                
 RESERVED_INPUT               : P9        :        :                   :         : 3         :                
 RESERVED_INPUT               : P10       :        :                   :         : 3         :                
-RESERVED_INPUT               : P11       :        :                   :         : 3         :                
+clk                          : P11       : input  : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT               : P12       :        :                   :         : 4         :                
 RESERVED_INPUT               : P13       :        :                   :         : 4         :                
 RESERVED_INPUT               : P14       :        :                   :         : 5         :                
@@ -519,7 +519,7 @@ RESERVED_INPUT               : W6        :        :                   :         
 RESERVED_INPUT               : W7        :        :                   :         : 3         :                
 RESERVED_INPUT               : W8        :        :                   :         : 3         :                
 RESERVED_INPUT               : W9        :        :                   :         : 3         :                
-RESERVED_INPUT               : W10       :        :                   :         : 3         :                
+RX_Serial                    : W10       : input  : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT               : W11       :        :                   :         : 4         :                
 RESERVED_INPUT               : W12       :        :                   :         : 4         :                
 RESERVED_INPUT               : W13       :        :                   :         : 4         :                

@@ -1,29 +1,21 @@
 |UART_toplevel
 clk => clk.IN1
 RX_Serial => RX_Serial.IN1
-RX_DV <= UART_Rx:UART_RX_INST_l.o_RX_DV
-RX_Byte[0] <= RX_Byte[0].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[1] <= RX_Byte[1].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[2] <= RX_Byte[2].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[3] <= RX_Byte[3].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[4] <= RX_Byte[4].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[5] <= RX_Byte[5].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[6] <= RX_Byte[6].DB_MAX_OUTPUT_PORT_TYPE
-RX_Byte[7] <= RX_Byte[7].DB_MAX_OUTPUT_PORT_TYPE
-SSG1[0] <= BCD_conv:SevenSeg1.number_out
-SSG1[1] <= BCD_conv:SevenSeg1.number_out
-SSG1[2] <= BCD_conv:SevenSeg1.number_out
-SSG1[3] <= BCD_conv:SevenSeg1.number_out
-SSG1[4] <= BCD_conv:SevenSeg1.number_out
-SSG1[5] <= BCD_conv:SevenSeg1.number_out
-SSG1[6] <= BCD_conv:SevenSeg1.number_out
-SSG2[0] <= BCD_conv:SevenSeg2.number_out
-SSG2[1] <= BCD_conv:SevenSeg2.number_out
-SSG2[2] <= BCD_conv:SevenSeg2.number_out
-SSG2[3] <= BCD_conv:SevenSeg2.number_out
-SSG2[4] <= BCD_conv:SevenSeg2.number_out
-SSG2[5] <= BCD_conv:SevenSeg2.number_out
-SSG2[6] <= BCD_conv:SevenSeg2.number_out
+RX_DV << UART_Rx:UART_RX_INST_l.o_RX_DV
+SSG1[0] << BCD_conv:SevenSeg0_l.number_out
+SSG1[1] << BCD_conv:SevenSeg0_l.number_out
+SSG1[2] << BCD_conv:SevenSeg0_l.number_out
+SSG1[3] << BCD_conv:SevenSeg0_l.number_out
+SSG1[4] << BCD_conv:SevenSeg0_l.number_out
+SSG1[5] << BCD_conv:SevenSeg0_l.number_out
+SSG1[6] << BCD_conv:SevenSeg0_l.number_out
+SSG2[0] << BCD_conv:SevenSeg1_l.number_out
+SSG2[1] << BCD_conv:SevenSeg1_l.number_out
+SSG2[2] << BCD_conv:SevenSeg1_l.number_out
+SSG2[3] << BCD_conv:SevenSeg1_l.number_out
+SSG2[4] << BCD_conv:SevenSeg1_l.number_out
+SSG2[5] << BCD_conv:SevenSeg1_l.number_out
+SSG2[6] << BCD_conv:SevenSeg1_l.number_out
 
 
 |UART_toplevel|UART_Rx:UART_RX_INST_l
@@ -46,8 +38,10 @@ clk => Clock_Count_r[4].CLK
 clk => Clock_Count_r[5].CLK
 clk => Clock_Count_r[6].CLK
 clk => Clock_Count_r[7].CLK
+clk => Clock_Count_r[8].CLK
+clk => Clock_Count_r[9].CLK
 clk => RX_DV_r.CLK
-clk => state_r~6.DATAIN
+clk => state_r~5.DATAIN
 i_RX_Serial => RX_Byte_r.DATAB
 i_RX_Serial => RX_Byte_r.DATAB
 i_RX_Serial => RX_Byte_r.DATAB
@@ -65,8 +59,9 @@ i_RX_Serial => Clock_Count_r.OUTPUTSELECT
 i_RX_Serial => Clock_Count_r.OUTPUTSELECT
 i_RX_Serial => Clock_Count_r.OUTPUTSELECT
 i_RX_Serial => Clock_Count_r.OUTPUTSELECT
+i_RX_Serial => Clock_Count_r.OUTPUTSELECT
+i_RX_Serial => Clock_Count_r.OUTPUTSELECT
 i_RX_Serial => state_r.DATAB
-i_RX_Serial => state_r.OUTPUTSELECT
 i_RX_Serial => state_r.OUTPUTSELECT
 i_RX_Serial => state_r.OUTPUTSELECT
 i_RX_Serial => state_r.OUTPUTSELECT
@@ -82,7 +77,7 @@ o_RX_Byte[6] <= RX_Byte_r[6].DB_MAX_OUTPUT_PORT_TYPE
 o_RX_Byte[7] <= RX_Byte_r[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_toplevel|BCD_conv:SevenSeg1
+|UART_toplevel|BCD_conv:SevenSeg0_l
 number_in[0] => Decoder0.IN3
 number_in[1] => Decoder0.IN2
 number_in[2] => Decoder0.IN1
@@ -96,7 +91,7 @@ number_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 number_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_toplevel|BCD_conv:SevenSeg2
+|UART_toplevel|BCD_conv:SevenSeg1_l
 number_in[0] => Decoder0.IN3
 number_in[1] => Decoder0.IN2
 number_in[2] => Decoder0.IN1

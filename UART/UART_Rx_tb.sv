@@ -1,100 +1,64 @@
 `timescale 1ns/10ps
 
 module UART_Rx_tb ();
-    //testbench uses same clk as UART
-    //Want to interface with 115200 baud
-    //previous values correspond to a 25MHz clock frequency; I'm changing to 50MHz clock frequency which is what the DE10-Lite offers
-    
-parameter c_CLOCK_PERIOD_NS = 20; //40 previously, 20 new
-parameter c_CLKS_PER_BIT = 434; //217 previously, 434 new
-parameter c_BIT_PERIOD = 8680; //8680 previously, blank new
+//This testbench is only for my FPGA clock frequency (50MHz) and baud rate (115200 bits/s)
 
-logic r_Clock = 1'b0;
-logic r_RX_Serial = 1'b1;
-logic w_RX_DV;
-logic [7:0] w_RX_Byte;
+localparam int c_FPGA_clk_freq = 50000000;
+localparam int c_baudrate = 115200;
+parameter c_CLOCK_PERIOD_NS = 20; //1/(FPGA clk frequency) in nanoseconds
+parameter c_BIT_PERIOD = 8680; //1/baudrate
+
+logic Clock_r = 1'b0;
+logic RX_Serial_r = 1'b1;
+logic RX_DV;
+logic [7:0] RX_Byte;
 
 //Takes in input byte and serializes it
 //OLD
-//task UART_WRITE_BYTE;
-//    input [7:0] i_Data;
-//    begin
-//        //Send Start Bit
-//        r_RX_Serial <= 1'b0;
-//        #(c_BIT_PERIOD);
-//        //#1000;
-//
-//        //Send Data Byte
-//        for(int i=0; i<8;i++) begin
-//            r_RX_Serial <= i_Data[i];
-//            #(c_BIT_PERIOD);
-//        end
-//
-//        //Send Stop Bit
-//        r_RX_Serial <= 1'b1;
-//        #(c_BIT_PERIOD);
-//    end
-//endtask //UART_WRITE_BYTE
-
-task UART_WRITE_BYTE(input [7:0] i_Data);
+task UART_WRITE_BYTE;
+    input [7:0] i_Data;
     begin
-        @(posedge r_Clock); // synchronize start of transmission
-        // Send Start Bit
-        r_RX_Serial <= 1'b0;
-        repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+        //Send Start Bit
+        RX_Serial_r <= 1'b0;
+        #(c_BIT_PERIOD);
 
-        // Send Data Byte (LSB first)
-        for (int i = 0; i < 8; i++) begin
-            r_RX_Serial <= i_Data[i];
-            repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+        //Send Data Byte
+        for(int i=0; i<8;i++) begin
+            RX_Serial_r <= i_Data[i];
+            #(c_BIT_PERIOD);
         end
 
-        // Send Stop Bit
-        r_RX_Serial <= 1'b1;
-        repeat(c_CLKS_PER_BIT) @(posedge r_Clock);
+        //Send Stop Bit
+        RX_Serial_r <= 1'b1;
+        #(c_BIT_PERIOD);
     end
-endtask
+endtask //UART_WRITE_BYTE
+
 
 UART_Rx #(
-    .CLKS_PER_BIT(c_CLKS_PER_BIT)) UART_RX_INST_l
+    .FPGA_clk_freq(c_FPGA_clk_freq),
+    .baudrate(c_baudrate)) UART_RX_INST_l
     (
-        .clk(r_Clock),
-        .i_RX_Serial(r_RX_Serial),
-        .o_RX_DV(w_RX_DV),
-        .o_RX_Byte(w_RX_Byte)
+        .clk(Clock_r),
+        .i_RX_Serial(RX_Serial_r),
+        .o_RX_DV(RX_DV),
+        .o_RX_Byte(RX_Byte)
     );
 
-always #(c_CLOCK_PERIOD_NS/2) r_Clock <= !r_Clock;
+always #(c_CLOCK_PERIOD_NS/2) Clock_r <= !Clock_r;
 
 //main test
-//OLD
-//initial begin
-//    //Send command to UART
-//    @(posedge r_Clock);
-//    UART_WRITE_BYTE(8'h37);
-//    @(posedge r_Clock);
-//
-//    //Check that correct command was received
-//    if(w_RX_Byte == 8'h37) $display("Test Passed - Correct Byte Received");
-//    else $display("Test Failed - Incorrect Byte Received");
-//    $finish();
-//end
-
 initial begin
-    @(posedge r_Clock);
+    //Send command to UART
+    @(posedge Clock_r);
     UART_WRITE_BYTE(8'h37);
-    // Wait for a few clock cycles to allow the receiver to process the byte.
-    repeat(5) @(posedge r_Clock);
+    @(posedge Clock_r);
 
-    //@(posedge w_RX_DV);
-
-    if(w_RX_Byte == 8'h37)
-        $display("Test Passed - Correct Byte Received");
-    else
-        $display("Test Failed - Incorrect Byte Received");
+    //Check that correct command was received
+    if(RX_Byte == 8'h37) $display("Test Passed - Correct Byte Received");
+    else $display("Test Failed - Incorrect Byte Received");
     $finish();
 end
-
 
 initial begin
     //Required to dump signals to EPWave
