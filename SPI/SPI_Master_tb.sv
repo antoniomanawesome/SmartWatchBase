@@ -24,7 +24,7 @@ module SPI_Master_tb();
     ) SPI_Master_INST_l
     (
         //FPGA Data Signals
-        .rst(rst)
+        .rst(rst),
         .clk(clk),
 
         //MOSI Signals
@@ -34,9 +34,9 @@ module SPI_Master_tb();
 
         //MISO Signals
         .o_MISO_DV(Master_MISO_DV_r), //Data valid
-        .o_MISO_Byte(Master_MISO_Byte_r) //Byte received MISO
+        .o_MISO_Byte(Master_MISO_Byte_r), //Byte received MISO
 
-        //SPI Signals
+        //SPICK Signals
         .SPI_CLK(SPI_CLK),
         .MISO(MOSI),
         .MOSI(MOSI)

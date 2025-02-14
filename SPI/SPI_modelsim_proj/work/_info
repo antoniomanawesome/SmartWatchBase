@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Antonio/Documents/ModelSim_Projects
+vSPI_Master
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1739502890
+!i10b 1
+!s100 gebUPdN^0YdNS<K;k8[VR1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I2b:<QlePK`=L:HJTYG2`03
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_modelsim_proj
+w1739502867
+8C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master.sv
+FC:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master.sv
+!i122 0
+L0 16 137
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1739502890.000000
+!s107 C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+n@s@p@i_@master
+vSPI_Master_tb
+R0
+R1
+!i10b 1
+!s100 REKW16zFjBmi@EXMoF;1n1
+R2
+IzB^0WRm;HQLIJ=n;<@2LX1
+R3
+S1
+R4
+w1739502886
+8C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master_tb.sv
+FC:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master_tb.sv
+!i122 1
+L0 1 75
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master_tb.sv|
+!i113 1
+R7
+R8
+n@s@p@i_@master_tb

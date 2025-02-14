@@ -1,0 +1,50 @@
+# Compile of SPI_Master.sv failed with 1 errors.
+# Compile of SPI_Master_tb.sv failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of SPI_Master.sv failed with 6 errors.
+# Compile of SPI_Master_tb.sv failed with 1 errors.
+# 2 compiles, 2 failed with 7 errors.
+# Compile of SPI_Master.sv failed with 1 errors.
+# Compile of SPI_Master_tb.sv failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of SPI_Master.sv was successful.
+# Compile of SPI_Master_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.SPI_Master_tb
+# vsim -gui work.SPI_Master_tb 
+# Start time: 22:15:02 on Feb 13,2025
+# Loading sv_std.std
+# Loading work.SPI_Master_tb
+# Loading work.SPI_Master
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_MODE
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/CLKS_PER_HALF_BIT
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/clk
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/rst
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/i_MOSI_Byte
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/i_MOSI_DV
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/o_MOSI_Ready
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/o_MISO_DV
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/o_MISO_Byte
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MISO
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/CPOL
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/CPHA
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK_Count_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK_Edges_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/Leading_Edge_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/Trailing_Edge_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI_DV_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI_BYTE_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MISO_Bit_Count_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI_Bit_Count_r
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 22:21:03 on Feb 13,2025, Elapsed time: 0:06:01
+# Errors: 0, Warnings: 1

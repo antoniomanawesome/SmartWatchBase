@@ -25,11 +25,11 @@ module SPI_Master #(
     //MOSI 
     input logic [7:0] i_MOSI_Byte, //Byte to transmit on MOSI
     input logic i_MOSI_DV, //Data Valid with i_MOSI_Byte
-    output logic o_MOSI_Ready //Transmit is ready for next byte
+    output logic o_MOSI_Ready, //Transmit is ready for next byte
 
     //MISO
-    output logic o_MISO_DV //Data Valid with MISO
-    output logic [7:0] o_MISO_Byte //Byte received on MISO
+    output logic o_MISO_DV, //Data Valid with MISO
+    output logic [7:0] o_MISO_Byte, //Byte received on MISO
 
     //SPI Interface
     output logic SPI_CLK,
@@ -71,7 +71,7 @@ always_ff @(posedge clk or posedge rst) begin
         Leading_Edge_r <= 1'b0;
         Trailing_Edge_r <= 1'b0;
 
-        if(MOSI_DV) begin 
+        if(i_MOSI_DV) begin 
             o_MOSI_Ready <= 1'b0;
             SPI_CLK_Edges_r <= 16; //Total # of edges in one byte is always 16
         end else if (SPI_CLK_Edges_r > 0) begin
@@ -104,8 +104,8 @@ always_ff @(posedge clk or posedge rst) begin
         MOSI_BYTE_r <= '0;
         MOSI_DV_r <= 1'b0;
     end else begin
-        MOSI_DV_r <= MOSI_DV; //1 clk cycle delay
-        if(MOSI_DV) MOSI_BYTE_r <= MOSI_Byte;
+        MOSI_DV_r <= i_MOSI_DV; //1 clk cycle delay
+        if(i_MOSI_DV) MOSI_BYTE_r <= i_MOSI_Byte;
     end
 end
 
@@ -114,7 +114,7 @@ always_ff @(posedge clk or posedge rst) begin
     if(rst) begin
         MOSI <= 1'b0;
         MOSI_Bit_Count_r <= 3'b111; //send MSB first
-    end else if begin 
+    end else begin 
         if(o_MOSI_Ready) MOSI_Bit_Count_r <= 3'b111; //if ready is true, reset bit counts to default
         else if (MOSI_DV_r & ~CPHA) begin //start transaction and CPHA = 0
             MOSI <= MOSI_BYTE_r[3'b111];
