@@ -11,30 +11,56 @@ cModel Technology
 dC:/Users/Antonio/Documents/ModelSim_Projects
 vSPI_Master
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1740699012
+Z1 !s110 1740777332
 !i10b 1
-!s100 RQjQoPWX:oYJ;m5V?c`lK0
+!s100 ;jAeO2YB8eK50cl0Y@k_V2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IRTDzLU?j[LBC;KcT?QP?81
+IfSTI7h^OJO2oHkC4^hDfG1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 Z4 dC:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_modelsim_proj
-w1740696788
+w1740769215
 8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master.sv
 FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master.sv
-!i122 13
+!i122 28
 L0 16 155
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1740699012.000000
+Z6 !s108 1740777332.000000
 !s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master.sv|
 !i113 1
 Z7 o-work work -sv
 Z8 tCvgOpt 0
 n@s@p@i_@master
+vSPI_Master_tb
+R0
+R1
+!i10b 1
+!s100 XheOMEL4H9ZPDgOFMBFEG1
+R2
+IdKi[SU>QEQbWa;3hAYbO]2
+R3
+S1
+R4
+w1740698978
+8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv
+FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv
+!i122 29
+L0 1 75
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv|
+!i113 1
+R7
+R8
+n@s@p@i_@master_tb
 vSPI_Master_TB
 R0
 !s110 1739804561
@@ -61,29 +87,55 @@ r1
 R7
 R8
 n@s@p@i_@master_@t@b
-vSPI_Master_tb
+vSPI_Master_w_CS
 R0
-R1
+!s110 1740777331
 !i10b 1
-!s100 XheOMEL4H9ZPDgOFMBFEG1
+!s100 7LgZ=TV=;ma@Xgf3QEBo93
 R2
-IdKi[SU>QEQbWa;3hAYbO]2
+IhOikEG[hTJ1L5@WWfEXzV2
 R3
 S1
 R4
-w1740698978
-8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv
-FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv
-!i122 14
-L0 1 75
+w1740777270
+8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS.sv
+FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS.sv
+!i122 26
+L0 29 113
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv|
+!s108 1740777331.000000
+!s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS.sv|
 !i113 1
 R7
 R8
-n@s@p@i_@master_tb
+n@s@p@i_@master_w_@c@s
+vSPI_Master_w_CS_tb
+R0
+!s110 1740777850
+!i10b 1
+!s100 =`=HSNMc6]60z`AiSRTcA0
+R2
+IEYS=l:WklgnQNZBE4;WA;0
+R3
+S1
+R4
+w1740777713
+8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS_tb.sv
+FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS_tb.sv
+!i122 31
+L0 1 80
+R5
+r1
+!s85 0
+31
+!s108 1740777850.000000
+!s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_w_CS_tb.sv|
+!i113 1
+R7
+R8
+n@s@p@i_@master_w_@c@s_tb

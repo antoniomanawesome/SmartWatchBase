@@ -15,8 +15,8 @@ of clocks for each half-bit of SPI data. (ex. 100 MHz clk, CLKS_PER_HALF_BIT = 2
 
 module SPI_Master
   #(parameter SPI_MODE = 0,
-    parameter CLKS_PER_HALF_BIT = 2)
-  (
+    parameter CLKS_PER_HALF_BIT = 2
+    ) (
 
    input logic  rst,    // FPGA Reset
    input logic  clk,    // FPGA Clock
