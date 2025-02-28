@@ -1,10 +1,12 @@
-# Compile of SPI_Master.sv failed with 2 errors.
-# Compile of SPI_Master_tb.sv was successful.
-# 2 compiles, 1 failed with 2 errors.
 # Compile of SPI_Master.sv was successful.
+# Compile of SPI_Master_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of SPI_Master.sv was successful.
+# Compile of SPI_Master_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
 vsim -gui work.SPI_Master_tb
 # vsim -gui work.SPI_Master_tb 
-# Start time: 09:50:19 on Feb 17,2025
+# Start time: 18:30:24 on Feb 27,2025
 # Loading sv_std.std
 # Loading work.SPI_Master_tb
 # Loading work.SPI_Master
@@ -17,77 +19,30 @@ add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/i_MOSI_DV
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/o_MOSI_Ready
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/o_MISO_DV
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/o_MISO_Byte
-add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SCK
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MISO
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/CPOL
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/CPHA
-add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK_Count_r
-add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_CLK_r
-add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SPI_clk_Edges_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SCK_Count_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SCK_r
+add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/SCK_Edges_r
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/Leading_Edge_r
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/Trailing_Edge_r
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI_DV_r
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI_Byte_r
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MOSI_Bit_Count_r
 add wave -position end  sim:/SPI_Master_tb/SPI_Master_INST_l/MISO_Bit_Count_r
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Antonio  Hostname: DESKTOP-4RU3HP3  ProcessID: 21020
+#           Attempting to use alternate WLF file "./wlft5gtjzi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5gtjzi
 run -all
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# WARNING: No extended dataflow license exists
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-quit -sim
-# End time: 10:02:19 on Feb 17,2025, Elapsed time: 0:12:00
-# Errors: 0, Warnings: 6
-# Compile of SPI_Master.v was successful.
-# Compile of SPI_Master_TB.sv was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.SPI_Master_TB
-# vsim -gui work.SPI_Master_TB 
-# Start time: 10:02:52 on Feb 17,2025
-# Loading sv_std.std
-# Loading work.SPI_Master_TB
-# Loading work.SPI_Master
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/SPI_MODE
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/CLKS_PER_HALF_BIT
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/i_Rst_L
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/i_Clk
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/i_TX_Byte
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/i_TX_DV
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/o_TX_Ready
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/o_RX_DV
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/o_RX_Byte
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/o_SPI_Clk
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/i_SPI_MISO
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/o_SPI_MOSI
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/w_CPOL
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/w_CPHA
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_SPI_Clk_Count
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_SPI_Clk
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_SPI_Clk_Edges
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_Leading_Edge
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_Trailing_Edge
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_TX_DV
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_TX_Byte
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_RX_Bit_Count
-add wave -position end  sim:/SPI_Master_TB/SPI_Master_UUT/r_TX_Bit_Count
-run -all
-# Sent out 0xC1, Received 0xc1
-# Sent out 0xBE, Received 0xbe
-# Sent out 0xEF, Received 0xef
-# ** Note: $finish    : C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master_TB.sv(84)
-#    Time: 922 ps  Iteration: 1  Instance: /SPI_Master_TB
+# Send out 0x37 and Received 0x37
+# Send out 0x38 and Received 0x38
+# Send out 0x39 and Received 0x39
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv(72)
+#    Time: 922 ps  Iteration: 1  Instance: /SPI_Master_tb
 # 1
-# Break in Module SPI_Master_TB at C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/SPI/SPI_Master_TB.sv line 84
-# End time: 10:08:22 on Feb 17,2025, Elapsed time: 0:05:30
-# Errors: 0, Warnings: 5
+# Break in Module SPI_Master_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/SPI/SPI_Master_tb.sv line 72

@@ -9,8 +9,8 @@ Mode | Clock Polarity (CPOL/CKP) | Clock Phase (CPHA)
 
 CLKS_PER_HALF_BIT
 Sets frequency of SPI clock, which is derived from clk. Set to integer number
-of clocks for each half-bit of SPI data. (ex. 100 MHz clk, CLKS_PER_HALF_BIT = 2, SPI_CLK would be 25 MHz)
-**Must be >= 2 and clk must be at least 2x faster than SPI_CLK
+of clocks for each half-bit of SPI data. (ex. 100 MHz clk, CLKS_PER_HALF_BIT = 2, SCK would be 25 MHz)
+**Must be >= 2 and clk must be at least 2x faster than SCK
 */
 
 module SPI_Master
@@ -19,7 +19,7 @@ module SPI_Master
   (
 
    input logic  rst,    // FPGA Reset
-   input logic  clk,        // FPGA Clock
+   input logic  clk,    // FPGA Clock
    
    //MOSI Signals
    input logic [7:0]  i_MOSI_Byte,        // Byte to transmit on MOSI
@@ -31,7 +31,7 @@ module SPI_Master
    output logic [7:0] o_MISO_Byte,   // Byte received on MISO
 
    // SPI
-   output logic SPI_CLK,
+   output logic SCK,
    input logic  MISO,
    output logic MOSI
    );
@@ -40,9 +40,9 @@ module SPI_Master
   logic CPOL;     // Clock polarity
   logic CPHA;     // Clock phase
 
-  logic [$clog2(CLKS_PER_HALF_BIT*2)-1:0] SPI_CLK_Count_r;
-  logic SPI_CLK_r;
-  logic [4:0] SPI_clk_Edges_r;
+  logic [$clog2(CLKS_PER_HALF_BIT*2)-1:0] SCK_Count_r;
+  logic SCK_r;
+  logic [4:0] SCK_Edges_r;
   logic Leading_Edge_r;
   logic Trailing_Edge_r;
   logic       MOSI_DV_r;
@@ -70,36 +70,36 @@ module SPI_Master
   begin
     if (rst) begin
       o_MOSI_Ready      <= 1'b0;
-      SPI_clk_Edges_r <= '0;
+      SCK_Edges_r <= '0;
       Leading_Edge_r  <= 1'b0;
       Trailing_Edge_r <= 1'b0;
-      SPI_CLK_r       <= CPOL; // assign default state to idle state
-      SPI_CLK_Count_r <= '0;
+      SCK_r       <= CPOL; // assign default state to idle
+      SCK_Count_r <= '0;
     end else begin
 
       // Default assignments
       Leading_Edge_r  <= 1'b0;
       Trailing_Edge_r <= 1'b0;
       
-      if (i_MOSI_DV) begin//if DV is true
+      if (i_MOSI_DV) begin //if DV is true
         o_MOSI_Ready      <= 1'b0;
-        SPI_clk_Edges_r <= 16;  // Total # edges in 1 byte is always 16
+        SCK_Edges_r <= 16; // Total # edges in 1 byte is always 16
       end
-      else if (SPI_clk_Edges_r > 0) begin //if DV not true
+      else if (SCK_Edges_r > 0) begin //if DV not true
         o_MOSI_Ready <= 1'b0;
         
-        if (SPI_CLK_Count_r == CLKS_PER_HALF_BIT*2-1) begin
-          SPI_clk_Edges_r <= SPI_clk_Edges_r - 1'b1;
+        if (SCK_Count_r == CLKS_PER_HALF_BIT*2-1) begin
+          SCK_Edges_r <= SCK_Edges_r - 1'b1;
           Trailing_Edge_r <= 1'b1;
-          SPI_CLK_Count_r <= '0;
-          SPI_CLK_r       <= ~SPI_CLK_r;
+          SCK_Count_r <= '0;
+          SCK_r       <= ~SCK_r;
         end
-        else if (SPI_CLK_Count_r == CLKS_PER_HALF_BIT-1) begin
-          SPI_clk_Edges_r <= SPI_clk_Edges_r - 1'b1;
+        else if (SCK_Count_r == CLKS_PER_HALF_BIT-1) begin
+          SCK_Edges_r <= SCK_Edges_r - 1'b1;
           Leading_Edge_r  <= 1'b1;
-          SPI_CLK_Count_r <= SPI_CLK_Count_r + 1'b1;
-          SPI_CLK_r       <= ~SPI_CLK_r;
-        end else SPI_CLK_Count_r <= SPI_CLK_Count_r + 1'b1;
+          SCK_Count_r <= SCK_Count_r + 1'b1;
+          SCK_r       <= ~SCK_r;
+        end else SCK_Count_r <= SCK_Count_r + 1'b1;
       end else o_MOSI_Ready <= 1'b1;
     end
   end
@@ -122,14 +122,14 @@ module SPI_Master
   begin
     if (rst) begin
       MOSI     <= 1'b0;
-      MOSI_Bit_Count_r <= 3'b111;
+      MOSI_Bit_Count_r <= 3'b111; //Index is MSB first here
     end
     else begin
 
       if (o_MOSI_Ready) MOSI_Bit_Count_r <= 3'b111; //if ready is true, rst bit counts to default
       else if (MOSI_DV_r & ~CPHA) begin // Catch the case where we start transaction and CPHA = 0
         MOSI     <= MOSI_Byte_r[3'b111];
-        MOSI_Bit_Count_r <= 3'b110;
+        MOSI_Bit_Count_r <= MOSI_Bit_Count_r - 1'b1;
       end else if ((Leading_Edge_r & CPHA) | (Trailing_Edge_r & ~CPHA)) begin
         MOSI_Bit_Count_r <= MOSI_Bit_Count_r - 1'b1;
         MOSI <= MOSI_Byte_r[MOSI_Bit_Count_r];
@@ -138,7 +138,7 @@ module SPI_Master
   end
 
 
-  //Read MOSI
+  //Read MISO
   always @(posedge clk or posedge rst)
   begin
     if (rst) begin
@@ -147,10 +147,10 @@ module SPI_Master
       MISO_Bit_Count_r <= 3'b111;
     end else begin
 
-      // Default Assignments
+      // Default Assignment
       o_MISO_DV   <= 1'b0;
 
-      if (o_MOSI_Ready) MISO_Bit_Count_r <= 3'b111; //If Ready is true, rst count to default
+      if (o_MOSI_Ready) MISO_Bit_Count_r <= 3'b111; //If Ready is true, rst count to default (MSB)
 
       else if ((Leading_Edge_r & ~CPHA) | (Trailing_Edge_r & CPHA)) begin
         o_MISO_Byte[MISO_Bit_Count_r] <= MISO;  // Sample data
@@ -161,10 +161,10 @@ module SPI_Master
   end
   
   
-  //Add clock delay to signals because we are basing the output of SPI_CLK on Leading_Edge_r which is a cycle behind
+  //Add clock delay to signals because we are basing the output of SCK on Leading_Edge_r which is a cycle behind
   always @(posedge clk or posedge rst) begin
-    if (rst) SPI_CLK  <= CPOL;
-    else SPI_CLK <= SPI_CLK_r;
+    if (rst) SCK  <= CPOL;
+    else SCK <= SCK_r;
   end
 
 endmodule // SPI_Master

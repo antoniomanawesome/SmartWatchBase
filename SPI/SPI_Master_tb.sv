@@ -4,7 +4,7 @@ module SPI_Master_tb();
     parameter int MAIN_CLK_DELAY = 2; //25 MHz
 
     logic rst = 1'b1;
-    logic SPI_CLK;
+    logic SCK;
     logic clk = 1'b0;
     logic MOSI;
 
@@ -29,7 +29,7 @@ module SPI_Master_tb();
 
         //MOSI Signals
         .i_MOSI_Byte(Master_MOSI_Byte_r), //Byte to transmit MOSI
-        .i_MOSI_DV(Master_MISO_DV_r), //Data valid
+        .i_MOSI_DV(Master_MOSI_DV_r), //Data valid
         .o_MOSI_Ready(Master_MOSI_Ready), //Transmit ready
 
         //MISO Signals
@@ -37,7 +37,7 @@ module SPI_Master_tb();
         .o_MISO_Byte(Master_MISO_Byte_r), //Byte received MISO
 
         //SPICK Signals
-        .SPI_CLK(SPI_CLK),
+        .SCK(SCK),
         .MISO(MOSI),
         .MOSI(MOSI)
 
