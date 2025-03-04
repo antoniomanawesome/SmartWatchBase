@@ -17,7 +17,7 @@ logic Master_MOSI_DV_r = 1'b0;
 logic Master_MOSI_Ready;
 logic Master_MISO_DV;
 logic [7:0] Master_MISO_Byte;
-logic [$clog2(MAX_BYTES_PER_CS+1)-1:0] Master_MISO_Count, Master_MISO_Count_r = 2'b10;
+logic [$clog2(MAX_BYTES_PER_CS+1)-1:0] Master_MISO_Count, Master_MOSI_Count_r = 2'b10;
 
 always #(MAIN_CLK_DELAY) clk = ~clk;
 
@@ -69,9 +69,9 @@ initial begin
   
   // Test sending 2 bytes
   SendSingleByte(8'h37);
-  $display("Sent out 0xC1, Received 0x%X", Master_MISO_Byte); 
+  $display("Sent out 0x37, Received 0x%X", Master_MISO_Byte); 
   SendSingleByte(8'h38);
-  $display("Sent out 0xC2, Received 0x%X", Master_MISO_Byte); 
+  $display("Sent out 0x38, Received 0x%X", Master_MISO_Byte); 
 
   repeat(10) @(posedge clk);
   $finish();      

@@ -136,6 +136,6 @@ end
 
 assign CS_L = CS_r;
 assign o_MISO_Count = MISO_Count_r;
-assign o_MOSI_Ready = ((state_r == IDLE) | (state_r == TRANSFER) && (Master_Ready == 1'b1) && (MOSI_Count_r > 0) & i_MOSI_DV);
+assign o_MOSI_Ready = ((state_r == IDLE) | (state_r == TRANSFER && Master_Ready == 1'b1 && MOSI_Count_r > 0)) & ~i_MOSI_DV;
 
 endmodule
