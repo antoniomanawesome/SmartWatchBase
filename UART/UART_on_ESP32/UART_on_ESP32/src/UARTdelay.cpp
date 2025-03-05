@@ -1,6 +1,5 @@
 #include <Arduino.h>
 
-String Message = "Claudius";
 
 void setup() {
   pinMode(TX2, OUTPUT);
@@ -12,9 +11,11 @@ void setup() {
 
 void loop() {
 
-    for(int i = 0; i < Message.length(); i++){
-        Serial2.write(Message[i]);
-        delay(1000);
+    for(uint8_t i = 0; i < 5; i++){
+        Serial2.write(i);
+        delay(100);
     }
+
+    Serial.println("Loop Done");
 
 }
