@@ -96,11 +96,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "RX_Serial",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Serial",
+					"name" : "clk",
 					"strict" : false
 				}
 			]

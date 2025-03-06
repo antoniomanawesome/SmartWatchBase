@@ -13,7 +13,7 @@ void loop() {
 
     for(uint8_t i = 0; i < 5; i++){
         Serial2.write(i);
-        delay(100);
+        delay(500);
     }
 
     Serial.println("Loop Done");

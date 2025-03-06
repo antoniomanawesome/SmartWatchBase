@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "02/10/2025 17:37:40"
+// DATE "03/05/2025 19:11:58"
 
 // 
 // Device: Altera 10M50DAF484C6GES Package FBGA484
@@ -67,8 +67,8 @@ output 	[7:0] RX_Byte;
 // RX_Byte[5]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // RX_Byte[6]	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // RX_Byte[7]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// clk	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // RX_Serial	=>  Location: PIN_AB20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -112,81 +112,70 @@ wire \RX_Byte[7]~output_o ;
 wire \clk~input_o ;
 wire \clk~inputclkctrl_outclk ;
 wire \RX_Serial~input_o ;
-wire \UART_RX_INST_l|Add0~0_combout ;
-wire \UART_RX_INST_l|Add0~5 ;
-wire \UART_RX_INST_l|Add0~6_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[3]~6_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[0]~10_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[6]~23 ;
+wire \UART_RX_INST_l|Clock_Count_r[7]~24_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[0]~31_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[7]~25 ;
+wire \UART_RX_INST_l|Clock_Count_r[8]~26_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[8]~27 ;
+wire \UART_RX_INST_l|Clock_Count_r[9]~28_combout ;
 wire \UART_RX_INST_l|LessThan1~1_combout ;
-wire \UART_RX_INST_l|Add0~7 ;
-wire \UART_RX_INST_l|Add0~8_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[4]~3_combout ;
-wire \UART_RX_INST_l|Add0~9 ;
-wire \UART_RX_INST_l|Add0~10_combout ;
-wire \UART_RX_INST_l|Add0~21_combout ;
 wire \UART_RX_INST_l|LessThan1~0_combout ;
 wire \UART_RX_INST_l|LessThan1~2_combout ;
-wire \UART_RX_INST_l|Selector14~3_combout ;
-wire \UART_RX_INST_l|Selector14~10_combout ;
-wire \UART_RX_INST_l|Selector14~9_combout ;
-wire \UART_RX_INST_l|state_r.IDLE~q ;
-wire \UART_RX_INST_l|Selector14~6_combout ;
-wire \UART_RX_INST_l|Selector14~8_combout ;
-wire \UART_RX_INST_l|Selector15~5_combout ;
-wire \UART_RX_INST_l|Selector15~2_combout ;
-wire \UART_RX_INST_l|Selector15~3_combout ;
-wire \UART_RX_INST_l|Selector15~4_combout ;
-wire \UART_RX_INST_l|state_r.START_BIT~q ;
-wire \UART_RX_INST_l|Selector14~7_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[0]~0_combout ;
+wire \UART_RX_INST_l|Selector18~0_combout ;
+wire \UART_RX_INST_l|state_r.CLEANUP~q ;
+wire \UART_RX_INST_l|Selector15~1_combout ;
 wire \UART_RX_INST_l|LessThan1~3_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[0]~1_combout ;
-wire \UART_RX_INST_l|Add0~22_combout ;
-wire \UART_RX_INST_l|Add0~1 ;
-wire \UART_RX_INST_l|Add0~2_combout ;
-wire \UART_RX_INST_l|Add0~23_combout ;
-wire \UART_RX_INST_l|Add0~3 ;
-wire \UART_RX_INST_l|Add0~4_combout ;
-wire \UART_RX_INST_l|Add0~24_combout ;
-wire \UART_RX_INST_l|Selector14~5_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[0]~2_combout ;
-wire \UART_RX_INST_l|Add0~11 ;
-wire \UART_RX_INST_l|Add0~12_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[6]~4_combout ;
-wire \UART_RX_INST_l|Add0~13 ;
-wire \UART_RX_INST_l|Add0~14_combout ;
-wire \UART_RX_INST_l|Clock_Count_r[7]~5_combout ;
-wire \UART_RX_INST_l|Add0~15 ;
-wire \UART_RX_INST_l|Add0~16_combout ;
-wire \UART_RX_INST_l|Add0~25_combout ;
-wire \UART_RX_INST_l|Add0~17 ;
-wire \UART_RX_INST_l|Add0~18_combout ;
-wire \UART_RX_INST_l|Add0~20_combout ;
-wire \UART_RX_INST_l|Selector14~2_combout ;
+wire \UART_RX_INST_l|Selector15~0_combout ;
 wire \UART_RX_INST_l|Selector17~0_combout ;
+wire \UART_RX_INST_l|Selector17~1_combout ;
 wire \UART_RX_INST_l|state_r.STOP_BIT~q ;
+wire \UART_RX_INST_l|Selector14~0_combout ;
+wire \UART_RX_INST_l|Selector14~1_combout ;
+wire \UART_RX_INST_l|state_r.IDLE~q ;
 wire \UART_RX_INST_l|Selector0~0_combout ;
-wire \UART_RX_INST_l|Selector13~0_combout ;
-wire \UART_RX_INST_l|Selector13~1_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[0]~30_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[0]~11 ;
+wire \UART_RX_INST_l|Clock_Count_r[1]~12_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[1]~13 ;
+wire \UART_RX_INST_l|Clock_Count_r[2]~14_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[2]~15 ;
+wire \UART_RX_INST_l|Clock_Count_r[3]~16_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[3]~17 ;
+wire \UART_RX_INST_l|Clock_Count_r[4]~18_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[4]~19 ;
+wire \UART_RX_INST_l|Clock_Count_r[5]~20_combout ;
+wire \UART_RX_INST_l|Clock_Count_r[5]~21 ;
+wire \UART_RX_INST_l|Clock_Count_r[6]~22_combout ;
+wire \UART_RX_INST_l|Selector16~1_combout ;
+wire \UART_RX_INST_l|Selector16~2_combout ;
+wire \UART_RX_INST_l|Selector16~0_combout ;
+wire \UART_RX_INST_l|Selector16~3_combout ;
 wire \UART_RX_INST_l|Decoder0~0_combout ;
 wire \UART_RX_INST_l|Selector12~0_combout ;
 wire \UART_RX_INST_l|Selector12~1_combout ;
-wire \UART_RX_INST_l|Selector11~4_combout ;
-wire \UART_RX_INST_l|Selector11~2_combout ;
-wire \UART_RX_INST_l|Selector11~3_combout ;
-wire \UART_RX_INST_l|Selector14~4_combout ;
-wire \UART_RX_INST_l|Selector16~0_combout ;
-wire \UART_RX_INST_l|Selector16~1_combout ;
+wire \UART_RX_INST_l|Selector16~4_combout ;
+wire \UART_RX_INST_l|Selector16~5_combout ;
 wire \UART_RX_INST_l|state_r.DATA_BITS~q ;
+wire \UART_RX_INST_l|Selector13~0_combout ;
+wire \UART_RX_INST_l|Selector13~1_combout ;
+wire \UART_RX_INST_l|Selector11~1_combout ;
+wire \UART_RX_INST_l|Selector11~0_combout ;
+wire \UART_RX_INST_l|Selector11~2_combout ;
+wire \UART_RX_INST_l|Decoder0~8_combout ;
+wire \UART_RX_INST_l|Selector15~2_combout ;
+wire \UART_RX_INST_l|state_r.START_BIT~q ;
 wire \UART_RX_INST_l|Selector0~1_combout ;
 wire \UART_RX_INST_l|RX_DV_r~q ;
-wire \UART_RX_INST_l|Decoder0~2_combout ;
-wire \UART_RX_INST_l|RX_Byte_r[1]~1_combout ;
-wire \UART_RX_INST_l|Decoder0~3_combout ;
-wire \UART_RX_INST_l|RX_Byte_r[2]~2_combout ;
 wire \UART_RX_INST_l|Decoder0~4_combout ;
 wire \UART_RX_INST_l|RX_Byte_r[3]~3_combout ;
 wire \UART_RX_INST_l|Decoder0~1_combout ;
 wire \UART_RX_INST_l|RX_Byte_r[0]~0_combout ;
+wire \UART_RX_INST_l|Decoder0~2_combout ;
+wire \UART_RX_INST_l|RX_Byte_r[1]~1_combout ;
+wire \UART_RX_INST_l|Decoder0~3_combout ;
+wire \UART_RX_INST_l|RX_Byte_r[2]~2_combout ;
 wire \SevenSeg1_l|WideOr6~0_combout ;
 wire \SevenSeg1_l|WideOr5~0_combout ;
 wire \SevenSeg1_l|WideOr4~0_combout ;
@@ -194,13 +183,12 @@ wire \SevenSeg1_l|WideOr3~0_combout ;
 wire \SevenSeg1_l|WideOr2~0_combout ;
 wire \SevenSeg1_l|WideOr1~0_combout ;
 wire \SevenSeg1_l|WideOr0~0_combout ;
-wire \UART_RX_INST_l|Decoder0~7_combout ;
-wire \UART_RX_INST_l|RX_Byte_r[6]~6_combout ;
 wire \UART_RX_INST_l|Decoder0~5_combout ;
 wire \UART_RX_INST_l|RX_Byte_r[4]~4_combout ;
+wire \UART_RX_INST_l|Decoder0~7_combout ;
+wire \UART_RX_INST_l|RX_Byte_r[6]~6_combout ;
 wire \UART_RX_INST_l|Decoder0~6_combout ;
 wire \UART_RX_INST_l|RX_Byte_r[5]~5_combout ;
-wire \UART_RX_INST_l|Decoder0~8_combout ;
 wire \UART_RX_INST_l|RX_Byte_r[7]~7_combout ;
 wire \SevenSeg0_l|WideOr6~0_combout ;
 wire \SevenSeg0_l|WideOr5~0_combout ;
@@ -209,8 +197,8 @@ wire \SevenSeg0_l|WideOr3~0_combout ;
 wire \SevenSeg0_l|WideOr2~0_combout ;
 wire \SevenSeg0_l|WideOr1~0_combout ;
 wire \SevenSeg0_l|WideOr0~0_combout ;
-wire [7:0] \UART_RX_INST_l|RX_Byte_r ;
 wire [9:0] \UART_RX_INST_l|Clock_Count_r ;
+wire [7:0] \UART_RX_INST_l|RX_Byte_r ;
 wire [2:0] \UART_RX_INST_l|Bit_Index_r ;
 
 
@@ -219,7 +207,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y41_N16
+// Location: LCCOMB_X44_Y44_N20
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -572,105 +560,178 @@ defparam \RX_Serial~input .listen_to_nsleep_signal = "false";
 defparam \RX_Serial~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X58_Y46_N10
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~0 (
+// Location: LCCOMB_X63_Y47_N10
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[0]~10 (
 // Equation(s):
-// \UART_RX_INST_l|Add0~0_combout  = \UART_RX_INST_l|Clock_Count_r [0] $ (VCC)
-// \UART_RX_INST_l|Add0~1  = CARRY(\UART_RX_INST_l|Clock_Count_r [0])
+// \UART_RX_INST_l|Clock_Count_r[0]~10_combout  = \UART_RX_INST_l|Clock_Count_r [0] $ (VCC)
+// \UART_RX_INST_l|Clock_Count_r[0]~11  = CARRY(\UART_RX_INST_l|Clock_Count_r [0])
 
 	.dataa(\UART_RX_INST_l|Clock_Count_r [0]),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(vcc),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~0_combout ),
-	.cout(\UART_RX_INST_l|Add0~1 ));
+	.combout(\UART_RX_INST_l|Clock_Count_r[0]~10_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[0]~11 ));
 // synopsys translate_off
-defparam \UART_RX_INST_l|Add0~0 .lut_mask = 16'h55AA;
-defparam \UART_RX_INST_l|Add0~0 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Clock_Count_r[0]~10 .lut_mask = 16'h55AA;
+defparam \UART_RX_INST_l|Clock_Count_r[0]~10 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X58_Y46_N14
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~4 (
+// Location: LCCOMB_X63_Y47_N22
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[6]~22 (
 // Equation(s):
-// \UART_RX_INST_l|Add0~4_combout  = (\UART_RX_INST_l|Clock_Count_r [2] & (\UART_RX_INST_l|Add0~3  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [2] & (!\UART_RX_INST_l|Add0~3  & VCC))
-// \UART_RX_INST_l|Add0~5  = CARRY((\UART_RX_INST_l|Clock_Count_r [2] & !\UART_RX_INST_l|Add0~3 ))
+// \UART_RX_INST_l|Clock_Count_r[6]~22_combout  = (\UART_RX_INST_l|Clock_Count_r [6] & (\UART_RX_INST_l|Clock_Count_r[5]~21  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [6] & (!\UART_RX_INST_l|Clock_Count_r[5]~21  & VCC))
+// \UART_RX_INST_l|Clock_Count_r[6]~23  = CARRY((\UART_RX_INST_l|Clock_Count_r [6] & !\UART_RX_INST_l|Clock_Count_r[5]~21 ))
 
 	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Clock_Count_r [2]),
+	.datab(\UART_RX_INST_l|Clock_Count_r [6]),
 	.datac(gnd),
 	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~3 ),
-	.combout(\UART_RX_INST_l|Add0~4_combout ),
-	.cout(\UART_RX_INST_l|Add0~5 ));
+	.cin(\UART_RX_INST_l|Clock_Count_r[5]~21 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[6]~22_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[6]~23 ));
 // synopsys translate_off
-defparam \UART_RX_INST_l|Add0~4 .lut_mask = 16'hC30C;
-defparam \UART_RX_INST_l|Add0~4 .sum_lutc_input = "cin";
+defparam \UART_RX_INST_l|Clock_Count_r[6]~22 .lut_mask = 16'hC30C;
+defparam \UART_RX_INST_l|Clock_Count_r[6]~22 .sum_lutc_input = "cin";
 // synopsys translate_on
 
-// Location: LCCOMB_X58_Y46_N16
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~6 (
+// Location: LCCOMB_X63_Y47_N24
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[7]~24 (
 // Equation(s):
-// \UART_RX_INST_l|Add0~6_combout  = (\UART_RX_INST_l|Clock_Count_r [3] & (!\UART_RX_INST_l|Add0~5 )) # (!\UART_RX_INST_l|Clock_Count_r [3] & ((\UART_RX_INST_l|Add0~5 ) # (GND)))
-// \UART_RX_INST_l|Add0~7  = CARRY((!\UART_RX_INST_l|Add0~5 ) # (!\UART_RX_INST_l|Clock_Count_r [3]))
+// \UART_RX_INST_l|Clock_Count_r[7]~24_combout  = (\UART_RX_INST_l|Clock_Count_r [7] & (!\UART_RX_INST_l|Clock_Count_r[6]~23 )) # (!\UART_RX_INST_l|Clock_Count_r [7] & ((\UART_RX_INST_l|Clock_Count_r[6]~23 ) # (GND)))
+// \UART_RX_INST_l|Clock_Count_r[7]~25  = CARRY((!\UART_RX_INST_l|Clock_Count_r[6]~23 ) # (!\UART_RX_INST_l|Clock_Count_r [7]))
+
+	.dataa(\UART_RX_INST_l|Clock_Count_r [7]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[6]~23 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[7]~24_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[7]~25 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[7]~24 .lut_mask = 16'h5A5F;
+defparam \UART_RX_INST_l|Clock_Count_r[7]~24 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N2
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[0]~31 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[0]~31_combout  = (!\UART_RX_INST_l|state_r.CLEANUP~q  & ((!\UART_RX_INST_l|Selector16~3_combout ) # (!\RX_Serial~input_o )))
 
 	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Clock_Count_r [3]),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~5 ),
-	.combout(\UART_RX_INST_l|Add0~6_combout ),
-	.cout(\UART_RX_INST_l|Add0~7 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~6 .lut_mask = 16'h3C3F;
-defparam \UART_RX_INST_l|Add0~6 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N8
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[3]~6 (
-// Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[3]~6_combout  = (\UART_RX_INST_l|Clock_Count_r[0]~2_combout ) # ((\UART_RX_INST_l|Add0~6_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout ))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r[0]~2_combout ),
-	.datab(\UART_RX_INST_l|Add0~6_combout ),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
+	.datab(\RX_Serial~input_o ),
+	.datac(\UART_RX_INST_l|state_r.CLEANUP~q ),
+	.datad(\UART_RX_INST_l|Selector16~3_combout ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[3]~6_combout ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[3]~6 .lut_mask = 16'hAAEE;
-defparam \UART_RX_INST_l|Clock_Count_r[3]~6 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Clock_Count_r[0]~31 .lut_mask = 16'h030F;
+defparam \UART_RX_INST_l|Clock_Count_r[0]~31 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X58_Y46_N9
-dffeas \UART_RX_INST_l|Clock_Count_r[3] (
+// Location: FF_X63_Y47_N25
+dffeas \UART_RX_INST_l|Clock_Count_r[7] (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Clock_Count_r[3]~6_combout ),
+	.d(\UART_RX_INST_l|Clock_Count_r[7]~24_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
 	.sload(gnd),
-	.ena(vcc),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [3]),
+	.q(\UART_RX_INST_l|Clock_Count_r [7]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[3] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[3] .power_up = "low";
+defparam \UART_RX_INST_l|Clock_Count_r[7] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X59_Y46_N8
+// Location: LCCOMB_X63_Y47_N26
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[8]~26 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[8]~26_combout  = (\UART_RX_INST_l|Clock_Count_r [8] & (\UART_RX_INST_l|Clock_Count_r[7]~25  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [8] & (!\UART_RX_INST_l|Clock_Count_r[7]~25  & VCC))
+// \UART_RX_INST_l|Clock_Count_r[8]~27  = CARRY((\UART_RX_INST_l|Clock_Count_r [8] & !\UART_RX_INST_l|Clock_Count_r[7]~25 ))
+
+	.dataa(gnd),
+	.datab(\UART_RX_INST_l|Clock_Count_r [8]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[7]~25 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[8]~26_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[8]~27 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[8]~26 .lut_mask = 16'hC30C;
+defparam \UART_RX_INST_l|Clock_Count_r[8]~26 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N27
+dffeas \UART_RX_INST_l|Clock_Count_r[8] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[8]~26_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[8] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N28
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[9]~28 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[9]~28_combout  = \UART_RX_INST_l|Clock_Count_r[8]~27  $ (\UART_RX_INST_l|Clock_Count_r [9])
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\UART_RX_INST_l|Clock_Count_r [9]),
+	.cin(\UART_RX_INST_l|Clock_Count_r[8]~27 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[9]~28_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[9]~28 .lut_mask = 16'h0FF0;
+defparam \UART_RX_INST_l|Clock_Count_r[9]~28 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N29
+dffeas \UART_RX_INST_l|Clock_Count_r[9] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[9]~28_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[9] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N30
 fiftyfivenm_lcell_comb \UART_RX_INST_l|LessThan1~1 (
 // Equation(s):
-// \UART_RX_INST_l|LessThan1~1_combout  = (!\UART_RX_INST_l|Clock_Count_r [0] & (!\UART_RX_INST_l|Clock_Count_r [1] & (!\UART_RX_INST_l|Clock_Count_r [2] & !\UART_RX_INST_l|Clock_Count_r [3])))
+// \UART_RX_INST_l|LessThan1~1_combout  = (!\UART_RX_INST_l|Clock_Count_r [0] & (!\UART_RX_INST_l|Clock_Count_r [3] & (!\UART_RX_INST_l|Clock_Count_r [2] & !\UART_RX_INST_l|Clock_Count_r [1])))
 
 	.dataa(\UART_RX_INST_l|Clock_Count_r [0]),
-	.datab(\UART_RX_INST_l|Clock_Count_r [1]),
+	.datab(\UART_RX_INST_l|Clock_Count_r [3]),
 	.datac(\UART_RX_INST_l|Clock_Count_r [2]),
-	.datad(\UART_RX_INST_l|Clock_Count_r [3]),
+	.datad(\UART_RX_INST_l|Clock_Count_r [1]),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|LessThan1~1_combout ),
 	.cout());
@@ -679,115 +740,7 @@ defparam \UART_RX_INST_l|LessThan1~1 .lut_mask = 16'h0001;
 defparam \UART_RX_INST_l|LessThan1~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X58_Y46_N18
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~8 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~8_combout  = (\UART_RX_INST_l|Clock_Count_r [4] & (\UART_RX_INST_l|Add0~7  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [4] & (!\UART_RX_INST_l|Add0~7  & VCC))
-// \UART_RX_INST_l|Add0~9  = CARRY((\UART_RX_INST_l|Clock_Count_r [4] & !\UART_RX_INST_l|Add0~7 ))
-
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Clock_Count_r [4]),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~7 ),
-	.combout(\UART_RX_INST_l|Add0~8_combout ),
-	.cout(\UART_RX_INST_l|Add0~9 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~8 .lut_mask = 16'hC30C;
-defparam \UART_RX_INST_l|Add0~8 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N0
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[4]~3 (
-// Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[4]~3_combout  = (\UART_RX_INST_l|Clock_Count_r[0]~2_combout ) # ((\UART_RX_INST_l|Add0~8_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout ))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r[0]~2_combout ),
-	.datab(\UART_RX_INST_l|Add0~8_combout ),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[4]~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[4]~3 .lut_mask = 16'hAAEE;
-defparam \UART_RX_INST_l|Clock_Count_r[4]~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X58_Y46_N1
-dffeas \UART_RX_INST_l|Clock_Count_r[4] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Clock_Count_r[4]~3_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [4]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[4] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[4] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N20
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~10 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~10_combout  = (\UART_RX_INST_l|Clock_Count_r [5] & (!\UART_RX_INST_l|Add0~9 )) # (!\UART_RX_INST_l|Clock_Count_r [5] & ((\UART_RX_INST_l|Add0~9 ) # (GND)))
-// \UART_RX_INST_l|Add0~11  = CARRY((!\UART_RX_INST_l|Add0~9 ) # (!\UART_RX_INST_l|Clock_Count_r [5]))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [5]),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~9 ),
-	.combout(\UART_RX_INST_l|Add0~10_combout ),
-	.cout(\UART_RX_INST_l|Add0~11 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~10 .lut_mask = 16'h5A5F;
-defparam \UART_RX_INST_l|Add0~10 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N6
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~21 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~21_combout  = (\UART_RX_INST_l|Add0~10_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout )
-
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Add0~10_combout ),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~21_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~21 .lut_mask = 16'h00CC;
-defparam \UART_RX_INST_l|Add0~21 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X58_Y46_N7
-dffeas \UART_RX_INST_l|Clock_Count_r[5] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Add0~21_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [5]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[5] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[5] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X59_Y46_N20
+// Location: LCCOMB_X63_Y47_N4
 fiftyfivenm_lcell_comb \UART_RX_INST_l|LessThan1~0 (
 // Equation(s):
 // \UART_RX_INST_l|LessThan1~0_combout  = ((!\UART_RX_INST_l|Clock_Count_r [6] & ((!\UART_RX_INST_l|Clock_Count_r [5]) # (!\UART_RX_INST_l|Clock_Count_r [4])))) # (!\UART_RX_INST_l|Clock_Count_r [7])
@@ -804,7 +757,7 @@ defparam \UART_RX_INST_l|LessThan1~0 .lut_mask = 16'h07FF;
 defparam \UART_RX_INST_l|LessThan1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X59_Y46_N26
+// Location: LCCOMB_X62_Y47_N2
 fiftyfivenm_lcell_comb \UART_RX_INST_l|LessThan1~2 (
 // Equation(s):
 // \UART_RX_INST_l|LessThan1~2_combout  = ((\UART_RX_INST_l|LessThan1~0_combout ) # ((!\UART_RX_INST_l|Clock_Count_r [6] & \UART_RX_INST_l|LessThan1~1_combout ))) # (!\UART_RX_INST_l|Clock_Count_r [8])
@@ -821,182 +774,27 @@ defparam \UART_RX_INST_l|LessThan1~2 .lut_mask = 16'hFF75;
 defparam \UART_RX_INST_l|LessThan1~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X62_Y46_N0
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~3 (
+// Location: LCCOMB_X62_Y47_N0
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector18~0 (
 // Equation(s):
-// \UART_RX_INST_l|Selector14~3_combout  = (\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|state_r.DATA_BITS~q  & ((\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout ))))
+// \UART_RX_INST_l|Selector18~0_combout  = (\UART_RX_INST_l|state_r.STOP_BIT~q  & (\RX_Serial~input_o  & ((\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout ))))
 
-	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
-	.datab(\UART_RX_INST_l|state_r.DATA_BITS~q ),
-	.datac(\UART_RX_INST_l|Clock_Count_r [9]),
-	.datad(\UART_RX_INST_l|LessThan1~2_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~3 .lut_mask = 16'h8088;
-defparam \UART_RX_INST_l|Selector14~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N14
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~10 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~10_combout  = (\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Bit_Index_r [2] & \UART_RX_INST_l|Selector14~3_combout ))
-
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datac(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datad(\UART_RX_INST_l|Selector14~3_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~10_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~10 .lut_mask = 16'hC000;
-defparam \UART_RX_INST_l|Selector14~10 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N22
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~9 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~9_combout  = (!\UART_RX_INST_l|Selector14~2_combout  & ((\UART_RX_INST_l|Clock_Count_r[0]~0_combout ) # ((\UART_RX_INST_l|Selector14~10_combout ) # (!\RX_Serial~input_o ))))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r[0]~0_combout ),
-	.datab(\RX_Serial~input_o ),
-	.datac(\UART_RX_INST_l|Selector14~10_combout ),
-	.datad(\UART_RX_INST_l|Selector14~2_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~9_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~9 .lut_mask = 16'h00FB;
-defparam \UART_RX_INST_l|Selector14~9 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X62_Y46_N23
-dffeas \UART_RX_INST_l|state_r.IDLE (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Selector14~9_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|state_r.IDLE~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|state_r.IDLE .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|state_r.IDLE .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N2
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~6 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~6_combout  = (!\UART_RX_INST_l|Clock_Count_r [5] & (\UART_RX_INST_l|Clock_Count_r [4] & (\UART_RX_INST_l|Clock_Count_r [7] & \UART_RX_INST_l|Clock_Count_r [6])))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [5]),
-	.datab(\UART_RX_INST_l|Clock_Count_r [4]),
-	.datac(\UART_RX_INST_l|Clock_Count_r [7]),
-	.datad(\UART_RX_INST_l|Clock_Count_r [6]),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~6_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~6 .lut_mask = 16'h4000;
-defparam \UART_RX_INST_l|Selector14~6 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N4
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~8 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~8_combout  = (\UART_RX_INST_l|Selector14~7_combout  & (\UART_RX_INST_l|Selector14~5_combout  & \UART_RX_INST_l|Selector14~6_combout ))
-
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Selector14~7_combout ),
-	.datac(\UART_RX_INST_l|Selector14~5_combout ),
-	.datad(\UART_RX_INST_l|Selector14~6_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~8_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~8 .lut_mask = 16'hC000;
-defparam \UART_RX_INST_l|Selector14~8 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N16
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~5 (
-// Equation(s):
-// \UART_RX_INST_l|Selector15~5_combout  = (!\UART_RX_INST_l|Selector14~8_combout  & (((!\UART_RX_INST_l|Selector14~3_combout ) # (!\UART_RX_INST_l|Bit_Index_r [1])) # (!\UART_RX_INST_l|Bit_Index_r [2])))
-
-	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datac(\UART_RX_INST_l|Selector14~8_combout ),
-	.datad(\UART_RX_INST_l|Selector14~3_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector15~5_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector15~5 .lut_mask = 16'h070F;
-defparam \UART_RX_INST_l|Selector15~5 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N12
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~2 (
-// Equation(s):
-// \UART_RX_INST_l|Selector15~2_combout  = (!\UART_RX_INST_l|state_r.IDLE~q  & !\RX_Serial~input_o )
-
-	.dataa(\UART_RX_INST_l|state_r.IDLE~q ),
-	.datab(gnd),
-	.datac(gnd),
+	.dataa(\UART_RX_INST_l|state_r.STOP_BIT~q ),
+	.datab(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datac(\UART_RX_INST_l|LessThan1~2_combout ),
 	.datad(\RX_Serial~input_o ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector15~2_combout ),
+	.combout(\UART_RX_INST_l|Selector18~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector15~2 .lut_mask = 16'h0055;
-defparam \UART_RX_INST_l|Selector15~2 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector18~0 .lut_mask = 16'h8A00;
+defparam \UART_RX_INST_l|Selector18~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X62_Y46_N10
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~3 (
-// Equation(s):
-// \UART_RX_INST_l|Selector15~3_combout  = (!\UART_RX_INST_l|Selector15~2_combout  & (!\UART_RX_INST_l|Selector14~8_combout  & ((!\UART_RX_INST_l|Selector14~3_combout ) # (!\UART_RX_INST_l|Selector14~4_combout ))))
-
-	.dataa(\UART_RX_INST_l|Selector15~2_combout ),
-	.datab(\UART_RX_INST_l|Selector14~4_combout ),
-	.datac(\UART_RX_INST_l|Selector14~8_combout ),
-	.datad(\UART_RX_INST_l|Selector14~3_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector15~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector15~3 .lut_mask = 16'h0105;
-defparam \UART_RX_INST_l|Selector15~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N6
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~4 (
-// Equation(s):
-// \UART_RX_INST_l|Selector15~4_combout  = (!\UART_RX_INST_l|Selector14~2_combout  & ((\UART_RX_INST_l|Selector15~3_combout  & ((\UART_RX_INST_l|state_r.START_BIT~q ))) # (!\UART_RX_INST_l|Selector15~3_combout  & (\UART_RX_INST_l|Selector15~5_combout ))))
-
-	.dataa(\UART_RX_INST_l|Selector14~2_combout ),
-	.datab(\UART_RX_INST_l|Selector15~5_combout ),
-	.datac(\UART_RX_INST_l|state_r.START_BIT~q ),
-	.datad(\UART_RX_INST_l|Selector15~3_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector15~4_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector15~4 .lut_mask = 16'h5044;
-defparam \UART_RX_INST_l|Selector15~4 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X62_Y46_N7
-dffeas \UART_RX_INST_l|state_r.START_BIT (
+// Location: FF_X62_Y47_N1
+dffeas \UART_RX_INST_l|state_r.CLEANUP (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Selector15~4_combout ),
+	.d(\UART_RX_INST_l|Selector18~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -1005,494 +803,102 @@ dffeas \UART_RX_INST_l|state_r.START_BIT (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\UART_RX_INST_l|state_r.START_BIT~q ),
+	.q(\UART_RX_INST_l|state_r.CLEANUP~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \UART_RX_INST_l|state_r.START_BIT .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|state_r.START_BIT .power_up = "low";
+defparam \UART_RX_INST_l|state_r.CLEANUP .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|state_r.CLEANUP .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X62_Y46_N18
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~7 (
+// Location: LCCOMB_X64_Y47_N2
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~1 (
 // Equation(s):
-// \UART_RX_INST_l|Selector14~7_combout  = (!\UART_RX_INST_l|Clock_Count_r [8] & (!\UART_RX_INST_l|Clock_Count_r [9] & \UART_RX_INST_l|state_r.START_BIT~q ))
+// \UART_RX_INST_l|Selector15~1_combout  = (!\RX_Serial~input_o  & !\UART_RX_INST_l|state_r.IDLE~q )
 
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Clock_Count_r [8]),
-	.datac(\UART_RX_INST_l|Clock_Count_r [9]),
-	.datad(\UART_RX_INST_l|state_r.START_BIT~q ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\UART_RX_INST_l|state_r.IDLE~q ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~7_combout ),
+	.combout(\UART_RX_INST_l|Selector15~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~7 .lut_mask = 16'h0300;
-defparam \UART_RX_INST_l|Selector14~7 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector15~1 .lut_mask = 16'h0055;
+defparam \UART_RX_INST_l|Selector15~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X62_Y46_N30
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[0]~0 (
-// Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[0]~0_combout  = (\UART_RX_INST_l|state_r.IDLE~q  & (((!\UART_RX_INST_l|Selector14~6_combout ) # (!\UART_RX_INST_l|Selector14~5_combout )) # (!\UART_RX_INST_l|Selector14~7_combout )))
-
-	.dataa(\UART_RX_INST_l|state_r.IDLE~q ),
-	.datab(\UART_RX_INST_l|Selector14~7_combout ),
-	.datac(\UART_RX_INST_l|Selector14~5_combout ),
-	.datad(\UART_RX_INST_l|Selector14~6_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[0]~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[0]~0 .lut_mask = 16'h2AAA;
-defparam \UART_RX_INST_l|Clock_Count_r[0]~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N28
+// Location: LCCOMB_X62_Y47_N28
 fiftyfivenm_lcell_comb \UART_RX_INST_l|LessThan1~3 (
 // Equation(s):
 // \UART_RX_INST_l|LessThan1~3_combout  = (\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout )
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datab(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datac(gnd),
 	.datad(\UART_RX_INST_l|LessThan1~2_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|LessThan1~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|LessThan1~3 .lut_mask = 16'hF0FF;
+defparam \UART_RX_INST_l|LessThan1~3 .lut_mask = 16'hCCFF;
 defparam \UART_RX_INST_l|LessThan1~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X62_Y46_N20
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[0]~1 (
+// Location: LCCOMB_X62_Y47_N24
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~0 (
 // Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[0]~1_combout  = ((\UART_RX_INST_l|LessThan1~3_combout  & ((\UART_RX_INST_l|state_r.STOP_BIT~q ) # (\UART_RX_INST_l|state_r.DATA_BITS~q )))) # (!\UART_RX_INST_l|Clock_Count_r[0]~0_combout )
+// \UART_RX_INST_l|Selector15~0_combout  = (!\UART_RX_INST_l|state_r.CLEANUP~q  & (!\UART_RX_INST_l|Selector16~3_combout  & ((!\UART_RX_INST_l|LessThan1~3_combout ) # (!\UART_RX_INST_l|state_r.STOP_BIT~q ))))
 
 	.dataa(\UART_RX_INST_l|state_r.STOP_BIT~q ),
-	.datab(\UART_RX_INST_l|state_r.DATA_BITS~q ),
-	.datac(\UART_RX_INST_l|Clock_Count_r[0]~0_combout ),
+	.datab(\UART_RX_INST_l|state_r.CLEANUP~q ),
+	.datac(\UART_RX_INST_l|Selector16~3_combout ),
 	.datad(\UART_RX_INST_l|LessThan1~3_combout ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
+	.combout(\UART_RX_INST_l|Selector15~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[0]~1 .lut_mask = 16'hEF0F;
-defparam \UART_RX_INST_l|Clock_Count_r[0]~1 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector15~0 .lut_mask = 16'h0103;
+defparam \UART_RX_INST_l|Selector15~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X59_Y46_N30
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~22 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~22_combout  = (\UART_RX_INST_l|Add0~0_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout )
-
-	.dataa(\UART_RX_INST_l|Add0~0_combout ),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~22_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~22 .lut_mask = 16'h00AA;
-defparam \UART_RX_INST_l|Add0~22 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X59_Y46_N31
-dffeas \UART_RX_INST_l|Clock_Count_r[0] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Add0~22_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [0]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[0] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[0] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N12
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~2 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~2_combout  = (\UART_RX_INST_l|Clock_Count_r [1] & (!\UART_RX_INST_l|Add0~1 )) # (!\UART_RX_INST_l|Clock_Count_r [1] & ((\UART_RX_INST_l|Add0~1 ) # (GND)))
-// \UART_RX_INST_l|Add0~3  = CARRY((!\UART_RX_INST_l|Add0~1 ) # (!\UART_RX_INST_l|Clock_Count_r [1]))
-
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Clock_Count_r [1]),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~1 ),
-	.combout(\UART_RX_INST_l|Add0~2_combout ),
-	.cout(\UART_RX_INST_l|Add0~3 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~2 .lut_mask = 16'h3C3F;
-defparam \UART_RX_INST_l|Add0~2 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X59_Y46_N28
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~23 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~23_combout  = (\UART_RX_INST_l|Add0~2_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|Add0~2_combout ),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~23_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~23 .lut_mask = 16'h00F0;
-defparam \UART_RX_INST_l|Add0~23 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X59_Y46_N29
-dffeas \UART_RX_INST_l|Clock_Count_r[1] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Add0~23_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [1]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[1] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[1] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X59_Y46_N22
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~24 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~24_combout  = (\UART_RX_INST_l|Add0~4_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout )
-
-	.dataa(\UART_RX_INST_l|Add0~4_combout ),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~24_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~24 .lut_mask = 16'h00AA;
-defparam \UART_RX_INST_l|Add0~24 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X59_Y46_N23
-dffeas \UART_RX_INST_l|Clock_Count_r[2] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Add0~24_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [2]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[2] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[2] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X59_Y46_N16
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~5 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~5_combout  = (!\UART_RX_INST_l|Clock_Count_r [2] & (!\UART_RX_INST_l|Clock_Count_r [1] & (!\UART_RX_INST_l|Clock_Count_r [0] & \UART_RX_INST_l|Clock_Count_r [3])))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [2]),
-	.datab(\UART_RX_INST_l|Clock_Count_r [1]),
-	.datac(\UART_RX_INST_l|Clock_Count_r [0]),
-	.datad(\UART_RX_INST_l|Clock_Count_r [3]),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~5_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~5 .lut_mask = 16'h0100;
-defparam \UART_RX_INST_l|Selector14~5 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X59_Y46_N18
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[0]~2 (
-// Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[0]~2_combout  = (\RX_Serial~input_o  & (\UART_RX_INST_l|Selector14~5_combout  & (\UART_RX_INST_l|Selector14~7_combout  & \UART_RX_INST_l|Selector14~6_combout )))
-
-	.dataa(\RX_Serial~input_o ),
-	.datab(\UART_RX_INST_l|Selector14~5_combout ),
-	.datac(\UART_RX_INST_l|Selector14~7_combout ),
-	.datad(\UART_RX_INST_l|Selector14~6_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[0]~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[0]~2 .lut_mask = 16'h8000;
-defparam \UART_RX_INST_l|Clock_Count_r[0]~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N22
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~12 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~12_combout  = (\UART_RX_INST_l|Clock_Count_r [6] & (\UART_RX_INST_l|Add0~11  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [6] & (!\UART_RX_INST_l|Add0~11  & VCC))
-// \UART_RX_INST_l|Add0~13  = CARRY((\UART_RX_INST_l|Clock_Count_r [6] & !\UART_RX_INST_l|Add0~11 ))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [6]),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~11 ),
-	.combout(\UART_RX_INST_l|Add0~12_combout ),
-	.cout(\UART_RX_INST_l|Add0~13 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~12 .lut_mask = 16'hA50A;
-defparam \UART_RX_INST_l|Add0~12 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N4
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[6]~4 (
-// Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[6]~4_combout  = (\UART_RX_INST_l|Clock_Count_r[0]~2_combout ) # ((\UART_RX_INST_l|Add0~12_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout ))
-
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|Clock_Count_r[0]~2_combout ),
-	.datac(\UART_RX_INST_l|Add0~12_combout ),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[6]~4_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[6]~4 .lut_mask = 16'hCCFC;
-defparam \UART_RX_INST_l|Clock_Count_r[6]~4 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X58_Y46_N5
-dffeas \UART_RX_INST_l|Clock_Count_r[6] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Clock_Count_r[6]~4_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [6]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[6] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[6] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N24
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~14 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~14_combout  = (\UART_RX_INST_l|Clock_Count_r [7] & (!\UART_RX_INST_l|Add0~13 )) # (!\UART_RX_INST_l|Clock_Count_r [7] & ((\UART_RX_INST_l|Add0~13 ) # (GND)))
-// \UART_RX_INST_l|Add0~15  = CARRY((!\UART_RX_INST_l|Add0~13 ) # (!\UART_RX_INST_l|Clock_Count_r [7]))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [7]),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~13 ),
-	.combout(\UART_RX_INST_l|Add0~14_combout ),
-	.cout(\UART_RX_INST_l|Add0~15 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~14 .lut_mask = 16'h5A5F;
-defparam \UART_RX_INST_l|Add0~14 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N30
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[7]~5 (
-// Equation(s):
-// \UART_RX_INST_l|Clock_Count_r[7]~5_combout  = (\UART_RX_INST_l|Clock_Count_r[0]~2_combout ) # ((\UART_RX_INST_l|Add0~14_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout ))
-
-	.dataa(\UART_RX_INST_l|Add0~14_combout ),
-	.datab(\UART_RX_INST_l|Clock_Count_r[0]~2_combout ),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Clock_Count_r[7]~5_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[7]~5 .lut_mask = 16'hCCEE;
-defparam \UART_RX_INST_l|Clock_Count_r[7]~5 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X58_Y46_N31
-dffeas \UART_RX_INST_l|Clock_Count_r[7] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Clock_Count_r[7]~5_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [7]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[7] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[7] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N26
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~16 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~16_combout  = (\UART_RX_INST_l|Clock_Count_r [8] & (\UART_RX_INST_l|Add0~15  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [8] & (!\UART_RX_INST_l|Add0~15  & VCC))
-// \UART_RX_INST_l|Add0~17  = CARRY((\UART_RX_INST_l|Clock_Count_r [8] & !\UART_RX_INST_l|Add0~15 ))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [8]),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\UART_RX_INST_l|Add0~15 ),
-	.combout(\UART_RX_INST_l|Add0~16_combout ),
-	.cout(\UART_RX_INST_l|Add0~17 ));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~16 .lut_mask = 16'hA50A;
-defparam \UART_RX_INST_l|Add0~16 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N24
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~25 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~25_combout  = (\UART_RX_INST_l|Add0~16_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|Add0~16_combout ),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~25_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~25 .lut_mask = 16'h00F0;
-defparam \UART_RX_INST_l|Add0~25 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X62_Y46_N25
-dffeas \UART_RX_INST_l|Clock_Count_r[8] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Add0~25_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [8]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[8] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[8] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X58_Y46_N28
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~18 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~18_combout  = \UART_RX_INST_l|Add0~17  $ (\UART_RX_INST_l|Clock_Count_r [9])
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(\UART_RX_INST_l|Clock_Count_r [9]),
-	.cin(\UART_RX_INST_l|Add0~17 ),
-	.combout(\UART_RX_INST_l|Add0~18_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~18 .lut_mask = 16'h0FF0;
-defparam \UART_RX_INST_l|Add0~18 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N26
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Add0~20 (
-// Equation(s):
-// \UART_RX_INST_l|Add0~20_combout  = (\UART_RX_INST_l|Add0~18_combout  & !\UART_RX_INST_l|Clock_Count_r[0]~1_combout )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|Add0~18_combout ),
-	.datad(\UART_RX_INST_l|Clock_Count_r[0]~1_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Add0~20_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Add0~20 .lut_mask = 16'h00F0;
-defparam \UART_RX_INST_l|Add0~20 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X62_Y46_N27
-dffeas \UART_RX_INST_l|Clock_Count_r[9] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Add0~20_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Clock_Count_r [9]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Clock_Count_r[9] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Clock_Count_r[9] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X61_Y46_N16
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~2 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~2_combout  = (\UART_RX_INST_l|state_r.STOP_BIT~q  & ((\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout )))
-
-	.dataa(\UART_RX_INST_l|Clock_Count_r [9]),
-	.datab(\UART_RX_INST_l|state_r.STOP_BIT~q ),
-	.datac(\UART_RX_INST_l|LessThan1~2_combout ),
-	.datad(gnd),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~2 .lut_mask = 16'h8C8C;
-defparam \UART_RX_INST_l|Selector14~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X62_Y46_N8
+// Location: LCCOMB_X62_Y47_N20
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector17~0 (
 // Equation(s):
-// \UART_RX_INST_l|Selector17~0_combout  = (!\UART_RX_INST_l|Selector14~2_combout  & ((\UART_RX_INST_l|Selector15~3_combout  & ((\UART_RX_INST_l|state_r.STOP_BIT~q ))) # (!\UART_RX_INST_l|Selector15~3_combout  & (\UART_RX_INST_l|Selector14~10_combout ))))
+// \UART_RX_INST_l|Selector17~0_combout  = (\UART_RX_INST_l|state_r.STOP_BIT~q  & (!\UART_RX_INST_l|Selector15~1_combout  & (!\UART_RX_INST_l|Decoder0~8_combout  & \UART_RX_INST_l|Selector15~0_combout )))
 
-	.dataa(\UART_RX_INST_l|Selector14~2_combout ),
-	.datab(\UART_RX_INST_l|Selector14~10_combout ),
-	.datac(\UART_RX_INST_l|state_r.STOP_BIT~q ),
-	.datad(\UART_RX_INST_l|Selector15~3_combout ),
+	.dataa(\UART_RX_INST_l|state_r.STOP_BIT~q ),
+	.datab(\UART_RX_INST_l|Selector15~1_combout ),
+	.datac(\UART_RX_INST_l|Decoder0~8_combout ),
+	.datad(\UART_RX_INST_l|Selector15~0_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Selector17~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector17~0 .lut_mask = 16'h5044;
+defparam \UART_RX_INST_l|Selector17~0 .lut_mask = 16'h0200;
 defparam \UART_RX_INST_l|Selector17~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X62_Y46_N9
+// Location: LCCOMB_X62_Y47_N12
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector17~1 (
+// Equation(s):
+// \UART_RX_INST_l|Selector17~1_combout  = (\UART_RX_INST_l|Selector17~0_combout ) # ((!\UART_RX_INST_l|state_r.CLEANUP~q  & \UART_RX_INST_l|Decoder0~8_combout ))
+
+	.dataa(\UART_RX_INST_l|state_r.CLEANUP~q ),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|Decoder0~8_combout ),
+	.datad(\UART_RX_INST_l|Selector17~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector17~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector17~1 .lut_mask = 16'hFF50;
+defparam \UART_RX_INST_l|Selector17~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X62_Y47_N13
 dffeas \UART_RX_INST_l|state_r.STOP_BIT (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Selector17~0_combout ),
+	.d(\UART_RX_INST_l|Selector17~1_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -1508,62 +914,44 @@ defparam \UART_RX_INST_l|state_r.STOP_BIT .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|state_r.STOP_BIT .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N8
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector0~0 (
+// Location: LCCOMB_X62_Y47_N14
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~0 (
 // Equation(s):
-// \UART_RX_INST_l|Selector0~0_combout  = (!\UART_RX_INST_l|state_r.STOP_BIT~q  & !\UART_RX_INST_l|state_r.START_BIT~q )
+// \UART_RX_INST_l|Selector14~0_combout  = (\UART_RX_INST_l|state_r.STOP_BIT~q  & (!\RX_Serial~input_o  & ((\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout ))))
 
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|state_r.STOP_BIT~q ),
-	.datad(\UART_RX_INST_l|state_r.START_BIT~q ),
+	.dataa(\UART_RX_INST_l|state_r.STOP_BIT~q ),
+	.datab(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datac(\UART_RX_INST_l|LessThan1~2_combout ),
+	.datad(\RX_Serial~input_o ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector0~0_combout ),
+	.combout(\UART_RX_INST_l|Selector14~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector0~0 .lut_mask = 16'h000F;
-defparam \UART_RX_INST_l|Selector0~0 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector14~0 .lut_mask = 16'h008A;
+defparam \UART_RX_INST_l|Selector14~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N10
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector13~0 (
+// Location: LCCOMB_X62_Y47_N10
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~1 (
 // Equation(s):
-// \UART_RX_INST_l|Selector13~0_combout  = (\UART_RX_INST_l|LessThan1~2_combout  & !\UART_RX_INST_l|Clock_Count_r [9])
+// \UART_RX_INST_l|Selector14~1_combout  = (!\UART_RX_INST_l|Selector14~0_combout  & (\UART_RX_INST_l|Clock_Count_r[0]~31_combout  & ((\UART_RX_INST_l|state_r.IDLE~q ) # (!\RX_Serial~input_o ))))
 
-	.dataa(gnd),
-	.datab(\UART_RX_INST_l|LessThan1~2_combout ),
-	.datac(\UART_RX_INST_l|Clock_Count_r [9]),
-	.datad(gnd),
+	.dataa(\RX_Serial~input_o ),
+	.datab(\UART_RX_INST_l|Selector14~0_combout ),
+	.datac(\UART_RX_INST_l|state_r.IDLE~q ),
+	.datad(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector13~0_combout ),
+	.combout(\UART_RX_INST_l|Selector14~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector13~0 .lut_mask = 16'h0C0C;
-defparam \UART_RX_INST_l|Selector13~0 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector14~1 .lut_mask = 16'h3100;
+defparam \UART_RX_INST_l|Selector14~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N18
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector13~1 (
-// Equation(s):
-// \UART_RX_INST_l|Selector13~1_combout  = (\UART_RX_INST_l|Bit_Index_r [0] & (((\UART_RX_INST_l|state_r.DATA_BITS~q  & \UART_RX_INST_l|Selector13~0_combout )) # (!\UART_RX_INST_l|Selector0~0_combout ))) # (!\UART_RX_INST_l|Bit_Index_r [0] & 
-// (\UART_RX_INST_l|state_r.DATA_BITS~q  & ((!\UART_RX_INST_l|Selector13~0_combout ))))
-
-	.dataa(\UART_RX_INST_l|state_r.DATA_BITS~q ),
-	.datab(\UART_RX_INST_l|Selector0~0_combout ),
-	.datac(\UART_RX_INST_l|Bit_Index_r [0]),
-	.datad(\UART_RX_INST_l|Selector13~0_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector13~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector13~1 .lut_mask = 16'hB03A;
-defparam \UART_RX_INST_l|Selector13~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X61_Y46_N19
-dffeas \UART_RX_INST_l|Bit_Index_r[0] (
+// Location: FF_X62_Y47_N11
+dffeas \UART_RX_INST_l|state_r.IDLE (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Selector13~1_combout ),
+	.d(\UART_RX_INST_l|Selector14~1_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -1572,52 +960,376 @@ dffeas \UART_RX_INST_l|Bit_Index_r[0] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\UART_RX_INST_l|Bit_Index_r [0]),
+	.q(\UART_RX_INST_l|state_r.IDLE~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \UART_RX_INST_l|Bit_Index_r[0] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Bit_Index_r[0] .power_up = "low";
+defparam \UART_RX_INST_l|state_r.IDLE .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|state_r.IDLE .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N30
+// Location: LCCOMB_X63_Y47_N8
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector0~0 (
+// Equation(s):
+// \UART_RX_INST_l|Selector0~0_combout  = (!\UART_RX_INST_l|state_r.DATA_BITS~q  & !\UART_RX_INST_l|state_r.STOP_BIT~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.datad(\UART_RX_INST_l|state_r.STOP_BIT~q ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector0~0 .lut_mask = 16'h000F;
+defparam \UART_RX_INST_l|Selector0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N0
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[0]~30 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[0]~30_combout  = ((\UART_RX_INST_l|Selector16~3_combout ) # ((!\UART_RX_INST_l|Selector0~0_combout  & \UART_RX_INST_l|LessThan1~3_combout ))) # (!\UART_RX_INST_l|state_r.IDLE~q )
+
+	.dataa(\UART_RX_INST_l|state_r.IDLE~q ),
+	.datab(\UART_RX_INST_l|Selector16~3_combout ),
+	.datac(\UART_RX_INST_l|Selector0~0_combout ),
+	.datad(\UART_RX_INST_l|LessThan1~3_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[0]~30 .lut_mask = 16'hDFDD;
+defparam \UART_RX_INST_l|Clock_Count_r[0]~30 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N11
+dffeas \UART_RX_INST_l|Clock_Count_r[0] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[0]~10_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[0] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N12
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[1]~12 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[1]~12_combout  = (\UART_RX_INST_l|Clock_Count_r [1] & (!\UART_RX_INST_l|Clock_Count_r[0]~11 )) # (!\UART_RX_INST_l|Clock_Count_r [1] & ((\UART_RX_INST_l|Clock_Count_r[0]~11 ) # (GND)))
+// \UART_RX_INST_l|Clock_Count_r[1]~13  = CARRY((!\UART_RX_INST_l|Clock_Count_r[0]~11 ) # (!\UART_RX_INST_l|Clock_Count_r [1]))
+
+	.dataa(gnd),
+	.datab(\UART_RX_INST_l|Clock_Count_r [1]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[0]~11 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[1]~12_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[1]~13 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[1]~12 .lut_mask = 16'h3C3F;
+defparam \UART_RX_INST_l|Clock_Count_r[1]~12 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N13
+dffeas \UART_RX_INST_l|Clock_Count_r[1] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[1]~12_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[1] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N14
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[2]~14 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[2]~14_combout  = (\UART_RX_INST_l|Clock_Count_r [2] & (\UART_RX_INST_l|Clock_Count_r[1]~13  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [2] & (!\UART_RX_INST_l|Clock_Count_r[1]~13  & VCC))
+// \UART_RX_INST_l|Clock_Count_r[2]~15  = CARRY((\UART_RX_INST_l|Clock_Count_r [2] & !\UART_RX_INST_l|Clock_Count_r[1]~13 ))
+
+	.dataa(gnd),
+	.datab(\UART_RX_INST_l|Clock_Count_r [2]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[1]~13 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[2]~14_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[2]~15 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[2]~14 .lut_mask = 16'hC30C;
+defparam \UART_RX_INST_l|Clock_Count_r[2]~14 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N15
+dffeas \UART_RX_INST_l|Clock_Count_r[2] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[2]~14_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[2] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N16
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[3]~16 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[3]~16_combout  = (\UART_RX_INST_l|Clock_Count_r [3] & (!\UART_RX_INST_l|Clock_Count_r[2]~15 )) # (!\UART_RX_INST_l|Clock_Count_r [3] & ((\UART_RX_INST_l|Clock_Count_r[2]~15 ) # (GND)))
+// \UART_RX_INST_l|Clock_Count_r[3]~17  = CARRY((!\UART_RX_INST_l|Clock_Count_r[2]~15 ) # (!\UART_RX_INST_l|Clock_Count_r [3]))
+
+	.dataa(gnd),
+	.datab(\UART_RX_INST_l|Clock_Count_r [3]),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[2]~15 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[3]~16_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[3]~17 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[3]~16 .lut_mask = 16'h3C3F;
+defparam \UART_RX_INST_l|Clock_Count_r[3]~16 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N17
+dffeas \UART_RX_INST_l|Clock_Count_r[3] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[3]~16_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[3] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N18
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[4]~18 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[4]~18_combout  = (\UART_RX_INST_l|Clock_Count_r [4] & (\UART_RX_INST_l|Clock_Count_r[3]~17  $ (GND))) # (!\UART_RX_INST_l|Clock_Count_r [4] & (!\UART_RX_INST_l|Clock_Count_r[3]~17  & VCC))
+// \UART_RX_INST_l|Clock_Count_r[4]~19  = CARRY((\UART_RX_INST_l|Clock_Count_r [4] & !\UART_RX_INST_l|Clock_Count_r[3]~17 ))
+
+	.dataa(\UART_RX_INST_l|Clock_Count_r [4]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[3]~17 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[4]~18_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[4]~19 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[4]~18 .lut_mask = 16'hA50A;
+defparam \UART_RX_INST_l|Clock_Count_r[4]~18 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N19
+dffeas \UART_RX_INST_l|Clock_Count_r[4] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[4]~18_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[4] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N20
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Clock_Count_r[5]~20 (
+// Equation(s):
+// \UART_RX_INST_l|Clock_Count_r[5]~20_combout  = (\UART_RX_INST_l|Clock_Count_r [5] & (!\UART_RX_INST_l|Clock_Count_r[4]~19 )) # (!\UART_RX_INST_l|Clock_Count_r [5] & ((\UART_RX_INST_l|Clock_Count_r[4]~19 ) # (GND)))
+// \UART_RX_INST_l|Clock_Count_r[5]~21  = CARRY((!\UART_RX_INST_l|Clock_Count_r[4]~19 ) # (!\UART_RX_INST_l|Clock_Count_r [5]))
+
+	.dataa(\UART_RX_INST_l|Clock_Count_r [5]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\UART_RX_INST_l|Clock_Count_r[4]~19 ),
+	.combout(\UART_RX_INST_l|Clock_Count_r[5]~20_combout ),
+	.cout(\UART_RX_INST_l|Clock_Count_r[5]~21 ));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[5]~20 .lut_mask = 16'h5A5F;
+defparam \UART_RX_INST_l|Clock_Count_r[5]~20 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N21
+dffeas \UART_RX_INST_l|Clock_Count_r[5] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[5]~20_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[5] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X63_Y47_N23
+dffeas \UART_RX_INST_l|Clock_Count_r[6] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Clock_Count_r[6]~22_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\UART_RX_INST_l|Clock_Count_r[0]~30_combout ),
+	.sload(gnd),
+	.ena(\UART_RX_INST_l|Clock_Count_r[0]~31_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Clock_Count_r [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Clock_Count_r[6] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Clock_Count_r[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y47_N6
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~1 (
+// Equation(s):
+// \UART_RX_INST_l|Selector16~1_combout  = (\UART_RX_INST_l|Clock_Count_r [6] & (\UART_RX_INST_l|Clock_Count_r [3] & (!\UART_RX_INST_l|Clock_Count_r [5] & \UART_RX_INST_l|Clock_Count_r [4])))
+
+	.dataa(\UART_RX_INST_l|Clock_Count_r [6]),
+	.datab(\UART_RX_INST_l|Clock_Count_r [3]),
+	.datac(\UART_RX_INST_l|Clock_Count_r [5]),
+	.datad(\UART_RX_INST_l|Clock_Count_r [4]),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector16~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector16~1 .lut_mask = 16'h0800;
+defparam \UART_RX_INST_l|Selector16~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N4
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~2 (
+// Equation(s):
+// \UART_RX_INST_l|Selector16~2_combout  = (!\UART_RX_INST_l|Clock_Count_r [9] & (!\UART_RX_INST_l|Clock_Count_r [8] & \UART_RX_INST_l|Clock_Count_r [7]))
+
+	.dataa(gnd),
+	.datab(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datac(\UART_RX_INST_l|Clock_Count_r [8]),
+	.datad(\UART_RX_INST_l|Clock_Count_r [7]),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector16~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector16~2 .lut_mask = 16'h0300;
+defparam \UART_RX_INST_l|Selector16~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N6
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~0 (
+// Equation(s):
+// \UART_RX_INST_l|Selector16~0_combout  = (\UART_RX_INST_l|state_r.START_BIT~q  & (!\UART_RX_INST_l|Clock_Count_r [1] & (!\UART_RX_INST_l|Clock_Count_r [0] & !\UART_RX_INST_l|Clock_Count_r [2])))
+
+	.dataa(\UART_RX_INST_l|state_r.START_BIT~q ),
+	.datab(\UART_RX_INST_l|Clock_Count_r [1]),
+	.datac(\UART_RX_INST_l|Clock_Count_r [0]),
+	.datad(\UART_RX_INST_l|Clock_Count_r [2]),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector16~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector16~0 .lut_mask = 16'h0002;
+defparam \UART_RX_INST_l|Selector16~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N30
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~3 (
+// Equation(s):
+// \UART_RX_INST_l|Selector16~3_combout  = (\UART_RX_INST_l|Selector16~1_combout  & (\UART_RX_INST_l|Selector16~2_combout  & \UART_RX_INST_l|Selector16~0_combout ))
+
+	.dataa(\UART_RX_INST_l|Selector16~1_combout ),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|Selector16~2_combout ),
+	.datad(\UART_RX_INST_l|Selector16~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector16~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector16~3 .lut_mask = 16'hA000;
+defparam \UART_RX_INST_l|Selector16~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N16
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~0 (
 // Equation(s):
 // \UART_RX_INST_l|Decoder0~0_combout  = (\UART_RX_INST_l|state_r.DATA_BITS~q  & ((\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout )))
 
-	.dataa(\UART_RX_INST_l|state_r.DATA_BITS~q ),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|LessThan1~2_combout ),
-	.datad(\UART_RX_INST_l|Clock_Count_r [9]),
+	.dataa(gnd),
+	.datab(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datac(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.datad(\UART_RX_INST_l|LessThan1~2_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Decoder0~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~0 .lut_mask = 16'hAA0A;
+defparam \UART_RX_INST_l|Decoder0~0 .lut_mask = 16'hC0F0;
 defparam \UART_RX_INST_l|Decoder0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N0
+// Location: LCCOMB_X61_Y47_N18
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector12~0 (
 // Equation(s):
-// \UART_RX_INST_l|Selector12~0_combout  = (\UART_RX_INST_l|state_r.START_BIT~q ) # ((\UART_RX_INST_l|state_r.STOP_BIT~q ) # ((\UART_RX_INST_l|state_r.DATA_BITS~q  & !\UART_RX_INST_l|LessThan1~3_combout )))
+// \UART_RX_INST_l|Selector12~0_combout  = (\UART_RX_INST_l|Bit_Index_r [1] & ((\UART_RX_INST_l|state_r.DATA_BITS~q  & ((!\UART_RX_INST_l|LessThan1~3_combout ))) # (!\UART_RX_INST_l|state_r.DATA_BITS~q  & (\UART_RX_INST_l|state_r.IDLE~q ))))
 
-	.dataa(\UART_RX_INST_l|state_r.START_BIT~q ),
-	.datab(\UART_RX_INST_l|state_r.STOP_BIT~q ),
-	.datac(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.dataa(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.datab(\UART_RX_INST_l|state_r.IDLE~q ),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
 	.datad(\UART_RX_INST_l|LessThan1~3_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Selector12~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector12~0 .lut_mask = 16'hEEFE;
+defparam \UART_RX_INST_l|Selector12~0 .lut_mask = 16'h40E0;
 defparam \UART_RX_INST_l|Selector12~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N24
+// Location: LCCOMB_X61_Y47_N14
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector12~1 (
 // Equation(s):
-// \UART_RX_INST_l|Selector12~1_combout  = (\UART_RX_INST_l|Bit_Index_r [1] & ((\UART_RX_INST_l|Selector12~0_combout ) # ((!\UART_RX_INST_l|Bit_Index_r [0] & \UART_RX_INST_l|Decoder0~0_combout )))) # (!\UART_RX_INST_l|Bit_Index_r [1] & 
-// (\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Decoder0~0_combout )))
+// \UART_RX_INST_l|Selector12~1_combout  = (\UART_RX_INST_l|Selector12~0_combout ) # ((\UART_RX_INST_l|Decoder0~0_combout  & (\UART_RX_INST_l|Bit_Index_r [0] $ (\UART_RX_INST_l|Bit_Index_r [1]))))
 
 	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
 	.datab(\UART_RX_INST_l|Decoder0~0_combout ),
@@ -1627,11 +1339,11 @@ fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector12~1 (
 	.combout(\UART_RX_INST_l|Selector12~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector12~1 .lut_mask = 16'hF848;
+defparam \UART_RX_INST_l|Selector12~1 .lut_mask = 16'hFF48;
 defparam \UART_RX_INST_l|Selector12~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X61_Y46_N25
+// Location: FF_X61_Y47_N15
 dffeas \UART_RX_INST_l|Bit_Index_r[1] (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|Selector12~1_combout ),
@@ -1650,132 +1362,45 @@ defparam \UART_RX_INST_l|Bit_Index_r[1] .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|Bit_Index_r[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N14
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector11~4 (
+// Location: LCCOMB_X64_Y47_N0
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~4 (
 // Equation(s):
-// \UART_RX_INST_l|Selector11~4_combout  = (\UART_RX_INST_l|state_r.DATA_BITS~q  & (((\UART_RX_INST_l|LessThan1~2_combout  & !\UART_RX_INST_l|Clock_Count_r [9])) # (!\UART_RX_INST_l|Bit_Index_r [0])))
+// \UART_RX_INST_l|Selector16~4_combout  = (\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|LessThan1~3_combout  & \UART_RX_INST_l|Bit_Index_r [2])))
 
-	.dataa(\UART_RX_INST_l|state_r.DATA_BITS~q ),
-	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
-	.datac(\UART_RX_INST_l|LessThan1~2_combout ),
-	.datad(\UART_RX_INST_l|Clock_Count_r [9]),
+	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datac(\UART_RX_INST_l|LessThan1~3_combout ),
+	.datad(\UART_RX_INST_l|Bit_Index_r [2]),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector11~4_combout ),
+	.combout(\UART_RX_INST_l|Selector16~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector11~4 .lut_mask = 16'h22A2;
-defparam \UART_RX_INST_l|Selector11~4 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector16~4 .lut_mask = 16'h8000;
+defparam \UART_RX_INST_l|Selector16~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N2
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector11~2 (
+// Location: LCCOMB_X64_Y47_N12
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~5 (
 // Equation(s):
-// \UART_RX_INST_l|Selector11~2_combout  = (\UART_RX_INST_l|state_r.START_BIT~q ) # ((\UART_RX_INST_l|state_r.STOP_BIT~q ) # (\UART_RX_INST_l|Selector11~4_combout ))
+// \UART_RX_INST_l|Selector16~5_combout  = (\RX_Serial~input_o  & (((\UART_RX_INST_l|state_r.DATA_BITS~q  & !\UART_RX_INST_l|Selector16~4_combout )))) # (!\RX_Serial~input_o  & ((\UART_RX_INST_l|Selector16~3_combout ) # ((\UART_RX_INST_l|state_r.DATA_BITS~q  
+// & !\UART_RX_INST_l|Selector16~4_combout ))))
 
-	.dataa(\UART_RX_INST_l|state_r.START_BIT~q ),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|state_r.STOP_BIT~q ),
-	.datad(\UART_RX_INST_l|Selector11~4_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector11~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector11~2 .lut_mask = 16'hFFFA;
-defparam \UART_RX_INST_l|Selector11~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X61_Y46_N22
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector11~3 (
-// Equation(s):
-// \UART_RX_INST_l|Selector11~3_combout  = (\UART_RX_INST_l|Bit_Index_r [2] & ((\UART_RX_INST_l|Selector11~2_combout ) # ((!\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Selector14~3_combout )))) # (!\UART_RX_INST_l|Bit_Index_r [2] & 
-// (\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Selector14~3_combout )))
-
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Selector14~3_combout ),
-	.datac(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datad(\UART_RX_INST_l|Selector11~2_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector11~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector11~3 .lut_mask = 16'hF848;
-defparam \UART_RX_INST_l|Selector11~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X61_Y46_N23
-dffeas \UART_RX_INST_l|Bit_Index_r[2] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Selector11~3_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|Bit_Index_r [2]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|Bit_Index_r[2] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|Bit_Index_r[2] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X61_Y46_N6
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector14~4 (
-// Equation(s):
-// \UART_RX_INST_l|Selector14~4_combout  = (\UART_RX_INST_l|Bit_Index_r [2] & \UART_RX_INST_l|Bit_Index_r [1])
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datad(\UART_RX_INST_l|Bit_Index_r [1]),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector14~4_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector14~4 .lut_mask = 16'hF000;
-defparam \UART_RX_INST_l|Selector14~4 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X61_Y46_N12
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~0 (
-// Equation(s):
-// \UART_RX_INST_l|Selector16~0_combout  = (\UART_RX_INST_l|Selector14~8_combout  & (!\RX_Serial~input_o )) # (!\UART_RX_INST_l|Selector14~8_combout  & ((\UART_RX_INST_l|state_r.DATA_BITS~q )))
-
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(\UART_RX_INST_l|Selector16~3_combout ),
 	.datac(\UART_RX_INST_l|state_r.DATA_BITS~q ),
-	.datad(\UART_RX_INST_l|Selector14~8_combout ),
+	.datad(\UART_RX_INST_l|Selector16~4_combout ),
 	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector16~0_combout ),
+	.combout(\UART_RX_INST_l|Selector16~5_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Selector16~0 .lut_mask = 16'h33F0;
-defparam \UART_RX_INST_l|Selector16~0 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Selector16~5 .lut_mask = 16'h44F4;
+defparam \UART_RX_INST_l|Selector16~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N30
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector16~1 (
-// Equation(s):
-// \UART_RX_INST_l|Selector16~1_combout  = (!\UART_RX_INST_l|Selector14~2_combout  & (\UART_RX_INST_l|Selector16~0_combout  & ((!\UART_RX_INST_l|Selector14~3_combout ) # (!\UART_RX_INST_l|Selector14~4_combout ))))
-
-	.dataa(\UART_RX_INST_l|Selector14~4_combout ),
-	.datab(\UART_RX_INST_l|Selector14~2_combout ),
-	.datac(\UART_RX_INST_l|Selector14~3_combout ),
-	.datad(\UART_RX_INST_l|Selector16~0_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Selector16~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Selector16~1 .lut_mask = 16'h1300;
-defparam \UART_RX_INST_l|Selector16~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X61_Y46_N31
+// Location: FF_X64_Y47_N13
 dffeas \UART_RX_INST_l|state_r.DATA_BITS (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|Selector16~1_combout ),
+	.d(\UART_RX_INST_l|Selector16~5_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -1791,15 +1416,192 @@ defparam \UART_RX_INST_l|state_r.DATA_BITS .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|state_r.DATA_BITS .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N28
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector0~1 (
+// Location: LCCOMB_X64_Y47_N18
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector13~0 (
 // Equation(s):
-// \UART_RX_INST_l|Selector0~1_combout  = (\UART_RX_INST_l|Selector14~2_combout ) # ((\UART_RX_INST_l|RX_DV_r~q  & ((\UART_RX_INST_l|state_r.DATA_BITS~q ) # (!\UART_RX_INST_l|Selector0~0_combout ))))
+// \UART_RX_INST_l|Selector13~0_combout  = (\UART_RX_INST_l|Bit_Index_r [0] & ((\UART_RX_INST_l|state_r.IDLE~q ) # (\UART_RX_INST_l|state_r.DATA_BITS~q )))
+
+	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|state_r.IDLE~q ),
+	.datad(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector13~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector13~0 .lut_mask = 16'hAAA0;
+defparam \UART_RX_INST_l|Selector13~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X64_Y47_N6
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector13~1 (
+// Equation(s):
+// \UART_RX_INST_l|Selector13~1_combout  = \UART_RX_INST_l|Selector13~0_combout  $ (((\UART_RX_INST_l|state_r.DATA_BITS~q  & ((\UART_RX_INST_l|Clock_Count_r [9]) # (!\UART_RX_INST_l|LessThan1~2_combout )))))
 
 	.dataa(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.datab(\UART_RX_INST_l|Clock_Count_r [9]),
+	.datac(\UART_RX_INST_l|LessThan1~2_combout ),
+	.datad(\UART_RX_INST_l|Selector13~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector13~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector13~1 .lut_mask = 16'h758A;
+defparam \UART_RX_INST_l|Selector13~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X64_Y47_N7
+dffeas \UART_RX_INST_l|Bit_Index_r[0] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Selector13~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Bit_Index_r [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Bit_Index_r[0] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Bit_Index_r[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X64_Y47_N10
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector11~1 (
+// Equation(s):
+// \UART_RX_INST_l|Selector11~1_combout  = (\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Bit_Index_r [1] $ (\UART_RX_INST_l|Bit_Index_r [2])))
+
+	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Bit_Index_r [2]),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector11~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector11~1 .lut_mask = 16'h0AA0;
+defparam \UART_RX_INST_l|Selector11~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X64_Y47_N28
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector11~0 (
+// Equation(s):
+// \UART_RX_INST_l|Selector11~0_combout  = (\UART_RX_INST_l|state_r.DATA_BITS~q  & (((!\UART_RX_INST_l|LessThan1~3_combout )) # (!\UART_RX_INST_l|Bit_Index_r [0]))) # (!\UART_RX_INST_l|state_r.DATA_BITS~q  & (((\UART_RX_INST_l|state_r.IDLE~q ))))
+
+	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datab(\UART_RX_INST_l|state_r.DATA_BITS~q ),
+	.datac(\UART_RX_INST_l|LessThan1~3_combout ),
+	.datad(\UART_RX_INST_l|state_r.IDLE~q ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector11~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector11~0 .lut_mask = 16'h7F4C;
+defparam \UART_RX_INST_l|Selector11~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X64_Y47_N16
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector11~2 (
+// Equation(s):
+// \UART_RX_INST_l|Selector11~2_combout  = (\UART_RX_INST_l|Selector11~1_combout  & ((\UART_RX_INST_l|Decoder0~0_combout ) # ((\UART_RX_INST_l|Bit_Index_r [2] & \UART_RX_INST_l|Selector11~0_combout )))) # (!\UART_RX_INST_l|Selector11~1_combout  & 
+// (((\UART_RX_INST_l|Bit_Index_r [2] & \UART_RX_INST_l|Selector11~0_combout ))))
+
+	.dataa(\UART_RX_INST_l|Selector11~1_combout ),
+	.datab(\UART_RX_INST_l|Decoder0~0_combout ),
+	.datac(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datad(\UART_RX_INST_l|Selector11~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector11~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector11~2 .lut_mask = 16'hF888;
+defparam \UART_RX_INST_l|Selector11~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X64_Y47_N17
+dffeas \UART_RX_INST_l|Bit_Index_r[2] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Selector11~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|Bit_Index_r [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|Bit_Index_r[2] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|Bit_Index_r[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N22
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~8 (
+// Equation(s):
+// \UART_RX_INST_l|Decoder0~8_combout  = (\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Bit_Index_r [0] & \UART_RX_INST_l|Decoder0~0_combout )))
+
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Decoder0~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Decoder0~8 .lut_mask = 16'h8000;
+defparam \UART_RX_INST_l|Decoder0~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N26
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector15~2 (
+// Equation(s):
+// \UART_RX_INST_l|Selector15~2_combout  = (!\UART_RX_INST_l|Decoder0~8_combout  & (\UART_RX_INST_l|Selector15~0_combout  & ((\UART_RX_INST_l|Selector15~1_combout ) # (\UART_RX_INST_l|state_r.START_BIT~q ))))
+
+	.dataa(\UART_RX_INST_l|Decoder0~8_combout ),
+	.datab(\UART_RX_INST_l|Selector15~1_combout ),
+	.datac(\UART_RX_INST_l|state_r.START_BIT~q ),
+	.datad(\UART_RX_INST_l|Selector15~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Selector15~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Selector15~2 .lut_mask = 16'h5400;
+defparam \UART_RX_INST_l|Selector15~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X62_Y47_N27
+dffeas \UART_RX_INST_l|state_r.START_BIT (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|Selector15~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|state_r.START_BIT~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|state_r.START_BIT .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|state_r.START_BIT .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X62_Y47_N8
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Selector0~1 (
+// Equation(s):
+// \UART_RX_INST_l|Selector0~1_combout  = (\UART_RX_INST_l|Selector18~0_combout ) # ((\UART_RX_INST_l|RX_DV_r~q  & ((\UART_RX_INST_l|state_r.START_BIT~q ) # (!\UART_RX_INST_l|Selector0~0_combout ))))
+
+	.dataa(\UART_RX_INST_l|state_r.START_BIT~q ),
 	.datab(\UART_RX_INST_l|Selector0~0_combout ),
 	.datac(\UART_RX_INST_l|RX_DV_r~q ),
-	.datad(\UART_RX_INST_l|Selector14~2_combout ),
+	.datad(\UART_RX_INST_l|Selector18~0_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Selector0~1_combout ),
 	.cout());
@@ -1808,7 +1610,7 @@ defparam \UART_RX_INST_l|Selector0~1 .lut_mask = 16'hFFB0;
 defparam \UART_RX_INST_l|Selector0~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X61_Y46_N29
+// Location: FF_X62_Y47_N9
 dffeas \UART_RX_INST_l|RX_DV_r (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|Selector0~1_combout ),
@@ -1827,147 +1629,41 @@ defparam \UART_RX_INST_l|RX_DV_r .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|RX_DV_r .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N18
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~2 (
-// Equation(s):
-// \UART_RX_INST_l|Decoder0~2_combout  = (!\UART_RX_INST_l|Bit_Index_r [1] & (!\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & \UART_RX_INST_l|Bit_Index_r [0])))
-
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Decoder0~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~2 .lut_mask = 16'h1000;
-defparam \UART_RX_INST_l|Decoder0~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X60_Y46_N26
-fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[1]~1 (
-// Equation(s):
-// \UART_RX_INST_l|RX_Byte_r[1]~1_combout  = (\UART_RX_INST_l|Decoder0~2_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~2_combout  & ((\UART_RX_INST_l|RX_Byte_r [1])))
-
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
-	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datad(\UART_RX_INST_l|Decoder0~2_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|RX_Byte_r[1]~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[1]~1 .lut_mask = 16'hCCF0;
-defparam \UART_RX_INST_l|RX_Byte_r[1]~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X60_Y46_N27
-dffeas \UART_RX_INST_l|RX_Byte_r[1] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|RX_Byte_r[1]~1_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|RX_Byte_r [1]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[1] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|RX_Byte_r[1] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X60_Y46_N20
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~3 (
-// Equation(s):
-// \UART_RX_INST_l|Decoder0~3_combout  = (\UART_RX_INST_l|Bit_Index_r [1] & (!\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & !\UART_RX_INST_l|Bit_Index_r [0])))
-
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Decoder0~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~3 .lut_mask = 16'h0020;
-defparam \UART_RX_INST_l|Decoder0~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X60_Y46_N8
-fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[2]~2 (
-// Equation(s):
-// \UART_RX_INST_l|RX_Byte_r[2]~2_combout  = (\UART_RX_INST_l|Decoder0~3_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~3_combout  & ((\UART_RX_INST_l|RX_Byte_r [2])))
-
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
-	.datac(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datad(\UART_RX_INST_l|Decoder0~3_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|RX_Byte_r[2]~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[2]~2 .lut_mask = 16'hCCF0;
-defparam \UART_RX_INST_l|RX_Byte_r[2]~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X60_Y46_N9
-dffeas \UART_RX_INST_l|RX_Byte_r[2] (
-	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|RX_Byte_r[2]~2_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\UART_RX_INST_l|RX_Byte_r [2]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[2] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|RX_Byte_r[2] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X60_Y46_N10
+// Location: LCCOMB_X61_Y47_N10
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~4 (
 // Equation(s):
-// \UART_RX_INST_l|Decoder0~4_combout  = (\UART_RX_INST_l|Bit_Index_r [1] & (!\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & \UART_RX_INST_l|Bit_Index_r [0])))
+// \UART_RX_INST_l|Decoder0~4_combout  = (!\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
 
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Decoder0~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~4 .lut_mask = 16'h2000;
+defparam \UART_RX_INST_l|Decoder0~4 .lut_mask = 16'h4000;
 defparam \UART_RX_INST_l|Decoder0~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N22
+// Location: LCCOMB_X61_Y47_N30
 fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[3]~3 (
 // Equation(s):
 // \UART_RX_INST_l|RX_Byte_r[3]~3_combout  = (\UART_RX_INST_l|Decoder0~4_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~4_combout  & ((\UART_RX_INST_l|RX_Byte_r [3])))
 
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
 	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
 	.datad(\UART_RX_INST_l|Decoder0~4_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|RX_Byte_r[3]~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[3]~3 .lut_mask = 16'hCCF0;
+defparam \UART_RX_INST_l|RX_Byte_r[3]~3 .lut_mask = 16'hAAF0;
 defparam \UART_RX_INST_l|RX_Byte_r[3]~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X60_Y46_N23
+// Location: FF_X61_Y47_N31
 dffeas \UART_RX_INST_l|RX_Byte_r[3] (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|RX_Byte_r[3]~3_combout ),
@@ -1986,41 +1682,41 @@ defparam \UART_RX_INST_l|RX_Byte_r[3] .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|RX_Byte_r[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N28
+// Location: LCCOMB_X61_Y47_N16
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~1 (
 // Equation(s):
-// \UART_RX_INST_l|Decoder0~1_combout  = (!\UART_RX_INST_l|Bit_Index_r [1] & (!\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & !\UART_RX_INST_l|Bit_Index_r [0])))
+// \UART_RX_INST_l|Decoder0~1_combout  = (!\UART_RX_INST_l|Bit_Index_r [2] & (!\UART_RX_INST_l|Bit_Index_r [0] & (!\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
 
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Decoder0~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~1 .lut_mask = 16'h0010;
+defparam \UART_RX_INST_l|Decoder0~1 .lut_mask = 16'h0100;
 defparam \UART_RX_INST_l|Decoder0~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N16
+// Location: LCCOMB_X61_Y47_N4
 fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[0]~0 (
 // Equation(s):
 // \UART_RX_INST_l|RX_Byte_r[0]~0_combout  = (\UART_RX_INST_l|Decoder0~1_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~1_combout  & ((\UART_RX_INST_l|RX_Byte_r [0])))
 
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
 	.datac(\UART_RX_INST_l|RX_Byte_r [0]),
 	.datad(\UART_RX_INST_l|Decoder0~1_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|RX_Byte_r[0]~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[0]~0 .lut_mask = 16'hCCF0;
+defparam \UART_RX_INST_l|RX_Byte_r[0]~0 .lut_mask = 16'hAAF0;
 defparam \UART_RX_INST_l|RX_Byte_r[0]~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X60_Y46_N17
+// Location: FF_X61_Y47_N5
 dffeas \UART_RX_INST_l|RX_Byte_r[0] (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|RX_Byte_r[0]~0_combout ),
@@ -2039,170 +1735,44 @@ defparam \UART_RX_INST_l|RX_Byte_r[0] .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|RX_Byte_r[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X63_Y53_N12
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr6~0 (
+// Location: LCCOMB_X61_Y47_N2
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~2 (
 // Equation(s):
-// \SevenSeg1_l|WideOr6~0_combout  = (\UART_RX_INST_l|RX_Byte_r [2] & (!\UART_RX_INST_l|RX_Byte_r [1] & (\UART_RX_INST_l|RX_Byte_r [3] $ (!\UART_RX_INST_l|RX_Byte_r [0])))) # (!\UART_RX_INST_l|RX_Byte_r [2] & (\UART_RX_INST_l|RX_Byte_r [0] & 
-// (\UART_RX_INST_l|RX_Byte_r [1] $ (!\UART_RX_INST_l|RX_Byte_r [3]))))
+// \UART_RX_INST_l|Decoder0~2_combout  = (!\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Bit_Index_r [0] & (!\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
 	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr6~0_combout ),
+	.combout(\UART_RX_INST_l|Decoder0~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg1_l|WideOr6~0 .lut_mask = 16'h6104;
-defparam \SevenSeg1_l|WideOr6~0 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|Decoder0~2 .lut_mask = 16'h0400;
+defparam \UART_RX_INST_l|Decoder0~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X63_Y53_N10
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr5~0 (
+// Location: LCCOMB_X61_Y47_N22
+fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[1]~1 (
 // Equation(s):
-// \SevenSeg1_l|WideOr5~0_combout  = (\UART_RX_INST_l|RX_Byte_r [1] & ((\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [3]))) # (!\UART_RX_INST_l|RX_Byte_r [0] & (\UART_RX_INST_l|RX_Byte_r [2])))) # (!\UART_RX_INST_l|RX_Byte_r [1] & 
-// (\UART_RX_INST_l|RX_Byte_r [2] & (\UART_RX_INST_l|RX_Byte_r [3] $ (\UART_RX_INST_l|RX_Byte_r [0]))))
+// \UART_RX_INST_l|RX_Byte_r[1]~1_combout  = (\UART_RX_INST_l|Decoder0~2_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~2_combout  & ((\UART_RX_INST_l|RX_Byte_r [1])))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~2_combout ),
 	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr5~0_combout ),
+	.combout(\UART_RX_INST_l|RX_Byte_r[1]~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg1_l|WideOr5~0 .lut_mask = 16'hA4C8;
-defparam \SevenSeg1_l|WideOr5~0 .sum_lutc_input = "datac";
+defparam \UART_RX_INST_l|RX_Byte_r[1]~1 .lut_mask = 16'hAAF0;
+defparam \UART_RX_INST_l|RX_Byte_r[1]~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X63_Y53_N4
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr4~0 (
-// Equation(s):
-// \SevenSeg1_l|WideOr4~0_combout  = (\UART_RX_INST_l|RX_Byte_r [2] & (\UART_RX_INST_l|RX_Byte_r [3] & ((\UART_RX_INST_l|RX_Byte_r [1]) # (!\UART_RX_INST_l|RX_Byte_r [0])))) # (!\UART_RX_INST_l|RX_Byte_r [2] & (\UART_RX_INST_l|RX_Byte_r [1] & 
-// (!\UART_RX_INST_l|RX_Byte_r [3] & !\UART_RX_INST_l|RX_Byte_r [0])))
-
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
-	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr4~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \SevenSeg1_l|WideOr4~0 .lut_mask = 16'h80C2;
-defparam \SevenSeg1_l|WideOr4~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X63_Y53_N22
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr3~0 (
-// Equation(s):
-// \SevenSeg1_l|WideOr3~0_combout  = (\UART_RX_INST_l|RX_Byte_r [1] & ((\UART_RX_INST_l|RX_Byte_r [2] & ((\UART_RX_INST_l|RX_Byte_r [0]))) # (!\UART_RX_INST_l|RX_Byte_r [2] & (\UART_RX_INST_l|RX_Byte_r [3] & !\UART_RX_INST_l|RX_Byte_r [0])))) # 
-// (!\UART_RX_INST_l|RX_Byte_r [1] & (!\UART_RX_INST_l|RX_Byte_r [3] & (\UART_RX_INST_l|RX_Byte_r [2] $ (\UART_RX_INST_l|RX_Byte_r [0]))))
-
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
-	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr3~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \SevenSeg1_l|WideOr3~0 .lut_mask = 16'h8924;
-defparam \SevenSeg1_l|WideOr3~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X63_Y53_N28
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr2~0 (
-// Equation(s):
-// \SevenSeg1_l|WideOr2~0_combout  = (\UART_RX_INST_l|RX_Byte_r [1] & (((!\UART_RX_INST_l|RX_Byte_r [3] & \UART_RX_INST_l|RX_Byte_r [0])))) # (!\UART_RX_INST_l|RX_Byte_r [1] & ((\UART_RX_INST_l|RX_Byte_r [2] & (!\UART_RX_INST_l|RX_Byte_r [3])) # 
-// (!\UART_RX_INST_l|RX_Byte_r [2] & ((\UART_RX_INST_l|RX_Byte_r [0])))))
-
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
-	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr2~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \SevenSeg1_l|WideOr2~0 .lut_mask = 16'h1F04;
-defparam \SevenSeg1_l|WideOr2~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X63_Y53_N2
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr1~0 (
-// Equation(s):
-// \SevenSeg1_l|WideOr1~0_combout  = (\UART_RX_INST_l|RX_Byte_r [1] & (!\UART_RX_INST_l|RX_Byte_r [3] & ((\UART_RX_INST_l|RX_Byte_r [0]) # (!\UART_RX_INST_l|RX_Byte_r [2])))) # (!\UART_RX_INST_l|RX_Byte_r [1] & (\UART_RX_INST_l|RX_Byte_r [0] & 
-// (\UART_RX_INST_l|RX_Byte_r [2] $ (!\UART_RX_INST_l|RX_Byte_r [3]))))
-
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
-	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr1~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \SevenSeg1_l|WideOr1~0 .lut_mask = 16'h4B02;
-defparam \SevenSeg1_l|WideOr1~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X63_Y53_N24
-fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr0~0 (
-// Equation(s):
-// \SevenSeg1_l|WideOr0~0_combout  = (\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [3]) # (\UART_RX_INST_l|RX_Byte_r [1] $ (\UART_RX_INST_l|RX_Byte_r [2])))) # (!\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [1]) # 
-// (\UART_RX_INST_l|RX_Byte_r [2] $ (\UART_RX_INST_l|RX_Byte_r [3]))))
-
-	.dataa(\UART_RX_INST_l|RX_Byte_r [1]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [2]),
-	.datac(\UART_RX_INST_l|RX_Byte_r [3]),
-	.datad(\UART_RX_INST_l|RX_Byte_r [0]),
-	.cin(gnd),
-	.combout(\SevenSeg1_l|WideOr0~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \SevenSeg1_l|WideOr0~0 .lut_mask = 16'hF6BE;
-defparam \SevenSeg1_l|WideOr0~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X60_Y46_N24
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~7 (
-// Equation(s):
-// \UART_RX_INST_l|Decoder0~7_combout  = (\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & !\UART_RX_INST_l|Bit_Index_r [0])))
-
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Decoder0~7_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~7 .lut_mask = 16'h0080;
-defparam \UART_RX_INST_l|Decoder0~7 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X60_Y46_N12
-fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[6]~6 (
-// Equation(s):
-// \UART_RX_INST_l|RX_Byte_r[6]~6_combout  = (\UART_RX_INST_l|Decoder0~7_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~7_combout  & ((\UART_RX_INST_l|RX_Byte_r [6])))
-
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
-	.datac(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datad(\UART_RX_INST_l|Decoder0~7_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|RX_Byte_r[6]~6_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[6]~6 .lut_mask = 16'hCCF0;
-defparam \UART_RX_INST_l|RX_Byte_r[6]~6 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X60_Y46_N13
-dffeas \UART_RX_INST_l|RX_Byte_r[6] (
+// Location: FF_X61_Y47_N23
+dffeas \UART_RX_INST_l|RX_Byte_r[1] (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\UART_RX_INST_l|RX_Byte_r[6]~6_combout ),
+	.d(\UART_RX_INST_l|RX_Byte_r[1]~1_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -2211,48 +1781,227 @@ dffeas \UART_RX_INST_l|RX_Byte_r[6] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\UART_RX_INST_l|RX_Byte_r [6]),
+	.q(\UART_RX_INST_l|RX_Byte_r [1]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[6] .is_wysiwyg = "true";
-defparam \UART_RX_INST_l|RX_Byte_r[6] .power_up = "low";
+defparam \UART_RX_INST_l|RX_Byte_r[1] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|RX_Byte_r[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N0
+// Location: LCCOMB_X61_Y47_N24
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~3 (
+// Equation(s):
+// \UART_RX_INST_l|Decoder0~3_combout  = (!\UART_RX_INST_l|Bit_Index_r [2] & (!\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
+
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Decoder0~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Decoder0~3 .lut_mask = 16'h1000;
+defparam \UART_RX_INST_l|Decoder0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X61_Y47_N12
+fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[2]~2 (
+// Equation(s):
+// \UART_RX_INST_l|RX_Byte_r[2]~2_combout  = (\UART_RX_INST_l|Decoder0~3_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~3_combout  & ((\UART_RX_INST_l|RX_Byte_r [2])))
+
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|RX_Byte_r [2]),
+	.datad(\UART_RX_INST_l|Decoder0~3_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|RX_Byte_r[2]~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|RX_Byte_r[2]~2 .lut_mask = 16'hAAF0;
+defparam \UART_RX_INST_l|RX_Byte_r[2]~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X61_Y47_N13
+dffeas \UART_RX_INST_l|RX_Byte_r[2] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|RX_Byte_r[2]~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|RX_Byte_r [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|RX_Byte_r[2] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|RX_Byte_r[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N4
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr6~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr6~0_combout  = (\UART_RX_INST_l|RX_Byte_r [3] & (\UART_RX_INST_l|RX_Byte_r [0] & (\UART_RX_INST_l|RX_Byte_r [1] $ (\UART_RX_INST_l|RX_Byte_r [2])))) # (!\UART_RX_INST_l|RX_Byte_r [3] & (!\UART_RX_INST_l|RX_Byte_r [1] & 
+// (\UART_RX_INST_l|RX_Byte_r [0] $ (\UART_RX_INST_l|RX_Byte_r [2]))))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr6~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr6~0 .lut_mask = 16'h0984;
+defparam \SevenSeg1_l|WideOr6~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N10
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr5~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr5~0_combout  = (\UART_RX_INST_l|RX_Byte_r [3] & ((\UART_RX_INST_l|RX_Byte_r [0] & (\UART_RX_INST_l|RX_Byte_r [1])) # (!\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [2]))))) # (!\UART_RX_INST_l|RX_Byte_r [3] & 
+// (\UART_RX_INST_l|RX_Byte_r [2] & (\UART_RX_INST_l|RX_Byte_r [0] $ (\UART_RX_INST_l|RX_Byte_r [1]))))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr5~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr5~0 .lut_mask = 16'hB680;
+defparam \SevenSeg1_l|WideOr5~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N12
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr4~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr4~0_combout  = (\UART_RX_INST_l|RX_Byte_r [3] & (\UART_RX_INST_l|RX_Byte_r [2] & ((\UART_RX_INST_l|RX_Byte_r [1]) # (!\UART_RX_INST_l|RX_Byte_r [0])))) # (!\UART_RX_INST_l|RX_Byte_r [3] & (!\UART_RX_INST_l|RX_Byte_r [0] & 
+// (\UART_RX_INST_l|RX_Byte_r [1] & !\UART_RX_INST_l|RX_Byte_r [2])))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr4~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr4~0 .lut_mask = 16'hA210;
+defparam \SevenSeg1_l|WideOr4~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N22
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr3~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr3~0_combout  = (\UART_RX_INST_l|RX_Byte_r [1] & ((\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [2]))) # (!\UART_RX_INST_l|RX_Byte_r [0] & (\UART_RX_INST_l|RX_Byte_r [3] & !\UART_RX_INST_l|RX_Byte_r [2])))) # 
+// (!\UART_RX_INST_l|RX_Byte_r [1] & (!\UART_RX_INST_l|RX_Byte_r [3] & (\UART_RX_INST_l|RX_Byte_r [0] $ (\UART_RX_INST_l|RX_Byte_r [2]))))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr3~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr3~0 .lut_mask = 16'hC124;
+defparam \SevenSeg1_l|WideOr3~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N28
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr2~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr2~0_combout  = (\UART_RX_INST_l|RX_Byte_r [1] & (!\UART_RX_INST_l|RX_Byte_r [3] & (\UART_RX_INST_l|RX_Byte_r [0]))) # (!\UART_RX_INST_l|RX_Byte_r [1] & ((\UART_RX_INST_l|RX_Byte_r [2] & (!\UART_RX_INST_l|RX_Byte_r [3])) # 
+// (!\UART_RX_INST_l|RX_Byte_r [2] & ((\UART_RX_INST_l|RX_Byte_r [0])))))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr2~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr2~0 .lut_mask = 16'h454C;
+defparam \SevenSeg1_l|WideOr2~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N2
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr1~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr1~0_combout  = (\UART_RX_INST_l|RX_Byte_r [0] & (\UART_RX_INST_l|RX_Byte_r [3] $ (((\UART_RX_INST_l|RX_Byte_r [1]) # (!\UART_RX_INST_l|RX_Byte_r [2]))))) # (!\UART_RX_INST_l|RX_Byte_r [0] & (!\UART_RX_INST_l|RX_Byte_r [3] & 
+// (\UART_RX_INST_l|RX_Byte_r [1] & !\UART_RX_INST_l|RX_Byte_r [2])))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr1~0 .lut_mask = 16'h4854;
+defparam \SevenSeg1_l|WideOr1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X63_Y53_N24
+fiftyfivenm_lcell_comb \SevenSeg1_l|WideOr0~0 (
+// Equation(s):
+// \SevenSeg1_l|WideOr0~0_combout  = (\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [3]) # (\UART_RX_INST_l|RX_Byte_r [1] $ (\UART_RX_INST_l|RX_Byte_r [2])))) # (!\UART_RX_INST_l|RX_Byte_r [0] & ((\UART_RX_INST_l|RX_Byte_r [1]) # 
+// (\UART_RX_INST_l|RX_Byte_r [3] $ (\UART_RX_INST_l|RX_Byte_r [2]))))
+
+	.dataa(\UART_RX_INST_l|RX_Byte_r [3]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [0]),
+	.datac(\UART_RX_INST_l|RX_Byte_r [1]),
+	.datad(\UART_RX_INST_l|RX_Byte_r [2]),
+	.cin(gnd),
+	.combout(\SevenSeg1_l|WideOr0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SevenSeg1_l|WideOr0~0 .lut_mask = 16'hBDFA;
+defparam \SevenSeg1_l|WideOr0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X61_Y47_N20
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~5 (
 // Equation(s):
-// \UART_RX_INST_l|Decoder0~5_combout  = (!\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & !\UART_RX_INST_l|Bit_Index_r [0])))
+// \UART_RX_INST_l|Decoder0~5_combout  = (\UART_RX_INST_l|Bit_Index_r [2] & (!\UART_RX_INST_l|Bit_Index_r [0] & (!\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
 
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Decoder0~5_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~5 .lut_mask = 16'h0040;
+defparam \UART_RX_INST_l|Decoder0~5 .lut_mask = 16'h0200;
 defparam \UART_RX_INST_l|Decoder0~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N4
+// Location: LCCOMB_X61_Y47_N0
 fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[4]~4 (
 // Equation(s):
 // \UART_RX_INST_l|RX_Byte_r[4]~4_combout  = (\UART_RX_INST_l|Decoder0~5_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~5_combout  & ((\UART_RX_INST_l|RX_Byte_r [4])))
 
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
 	.datac(\UART_RX_INST_l|RX_Byte_r [4]),
 	.datad(\UART_RX_INST_l|Decoder0~5_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|RX_Byte_r[4]~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[4]~4 .lut_mask = 16'hCCF0;
+defparam \UART_RX_INST_l|RX_Byte_r[4]~4 .lut_mask = 16'hAAF0;
 defparam \UART_RX_INST_l|RX_Byte_r[4]~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X60_Y46_N5
+// Location: FF_X61_Y47_N1
 dffeas \UART_RX_INST_l|RX_Byte_r[4] (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|RX_Byte_r[4]~4_combout ),
@@ -2271,41 +2020,94 @@ defparam \UART_RX_INST_l|RX_Byte_r[4] .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|RX_Byte_r[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N6
+// Location: LCCOMB_X61_Y47_N28
+fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~7 (
+// Equation(s):
+// \UART_RX_INST_l|Decoder0~7_combout  = (\UART_RX_INST_l|Bit_Index_r [2] & (!\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
+
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|Decoder0~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|Decoder0~7 .lut_mask = 16'h2000;
+defparam \UART_RX_INST_l|Decoder0~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X61_Y47_N8
+fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[6]~6 (
+// Equation(s):
+// \UART_RX_INST_l|RX_Byte_r[6]~6_combout  = (\UART_RX_INST_l|Decoder0~7_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~7_combout  & ((\UART_RX_INST_l|RX_Byte_r [6])))
+
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
+	.datac(\UART_RX_INST_l|RX_Byte_r [6]),
+	.datad(\UART_RX_INST_l|Decoder0~7_combout ),
+	.cin(gnd),
+	.combout(\UART_RX_INST_l|RX_Byte_r[6]~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \UART_RX_INST_l|RX_Byte_r[6]~6 .lut_mask = 16'hAAF0;
+defparam \UART_RX_INST_l|RX_Byte_r[6]~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X61_Y47_N9
+dffeas \UART_RX_INST_l|RX_Byte_r[6] (
+	.clk(\clk~inputclkctrl_outclk ),
+	.d(\UART_RX_INST_l|RX_Byte_r[6]~6_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\UART_RX_INST_l|RX_Byte_r [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \UART_RX_INST_l|RX_Byte_r[6] .is_wysiwyg = "true";
+defparam \UART_RX_INST_l|RX_Byte_r[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X61_Y47_N6
 fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~6 (
 // Equation(s):
-// \UART_RX_INST_l|Decoder0~6_combout  = (!\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Decoder0~0_combout  & \UART_RX_INST_l|Bit_Index_r [0])))
+// \UART_RX_INST_l|Decoder0~6_combout  = (\UART_RX_INST_l|Bit_Index_r [2] & (\UART_RX_INST_l|Bit_Index_r [0] & (!\UART_RX_INST_l|Bit_Index_r [1] & \UART_RX_INST_l|Decoder0~0_combout )))
 
-	.dataa(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datac(\UART_RX_INST_l|Decoder0~0_combout ),
-	.datad(\UART_RX_INST_l|Bit_Index_r [0]),
+	.dataa(\UART_RX_INST_l|Bit_Index_r [2]),
+	.datab(\UART_RX_INST_l|Bit_Index_r [0]),
+	.datac(\UART_RX_INST_l|Bit_Index_r [1]),
+	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|Decoder0~6_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~6 .lut_mask = 16'h4000;
+defparam \UART_RX_INST_l|Decoder0~6 .lut_mask = 16'h0800;
 defparam \UART_RX_INST_l|Decoder0~6 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X60_Y46_N2
+// Location: LCCOMB_X61_Y47_N26
 fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[5]~5 (
 // Equation(s):
 // \UART_RX_INST_l|RX_Byte_r[5]~5_combout  = (\UART_RX_INST_l|Decoder0~6_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~6_combout  & ((\UART_RX_INST_l|RX_Byte_r [5])))
 
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|Decoder0~6_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|RX_Byte_r[5]~5_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[5]~5 .lut_mask = 16'hCCF0;
+defparam \UART_RX_INST_l|RX_Byte_r[5]~5 .lut_mask = 16'hAAF0;
 defparam \UART_RX_INST_l|RX_Byte_r[5]~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X60_Y46_N3
+// Location: FF_X61_Y47_N27
 dffeas \UART_RX_INST_l|RX_Byte_r[5] (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|RX_Byte_r[5]~5_combout ),
@@ -2324,41 +2126,24 @@ defparam \UART_RX_INST_l|RX_Byte_r[5] .is_wysiwyg = "true";
 defparam \UART_RX_INST_l|RX_Byte_r[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X61_Y46_N20
-fiftyfivenm_lcell_comb \UART_RX_INST_l|Decoder0~8 (
-// Equation(s):
-// \UART_RX_INST_l|Decoder0~8_combout  = (\UART_RX_INST_l|Bit_Index_r [0] & (\UART_RX_INST_l|Bit_Index_r [1] & (\UART_RX_INST_l|Bit_Index_r [2] & \UART_RX_INST_l|Decoder0~0_combout )))
-
-	.dataa(\UART_RX_INST_l|Bit_Index_r [0]),
-	.datab(\UART_RX_INST_l|Bit_Index_r [1]),
-	.datac(\UART_RX_INST_l|Bit_Index_r [2]),
-	.datad(\UART_RX_INST_l|Decoder0~0_combout ),
-	.cin(gnd),
-	.combout(\UART_RX_INST_l|Decoder0~8_combout ),
-	.cout());
-// synopsys translate_off
-defparam \UART_RX_INST_l|Decoder0~8 .lut_mask = 16'h8000;
-defparam \UART_RX_INST_l|Decoder0~8 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X61_Y46_N26
+// Location: LCCOMB_X62_Y47_N18
 fiftyfivenm_lcell_comb \UART_RX_INST_l|RX_Byte_r[7]~7 (
 // Equation(s):
 // \UART_RX_INST_l|RX_Byte_r[7]~7_combout  = (\UART_RX_INST_l|Decoder0~8_combout  & (\RX_Serial~input_o )) # (!\UART_RX_INST_l|Decoder0~8_combout  & ((\UART_RX_INST_l|RX_Byte_r [7])))
 
-	.dataa(gnd),
-	.datab(\RX_Serial~input_o ),
+	.dataa(\RX_Serial~input_o ),
+	.datab(gnd),
 	.datac(\UART_RX_INST_l|RX_Byte_r [7]),
 	.datad(\UART_RX_INST_l|Decoder0~8_combout ),
 	.cin(gnd),
 	.combout(\UART_RX_INST_l|RX_Byte_r[7]~7_combout ),
 	.cout());
 // synopsys translate_off
-defparam \UART_RX_INST_l|RX_Byte_r[7]~7 .lut_mask = 16'hCCF0;
+defparam \UART_RX_INST_l|RX_Byte_r[7]~7 .lut_mask = 16'hAAF0;
 defparam \UART_RX_INST_l|RX_Byte_r[7]~7 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X61_Y46_N27
+// Location: FF_X62_Y47_N19
 dffeas \UART_RX_INST_l|RX_Byte_r[7] (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\UART_RX_INST_l|RX_Byte_r[7]~7_combout ),
@@ -2383,15 +2168,15 @@ fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr6~0 (
 // \SevenSeg0_l|WideOr6~0_combout  = (\UART_RX_INST_l|RX_Byte_r [6] & (!\UART_RX_INST_l|RX_Byte_r [5] & (\UART_RX_INST_l|RX_Byte_r [4] $ (!\UART_RX_INST_l|RX_Byte_r [7])))) # (!\UART_RX_INST_l|RX_Byte_r [6] & (\UART_RX_INST_l|RX_Byte_r [4] & 
 // (\UART_RX_INST_l|RX_Byte_r [5] $ (!\UART_RX_INST_l|RX_Byte_r [7]))))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
 	.combout(\SevenSeg0_l|WideOr6~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg0_l|WideOr6~0 .lut_mask = 16'h4806;
+defparam \SevenSeg0_l|WideOr6~0 .lut_mask = 16'h2806;
 defparam \SevenSeg0_l|WideOr6~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -2401,15 +2186,15 @@ fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr5~0 (
 // \SevenSeg0_l|WideOr5~0_combout  = (\UART_RX_INST_l|RX_Byte_r [5] & ((\UART_RX_INST_l|RX_Byte_r [4] & ((\UART_RX_INST_l|RX_Byte_r [7]))) # (!\UART_RX_INST_l|RX_Byte_r [4] & (\UART_RX_INST_l|RX_Byte_r [6])))) # (!\UART_RX_INST_l|RX_Byte_r [5] & 
 // (\UART_RX_INST_l|RX_Byte_r [6] & (\UART_RX_INST_l|RX_Byte_r [4] $ (\UART_RX_INST_l|RX_Byte_r [7]))))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
 	.combout(\SevenSeg0_l|WideOr5~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg0_l|WideOr5~0 .lut_mask = 16'hE228;
+defparam \SevenSeg0_l|WideOr5~0 .lut_mask = 16'hE448;
 defparam \SevenSeg0_l|WideOr5~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -2419,26 +2204,26 @@ fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr4~0 (
 // \SevenSeg0_l|WideOr4~0_combout  = (\UART_RX_INST_l|RX_Byte_r [6] & (\UART_RX_INST_l|RX_Byte_r [7] & ((\UART_RX_INST_l|RX_Byte_r [5]) # (!\UART_RX_INST_l|RX_Byte_r [4])))) # (!\UART_RX_INST_l|RX_Byte_r [6] & (!\UART_RX_INST_l|RX_Byte_r [4] & 
 // (\UART_RX_INST_l|RX_Byte_r [5] & !\UART_RX_INST_l|RX_Byte_r [7])))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
 	.combout(\SevenSeg0_l|WideOr4~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg0_l|WideOr4~0 .lut_mask = 16'hA210;
+defparam \SevenSeg0_l|WideOr4~0 .lut_mask = 16'hC410;
 defparam \SevenSeg0_l|WideOr4~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X66_Y53_N22
 fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr3~0 (
 // Equation(s):
-// \SevenSeg0_l|WideOr3~0_combout  = (\UART_RX_INST_l|RX_Byte_r [5] & ((\UART_RX_INST_l|RX_Byte_r [6] & (\UART_RX_INST_l|RX_Byte_r [4])) # (!\UART_RX_INST_l|RX_Byte_r [6] & (!\UART_RX_INST_l|RX_Byte_r [4] & \UART_RX_INST_l|RX_Byte_r [7])))) # 
-// (!\UART_RX_INST_l|RX_Byte_r [5] & (!\UART_RX_INST_l|RX_Byte_r [7] & (\UART_RX_INST_l|RX_Byte_r [6] $ (\UART_RX_INST_l|RX_Byte_r [4]))))
+// \SevenSeg0_l|WideOr3~0_combout  = (\UART_RX_INST_l|RX_Byte_r [5] & ((\UART_RX_INST_l|RX_Byte_r [4] & (\UART_RX_INST_l|RX_Byte_r [6])) # (!\UART_RX_INST_l|RX_Byte_r [4] & (!\UART_RX_INST_l|RX_Byte_r [6] & \UART_RX_INST_l|RX_Byte_r [7])))) # 
+// (!\UART_RX_INST_l|RX_Byte_r [5] & (!\UART_RX_INST_l|RX_Byte_r [7] & (\UART_RX_INST_l|RX_Byte_r [4] $ (\UART_RX_INST_l|RX_Byte_r [6]))))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
@@ -2452,36 +2237,36 @@ defparam \SevenSeg0_l|WideOr3~0 .sum_lutc_input = "datac";
 // Location: LCCOMB_X66_Y53_N20
 fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr2~0 (
 // Equation(s):
-// \SevenSeg0_l|WideOr2~0_combout  = (\UART_RX_INST_l|RX_Byte_r [5] & (((\UART_RX_INST_l|RX_Byte_r [4] & !\UART_RX_INST_l|RX_Byte_r [7])))) # (!\UART_RX_INST_l|RX_Byte_r [5] & ((\UART_RX_INST_l|RX_Byte_r [6] & ((!\UART_RX_INST_l|RX_Byte_r [7]))) # 
+// \SevenSeg0_l|WideOr2~0_combout  = (\UART_RX_INST_l|RX_Byte_r [5] & (\UART_RX_INST_l|RX_Byte_r [4] & ((!\UART_RX_INST_l|RX_Byte_r [7])))) # (!\UART_RX_INST_l|RX_Byte_r [5] & ((\UART_RX_INST_l|RX_Byte_r [6] & ((!\UART_RX_INST_l|RX_Byte_r [7]))) # 
 // (!\UART_RX_INST_l|RX_Byte_r [6] & (\UART_RX_INST_l|RX_Byte_r [4]))))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
 	.combout(\SevenSeg0_l|WideOr2~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg0_l|WideOr2~0 .lut_mask = 16'h04CE;
+defparam \SevenSeg0_l|WideOr2~0 .lut_mask = 16'h02AE;
 defparam \SevenSeg0_l|WideOr2~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X66_Y53_N26
 fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr1~0 (
 // Equation(s):
-// \SevenSeg0_l|WideOr1~0_combout  = (\UART_RX_INST_l|RX_Byte_r [6] & (\UART_RX_INST_l|RX_Byte_r [4] & (\UART_RX_INST_l|RX_Byte_r [5] $ (\UART_RX_INST_l|RX_Byte_r [7])))) # (!\UART_RX_INST_l|RX_Byte_r [6] & (!\UART_RX_INST_l|RX_Byte_r [7] & 
-// ((\UART_RX_INST_l|RX_Byte_r [4]) # (\UART_RX_INST_l|RX_Byte_r [5]))))
+// \SevenSeg0_l|WideOr1~0_combout  = (\UART_RX_INST_l|RX_Byte_r [4] & (\UART_RX_INST_l|RX_Byte_r [7] $ (((\UART_RX_INST_l|RX_Byte_r [5]) # (!\UART_RX_INST_l|RX_Byte_r [6]))))) # (!\UART_RX_INST_l|RX_Byte_r [4] & (!\UART_RX_INST_l|RX_Byte_r [6] & 
+// (\UART_RX_INST_l|RX_Byte_r [5] & !\UART_RX_INST_l|RX_Byte_r [7])))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
 	.combout(\SevenSeg0_l|WideOr1~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg0_l|WideOr1~0 .lut_mask = 16'h08D4;
+defparam \SevenSeg0_l|WideOr1~0 .lut_mask = 16'h08B2;
 defparam \SevenSeg0_l|WideOr1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -2491,15 +2276,15 @@ fiftyfivenm_lcell_comb \SevenSeg0_l|WideOr0~0 (
 // \SevenSeg0_l|WideOr0~0_combout  = (\UART_RX_INST_l|RX_Byte_r [4] & ((\UART_RX_INST_l|RX_Byte_r [7]) # (\UART_RX_INST_l|RX_Byte_r [6] $ (\UART_RX_INST_l|RX_Byte_r [5])))) # (!\UART_RX_INST_l|RX_Byte_r [4] & ((\UART_RX_INST_l|RX_Byte_r [5]) # 
 // (\UART_RX_INST_l|RX_Byte_r [6] $ (\UART_RX_INST_l|RX_Byte_r [7]))))
 
-	.dataa(\UART_RX_INST_l|RX_Byte_r [6]),
-	.datab(\UART_RX_INST_l|RX_Byte_r [4]),
+	.dataa(\UART_RX_INST_l|RX_Byte_r [4]),
+	.datab(\UART_RX_INST_l|RX_Byte_r [6]),
 	.datac(\UART_RX_INST_l|RX_Byte_r [5]),
 	.datad(\UART_RX_INST_l|RX_Byte_r [7]),
 	.cin(gnd),
 	.combout(\SevenSeg0_l|WideOr0~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \SevenSeg0_l|WideOr0~0 .lut_mask = 16'hFD7A;
+defparam \SevenSeg0_l|WideOr0~0 .lut_mask = 16'hFB7C;
 defparam \SevenSeg0_l|WideOr0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 

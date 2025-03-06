@@ -1,3 +1,29 @@
-# Compile of UART_toplevel.sv was successful.
+# 0 compiles, 4 failed with no errors.
 # Compile of UART_Rx.sv was successful.
-# Compile of UART_toplevel.sv was successful.
+# Compile of UART_Rx_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.UART_Rx_tb
+# vsim -gui work.UART_Rx_tb 
+# Start time: 19:09:38 on Mar 05,2025
+# Loading sv_std.std
+# Loading work.UART_Rx_tb
+# Loading work.UART_Rx
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UART_RX_INST_l'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /UART_Rx_tb/UART_RX_INST_l File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv Line: 40
+# ** Warning: (vsim-3722) C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv(40): [TFMPC] - Missing connection for port 'rst'.
+add wave -position end  sim:/UART_Rx_tb/c_baudrate
+add wave -position end  sim:/UART_Rx_tb/c_BIT_PERIOD
+add wave -position end  sim:/UART_Rx_tb/c_CLOCK_PERIOD_NS
+add wave -position end  sim:/UART_Rx_tb/c_FPGA_clk_freq
+add wave -position end  sim:/UART_Rx_tb/Clock_r
+add wave -position end  sim:/UART_Rx_tb/RX_Byte
+add wave -position end  sim:/UART_Rx_tb/RX_DV
+add wave -position end  sim:/UART_Rx_tb/RX_Serial_r
+run -all
+# Test Passed - Correct Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv(60)
+#    Time: 86810 ns  Iteration: 1  Instance: /UART_Rx_tb
+# 1
+# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv line 60
+# End time: 19:10:23 on Mar 05,2025, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 8

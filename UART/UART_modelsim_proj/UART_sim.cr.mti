@@ -1,25 +1,11 @@
-C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv
+{C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module UART_Rx
 
 Top level modules:
 	UART_Rx
 
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module UART_toplevel
-
-Top level modules:
-	UART_toplevel
-
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module BCD_conv
-
-Top level modules:
-	BCD_conv
-
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv
+} {} {}} {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module UART_Rx_tb
 

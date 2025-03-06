@@ -37,52 +37,52 @@ Z6 tCvgOpt 0
 n@b@c@d_conv
 vUART_Rx
 R0
-!s110 1738784111
+Z7 !s110 1741219771
 !i10b 1
-!s100 zc04o[eN@g=A5L>^H<TW53
+!s100 RkL]T;^PXL>dE[`M[GQ013
 R1
-IcRY_8hB4`zMZUE]WOf6@=0
+IZ:4GN_E3LbOnPnIHi1=bo0
 R2
 S1
-R3
-w1738784073
-8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv
-FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv
-!i122 53
-L0 1 88
+Z8 dC:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_modelsim_proj
+w1741219713
+8C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv
+FC:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv
+!i122 55
+L0 1 114
 R4
 r1
 !s85 0
 31
-!s108 1738784111.000000
-!s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv|
+Z9 !s108 1741219771.000000
+!s107 C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv|
 !i113 1
 R5
 R6
 n@u@a@r@t_@rx
 vUART_Rx_tb
 R0
-!s110 1738783478
+R7
 !i10b 1
 !s100 bN4TJ=zVY;2L_WMICTPdY3
 R1
-IUb2Vc7Q4ClF7OMiL9DNcU1
+IFX2^b2AjMFCe[YghS4VVg3
 R2
 S1
-R3
-w1738783445
-8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv
-FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv
-!i122 49
+R8
+w1738856430
+8C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv
+FC:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv
+!i122 56
 L0 3 67
 R4
 r1
 !s85 0
 31
-!s108 1738783478.000000
-!s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv|
+R9
+!s107 C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv|
 !i113 1
 R5
 R6
