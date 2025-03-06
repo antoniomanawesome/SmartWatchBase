@@ -34,6 +34,22 @@ logic [2:0] Bit_Index_r = '0; //the index for where we are storing the data stre
 logic [7:0] RX_Byte_r = '0; //reg for o_RX_Byte
 logic       RX_DV_r = 1'b0; //reg for o_RX_DV
 
+//Creating a timeout counter to see if we can restart the FSMD if it gets stuck on a state
+logic [$clog2(CLKS_PER_BIT*12):0] timeout_counter = 0;
+logic timeout;
+always_ff @(posedge clk) begin
+    if (!rst_n || state_r == IDLE) begin
+        timeout_counter <= 0;
+        timeout <= 1'b0;
+    end else begin
+        if (timeout_counter < CLKS_PER_BIT*12)  // ~12 bit times
+            timeout_counter <= timeout_counter + 1;
+        else
+            timeout <= 1'b1;
+    end
+end
+
+//main FSMD block
 always_ff @(posedge clk) begin
     if(rst) begin
         state_r <= IDLE;
@@ -104,6 +120,13 @@ always_ff @(posedge clk) begin
 
             default: state_r <= IDLE;
         endcase
+
+        if (timeout) begin
+            Clock_Count_r <= 0;
+            Bit_Index_r <= 0;
+            RX_DV_r <= 1'b0;
+            state_r <= IDLE;
+        end
     end
 end
 
