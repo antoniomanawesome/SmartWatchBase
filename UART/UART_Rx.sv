@@ -38,7 +38,7 @@ logic       RX_DV_r = 1'b0; //reg for o_RX_DV
 logic [$clog2(CLKS_PER_BIT*12):0] timeout_counter = 0;
 logic timeout;
 always_ff @(posedge clk) begin
-    if (!rst_n || state_r == IDLE) begin
+    if (rst || state_r == IDLE) begin
         timeout_counter <= 0;
         timeout <= 1'b0;
     end else begin
