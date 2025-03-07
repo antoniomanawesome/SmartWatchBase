@@ -27,11 +27,11 @@
 #define SCREEN_HEIGHT 32 // OLED display height, in pixels
 
 // Declaration for SSD1306 display connected using software SPI (default case):
-#define OLED_MOSI   9
-#define OLED_CLK   10
-#define OLED_DC    11
-#define OLED_CS    12
-#define OLED_RESET 13
+#define OLED_MOSI   MOSI
+#define OLED_CLK   SCK
+#define OLED_DC    1
+#define OLED_CS    SS
+#define OLED_RESET 22
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT,
   OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
@@ -42,6 +42,22 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT,
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT,
   &SPI, OLED_DC, OLED_RESET, OLED_CS);
 */
+
+//function prototypes
+void testdrawline();
+void testdrawrect(void);
+void testfillrect(void);
+void testdrawcircle(void);
+void testfillcircle(void);
+void testdrawroundrect(void);
+void testfillroundrect(void);
+void testdrawtriangle(void);
+void testfilltriangle(void);
+void testdrawchar(void);
+void testdrawstyles(void);
+void testscrolltext(void);
+void testdrawbitmap(void);
+void testanimate(const uint8_t *bitmap, uint8_t w, uint8_t h);
 
 #define NUMFLAKES     10 // Number of snowflakes in the animation example
 
