@@ -62,7 +62,6 @@ void testdrawstyles(void) {
     //display.setTextSize(2);             // Draw 2X-scale text
     display.setTextColor(SSD1306_WHITE);
     display.println(F("Jonathan Gutmann"));
-    display.println(F("hates black people"));
   
     display.display();
     delay(2000);
