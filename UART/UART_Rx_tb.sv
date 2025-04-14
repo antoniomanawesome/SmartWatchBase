@@ -8,7 +8,7 @@ localparam int c_baudrate = 115200;
 parameter c_CLOCK_PERIOD_NS = 20; //1/(FPGA clk frequency) in nanoseconds
 parameter c_BIT_PERIOD = 8680; //1/baudrate
 
-logic Clock_r = 1'b0;
+logic clk = 1'b0;
 logic RX_Serial_r = 1'b1;
 logic RX_DV;
 logic [7:0] RX_Byte;
@@ -39,20 +39,20 @@ UART_Rx #(
     .FPGA_clk_freq(c_FPGA_clk_freq),
     .baudrate(c_baudrate)) UART_RX_INST_l
     (
-        .clk(Clock_r),
+        .clk(clk),
         .i_RX_Serial(RX_Serial_r),
         .o_RX_DV(RX_DV),
         .o_RX_Byte(RX_Byte)
     );
 
-always #(c_CLOCK_PERIOD_NS/2) Clock_r <= !Clock_r;
+always #(c_CLOCK_PERIOD_NS/2) clk <= !clk;
 
 //main test
 initial begin
     //Send command to UART
-    @(posedge Clock_r);
+    @(posedge clk);
     UART_WRITE_BYTE(8'h37);
-    @(posedge Clock_r);
+    @(posedge clk);
 
     //Check that correct command was received
     if(RX_Byte == 8'h37) $display("Test Passed - Correct Byte Received");

@@ -1,29 +1,71 @@
-# 0 compiles, 4 failed with no errors.
 # Compile of UART_Rx.sv was successful.
 # Compile of UART_Rx_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.UART_Rx_tb
-# vsim -gui work.UART_Rx_tb 
-# Start time: 19:09:38 on Mar 05,2025
+# Compile of UART_Tx.sv failed with 10 errors.
+# Compile of UART_Tx_tb.sv failed with 1 errors.
+# 4 compiles, 2 failed with 11 errors.
+# Compile of UART_Rx.sv was successful.
+# Compile of UART_Rx_tb.sv was successful.
+# Compile of UART_Tx.sv failed with 9 errors.
+# Compile of UART_Tx_tb.sv was successful.
+# 4 compiles, 1 failed with 9 errors.
+# Compile of UART_Tx.sv failed with 5 errors.
+# Compile of UART_Tx.sv failed with 4 errors.
+# Compile of UART_Tx.sv was successful.
+vsim -gui work.UART_Tx_tb
+# vsim -gui work.UART_Tx_tb 
+# Start time: 11:50:19 on Apr 14,2025
 # Loading sv_std.std
-# Loading work.UART_Rx_tb
+# Loading work.UART_Tx_tb
 # Loading work.UART_Rx
+# Loading work.UART_Tx
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UART_RX_INST_l'.  Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /UART_Rx_tb/UART_RX_INST_l File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv Line: 40
-# ** Warning: (vsim-3722) C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv(40): [TFMPC] - Missing connection for port 'rst'.
-add wave -position end  sim:/UART_Rx_tb/c_baudrate
-add wave -position end  sim:/UART_Rx_tb/c_BIT_PERIOD
-add wave -position end  sim:/UART_Rx_tb/c_CLOCK_PERIOD_NS
-add wave -position end  sim:/UART_Rx_tb/c_FPGA_clk_freq
-add wave -position end  sim:/UART_Rx_tb/Clock_r
-add wave -position end  sim:/UART_Rx_tb/RX_Byte
-add wave -position end  sim:/UART_Rx_tb/RX_DV
-add wave -position end  sim:/UART_Rx_tb/RX_Serial_r
+#    Time: 0 ps  Iteration: 0  Instance: /UART_Tx_tb/UART_RX_INST_l File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv Line: 17
+# ** Warning: (vsim-3722) C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv(17): [TFMPC] - Missing connection for port 'rst'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UART_TX_INST_l'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /UART_Tx_tb/UART_TX_INST_l File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv Line: 27
+# ** Warning: (vsim-3722) C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv(27): [TFMPC] - Missing connection for port 'rst'.
+add wave -position end  sim:/UART_Tx_tb/c_baudrate
+add wave -position end  sim:/UART_Tx_tb/c_BIT_PERIOD
+add wave -position end  sim:/UART_Tx_tb/c_CLOCK_PERIOD_NS
+add wave -position end  sim:/UART_Tx_tb/c_FPGA_clk_freq
+add wave -position end  sim:/UART_Tx_tb/clk
+add wave -position end  sim:/UART_Tx_tb/RX_Byte
+add wave -position end  sim:/UART_Tx_tb/RX_DV
+add wave -position end  sim:/UART_Tx_tb/TX_Active
+add wave -position end  sim:/UART_Tx_tb/TX_Byte
+add wave -position end  sim:/UART_Tx_tb/TX_DV
+add wave -position end  sim:/UART_Tx_tb/TX_Serial
+add wave -position end  sim:/UART_Tx_tb/UART_Line
 run -all
-# Test Passed - Correct Byte Received
-# ** Note: $finish    : C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv(60)
-#    Time: 86810 ns  Iteration: 1  Instance: /UART_Rx_tb
-# 1
-# Break in Module UART_Rx_tb at C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx_tb.sv line 60
-# End time: 19:10:23 on Mar 05,2025, Elapsed time: 0:00:45
-# Errors: 0, Warnings: 8
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 0 ps ###############
+#   Wakeup Event Array :  @ sub-iteration 0
+#     Member process: /UART_Tx_tb/#ALWAYS#39 @ sub-iteration 0
+#       Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:0
+#   Wakeup Event Array :  @ sub-iteration 1
+#     Member process: /UART_Tx_tb/#ALWAYS#39 @ sub-iteration 1
+#       Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:0
+#   Wakeup Event Array :  @ sub-iteration 2
+#     Member process: /UART_Tx_tb/#ALWAYS#39 @ sub-iteration 2
+#       Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:0
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ps.
+######## Additional Loop Analysis Started ##########
+##############  Autofindloop Step ##################
+#   Active process: /UART_Tx_tb/#IMPLICIT-WIRE(clk)#17
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:0
+#   Active process: /UART_Tx_tb/#IMPLICIT-WIRE(clk)#27
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:0
+#   Active process: /UART_Tx_tb/UART_RX_INST_l/#ALWAYS#40
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:17
+#   Active process: /UART_Tx_tb/UART_RX_INST_l/#ALWAYS#53
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:17
+#   Active process: /UART_Tx_tb/UART_TX_INST_l/#ALWAYS#33
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:27
+#   Active process: /UART_Tx_tb/#INITIAL#41
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:0
+#   Active process: /UART_Tx_tb/UART_TX_INST_l/#IMPLICIT-WIRE(o_TX_Serial)#10
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:27
+#   Active process: /UART_Tx_tb/#ASSIGN#37
+#     Source: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_tb.sv:37
+###################################################
