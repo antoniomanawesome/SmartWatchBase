@@ -24,7 +24,7 @@ typedef enum logic [2:0] {
 
 state_t state_r = IDLE;
 
-logic [7:0] Clock_Count_r = '0;
+logic [$clog2(CLKS_PER_BIT):0] Clock_Count_r = '0;
 logic [2:0] Bit_Index_r = '0;
 logic [7:0] TX_Data_r = '0;
 logic       TX_Active_r = 1'b0;
