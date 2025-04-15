@@ -4,7 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "RX_DV",
+					"name" : "Transmit_Done",
 					"strict" : false
 				},
 				{
@@ -64,43 +64,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[0]",
+					"name" : "TX_Byte[0]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[1]",
+					"name" : "TX_Byte[1]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[2]",
+					"name" : "TX_Byte[2]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[3]",
+					"name" : "TX_Byte[3]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[4]",
+					"name" : "TX_Byte[4]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[5]",
+					"name" : "TX_Byte[5]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[6]",
+					"name" : "TX_Byte[6]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Byte[7]",
+					"name" : "TX_Byte[7]",
 					"strict" : false
 				},
 				{
-					"name" : "RX_Serial",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DV",
 					"strict" : false
 				}
 			]

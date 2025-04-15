@@ -1,5 +1,5 @@
 
-State Machine - |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r
+State Machine - |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r
 Name state_r.XXX state_r.CLEANUP state_r.STOP_BIT state_r.DATA_BITS state_r.START_BIT state_r.IDLE 
 state_r.IDLE 0 0 0 0 0 0 
 state_r.START_BIT 0 0 0 0 1 1 

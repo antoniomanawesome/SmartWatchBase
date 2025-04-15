@@ -1,4 +1,4 @@
-module UART_toplevel (
+module UART_Rx_toplevel (
     input logic         clk,
     input logic         RX_Serial,
     output logic        RX_DV,
@@ -16,6 +16,7 @@ UART_Rx #(
     .CLKS_PER_BIT()) UART_RX_INST_l
     (
         .clk(clk),
+        .rst(1'b0),
         .i_RX_Serial(RX_Serial),
         .o_RX_DV(data_valid),
         .o_RX_Byte(RX_Byte)

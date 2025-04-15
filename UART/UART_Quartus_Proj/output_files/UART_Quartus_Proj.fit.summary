@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Mar 06 11:24:56 2025
+Fitter Status : Successful - Tue Apr 15 15:34:09 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : UART_Quartus_Proj
-Top-level Entity Name : UART_toplevel
+Top-level Entity Name : UART_Tx_toplevel
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 99 / 49,760 ( < 1 % )
-    Total combinational functions : 99 / 49,760 ( < 1 % )
-    Dedicated logic registers : 42 / 49,760 ( < 1 % )
-Total registers : 42
-Total pins : 25 / 360 ( 7 % )
+Total logic elements : 59 / 49,760 ( < 1 % )
+    Total combinational functions : 59 / 49,760 ( < 1 % )
+    Dedicated logic registers : 19 / 49,760 ( < 1 % )
+Total registers : 19
+Total pins : 26 / 360 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

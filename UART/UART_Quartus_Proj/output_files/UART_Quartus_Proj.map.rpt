@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_Quartus_Proj
-Thu Mar 06 11:24:48 2025
+Tue Apr 15 15:34:04 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,12 +13,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r
+  8. State Machine - |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: UART_Rx:UART_RX_INST_l
- 13. Port Connectivity Checks: "UART_Rx:UART_RX_INST_l"
+ 12. Parameter Settings for User Entity Instance: UART_Tx:UART_TX_INST_l
+ 13. Port Connectivity Checks: "UART_Tx:UART_TX_INST_l"
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
@@ -48,16 +48,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 06 11:24:48 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 15 15:34:03 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UART_Quartus_Proj                           ;
-; Top-level Entity Name              ; UART_toplevel                               ;
+; Top-level Entity Name              ; UART_Tx_toplevel                            ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 98                                          ;
-;     Total combinational functions  ; 98                                          ;
-;     Dedicated logic registers      ; 42                                          ;
-; Total registers                    ; 42                                          ;
-; Total pins                         ; 25                                          ;
+; Total logic elements               ; 58                                          ;
+;     Total combinational functions  ; 58                                          ;
+;     Dedicated logic registers      ; 19                                          ;
+; Total registers                    ; 19                                          ;
+; Total pins                         ; 26                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -73,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; UART_toplevel      ; UART_Quartus_Proj  ;
+; Top-level entity name                                            ; UART_Tx_toplevel   ; UART_Quartus_Proj  ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -170,15 +170,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; ../UART_toplevel.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv ;         ;
-; ../UART_Rx.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv       ;         ;
-; ../BCD_conv.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv      ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; ../UART_Tx_toplevel.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv ;         ;
+; ../UART_Tx.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv          ;         ;
+; ../BCD_conv.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv         ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -186,49 +186,49 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 98        ;
+; Estimated Total logic elements              ; 58        ;
 ;                                             ;           ;
-; Total combinational functions               ; 98        ;
+; Total combinational functions               ; 58        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 48        ;
-;     -- 3 input functions                    ; 21        ;
-;     -- <=2 input functions                  ; 29        ;
+;     -- 4 input functions                    ; 34        ;
+;     -- 3 input functions                    ; 9         ;
+;     -- <=2 input functions                  ; 15        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 76        ;
-;     -- arithmetic mode                      ; 22        ;
+;     -- normal mode                          ; 49        ;
+;     -- arithmetic mode                      ; 9         ;
 ;                                             ;           ;
-; Total registers                             ; 42        ;
-;     -- Dedicated logic registers            ; 42        ;
+; Total registers                             ; 19        ;
+;     -- Dedicated logic registers            ; 19        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 25        ;
+; I/O pins                                    ; 26        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 42        ;
-; Total fan-out                               ; 492       ;
-; Average fan-out                             ; 2.59      ;
+; Maximum fan-out                             ; 19        ;
+; Total fan-out                               ; 291       ;
+; Average fan-out                             ; 2.26      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                   ; Entity Name   ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
-; |UART_toplevel              ; 98 (0)              ; 42 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |UART_toplevel                        ; UART_toplevel ; work         ;
-;    |BCD_conv:SevenSeg0_l|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|BCD_conv:SevenSeg0_l   ; BCD_conv      ; work         ;
-;    |BCD_conv:SevenSeg1_l|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|BCD_conv:SevenSeg1_l   ; BCD_conv      ; work         ;
-;    |UART_Rx:UART_RX_INST_l| ; 84 (84)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_toplevel|UART_Rx:UART_RX_INST_l ; UART_Rx       ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------+---------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                      ; Entity Name      ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+------------------+--------------+
+; |UART_Tx_toplevel           ; 58 (0)              ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 26   ; 0            ; 0          ; |UART_Tx_toplevel                        ; UART_Tx_toplevel ; work         ;
+;    |BCD_conv:SevenSeg0_l|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|BCD_conv:SevenSeg0_l   ; BCD_conv         ; work         ;
+;    |BCD_conv:SevenSeg1_l|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|BCD_conv:SevenSeg1_l   ; BCD_conv         ; work         ;
+;    |UART_Tx:UART_TX_INST_l| ; 44 (44)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l ; UART_Tx          ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r                                                               ;
+; State Machine - |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r                                                            ;
 +-------------------+-------------+-----------------+------------------+-------------------+-------------------+--------------+
 ; Name              ; state_r.XXX ; state_r.CLEANUP ; state_r.STOP_BIT ; state_r.DATA_BITS ; state_r.START_BIT ; state_r.IDLE ;
 +-------------------+-------------+-----------------+------------------+-------------------+-------------------+--------------+
@@ -246,10 +246,10 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; UART_Rx:UART_RX_INST_l|state_r~7      ; Lost fanout                            ;
-; UART_Rx:UART_RX_INST_l|state_r~8      ; Lost fanout                            ;
-; UART_Rx:UART_RX_INST_l|state_r~9      ; Lost fanout                            ;
-; UART_Rx:UART_RX_INST_l|state_r.XXX    ; Stuck at GND due to stuck port data_in ;
+; UART_Tx:UART_TX_INST_l|state_r~8      ; Lost fanout                            ;
+; UART_Tx:UART_TX_INST_l|state_r~9      ; Lost fanout                            ;
+; UART_Tx:UART_TX_INST_l|state_r~10     ; Lost fanout                            ;
+; UART_Tx:UART_TX_INST_l|state_r.XXX    ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 4 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -259,30 +259,31 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
-; Number of registers using Synchronous Clear  ; 25    ;
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 10    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |UART_toplevel|UART_Rx:UART_RX_INST_l|timeout_counter[0] ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Clock_Count_r[0]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|Bit_Index_r        ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |UART_toplevel|UART_Rx:UART_RX_INST_l|state_r            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|Clock_Count_r[9] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|Bit_Index_r      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx:UART_RX_INST_l ;
+; Parameter Settings for User Entity Instance: UART_Tx:UART_TX_INST_l ;
 +----------------+----------+-----------------------------------------+
 ; Parameter Name ; Value    ; Type                                    ;
 +----------------+----------+-----------------------------------------+
@@ -292,13 +293,14 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UART_Rx:UART_RX_INST_l"                                                                                                                     ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; rst  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Tx:UART_TX_INST_l"                                                                    ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_TX_Active ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_TX_Serial ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -306,22 +308,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
-; cycloneiii_ff         ; 42                          ;
-;     ENA SCLR          ; 24                          ;
-;     SCLR              ; 1                           ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 101                         ;
-;     arith             ; 22                          ;
-;         2 data inputs ; 22                          ;
-;     normal            ; 79                          ;
-;         1 data inputs ; 5                           ;
+; boundary_port         ; 26                          ;
+; cycloneiii_ff         ; 19                          ;
+;     ENA SCLR          ; 10                          ;
+;     plain             ; 9                           ;
+; cycloneiii_lcell_comb ; 60                          ;
+;     arith             ; 9                           ;
+;         2 data inputs ; 9                           ;
+;     normal            ; 51                          ;
+;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 5                           ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 48                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 34                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.06                        ;
+; Average LUT depth     ; 2.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -330,7 +331,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -340,33 +341,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Mar 06 11:24:40 2025
+    Info: Processing started: Tue Apr 15 15:33:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_Quartus_Proj -c UART_Quartus_Proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/uart_toplevel.sv
-    Info (12023): Found entity 1: UART_toplevel File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/uart_rx.sv
-    Info (12023): Found entity 1: UART_Rx File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/uart_tx_toplevel.sv
+    Info (12023): Found entity 1: UART_Tx_toplevel File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/uart_tx.sv
+    Info (12023): Found entity 1: UART_Tx File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/bcd_conv.sv
     Info (12023): Found entity 1: BCD_conv File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv Line: 1
-Info (12127): Elaborating entity "UART_toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:UART_RX_INST_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 22
-Warning (10230): Verilog HDL assignment warning at UART_Rx.sv(46): truncated value with size 32 to match size of target (14) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv Line: 46
-Info (12128): Elaborating entity "BCD_conv" for hierarchy "BCD_conv:SevenSeg0_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_toplevel.sv Line: 27
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12127): Elaborating entity "UART_Tx_toplevel" for the top level hierarchy
+Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx:UART_TX_INST_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(58): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(68): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(71): truncated value with size 32 to match size of target (3) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(82): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 82
+Info (12128): Elaborating entity "BCD_conv" for hierarchy "BCD_conv:SevenSeg0_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 35
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 98 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Thu Mar 06 11:24:48 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 58 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Tue Apr 15 15:34:04 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:12
 
 

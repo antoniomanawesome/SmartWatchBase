@@ -76,14 +76,14 @@ RESERVED_INPUT               : A3        :        :                   :         
 RESERVED_INPUT               : A4        :        :                   :         : 8         :                
 RESERVED_INPUT               : A5        :        :                   :         : 8         :                
 RESERVED_INPUT               : A6        :        :                   :         : 8         :                
-RESERVED_INPUT               : A7        :        :                   :         : 7         :                
-RX_Byte[7]                   : A8        : output : 2.5 V             :         : 7         : Y              
-RX_Byte[6]                   : A9        : output : 2.5 V             :         : 7         : Y              
-RX_Byte[5]                   : A10       : output : 2.5 V             :         : 7         : Y              
+TX_DV                        : A7        : input  : 2.5 V             :         : 7         : Y              
+Transmit_Done                : A8        : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : A9        :        :                   :         : 7         :                
+RESERVED_INPUT               : A10       :        :                   :         : 7         :                
 RESERVED_INPUT               : A11       :        :                   :         : 7         :                
-RESERVED_INPUT               : A12       :        :                   :         : 7         :                
-RESERVED_INPUT               : A13       :        :                   :         : 7         :                
-RESERVED_INPUT               : A14       :        :                   :         : 7         :                
+TX_Byte[4]                   : A12       : input  : 2.5 V             :         : 7         : Y              
+TX_Byte[6]                   : A13       : input  : 2.5 V             :         : 7         : Y              
+TX_Byte[7]                   : A14       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : A15       :        :                   :         : 7         :                
 RESERVED_INPUT               : A16       :        :                   :         : 7         :                
 SSG2[4]                      : A17       : output : 2.5 V             :         : 7         : Y              
@@ -133,7 +133,7 @@ RESERVED_INPUT               : AB16      :        :                   :         
 RESERVED_INPUT               : AB17      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB18      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB19      :        :                   :         : 4         :                
-RX_Serial                    : AB20      : input  : 2.5 V             :         : 4         : Y              
+RESERVED_INPUT               : AB20      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB21      :        :                   :         : 4         :                
 GND                          : AB22      : gnd    :                   :         :           :                
 RESERVED_INPUT               : B1        :        :                   :         : 8         :                
@@ -143,11 +143,11 @@ RESERVED_INPUT               : B4        :        :                   :         
 RESERVED_INPUT               : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
 RESERVED_INPUT               : B7        :        :                   :         : 8         :                
-RESERVED_INPUT               : B8        :        :                   :         : 7         :                
+rst                          : B8        : input  : 2.5 V             :         : 7         : Y              
 GND                          : B9        : gnd    :                   :         :           :                
-RX_Byte[4]                   : B10       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : B10       :        :                   :         : 7         :                
 RESERVED_INPUT               : B11       :        :                   :         : 7         :                
-RESERVED_INPUT               : B12       :        :                   :         : 7         :                
+TX_Byte[5]                   : B12       : input  : 2.5 V             :         : 7         : Y              
 GND                          : B13       : gnd    :                   :         :           :                
 RESERVED_INPUT               : B14       :        :                   :         : 7         :                
 RESERVED_INPUT               : B15       :        :                   :         : 7         :                
@@ -167,10 +167,10 @@ RESERVED_INPUT               : C6        :        :                   :         
 RESERVED_INPUT               : C7        :        :                   :         : 8         :                
 RESERVED_INPUT               : C8        :        :                   :         : 8         :                
 RESERVED_INPUT               : C9        :        :                   :         : 7         :                
-RESERVED_INPUT               : C10       :        :                   :         : 7         :                
-RESERVED_INPUT               : C11       :        :                   :         : 7         :                
-RESERVED_INPUT               : C12       :        :                   :         : 7         :                
-RX_Byte[2]                   : C13       : output : 2.5 V             :         : 7         : Y              
+TX_Byte[0]                   : C10       : input  : 2.5 V             :         : 7         : Y              
+TX_Byte[1]                   : C11       : input  : 2.5 V             :         : 7         : Y              
+TX_Byte[3]                   : C12       : input  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : C13       :        :                   :         : 7         :                
 SSG1[0]                      : C14       : output : 2.5 V             :         : 7         : Y              
 SSG1[2]                      : C15       : output : 2.5 V             :         : 7         : Y              
 SSG1[3]                      : C16       : output : 2.5 V             :         : 7         : Y              
@@ -191,10 +191,10 @@ RESERVED_INPUT               : D8        :        :                   :         
 RESERVED_INPUT               : D9        :        :                   :         : 8         :                
 RESERVED_INPUT               : D10       :        :                   :         : 8         :                
 GND                          : D11       : gnd    :                   :         :           :                
-RESERVED_INPUT               : D12       :        :                   :         : 7         :                
-RX_Byte[3]                   : D13       : output : 2.5 V             :         : 7         : Y              
-RX_Byte[0]                   : D14       : output : 2.5 V             :         : 7         : Y              
-RX_DV                        : D15       : output : 2.5 V             :         : 7         : Y              
+TX_Byte[2]                   : D12       : input  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : D13       :        :                   :         : 7         :                
+RESERVED_INPUT               : D14       :        :                   :         : 7         :                
+RESERVED_INPUT               : D15       :        :                   :         : 7         :                
 GND                          : D16       : gnd    :                   :         :           :                
 SSG1[5]                      : D17       : output : 2.5 V             :         : 7         : Y              
 SSG2[1]                      : D18       : output : 2.5 V             :         : 6         : Y              
@@ -215,7 +215,7 @@ RESERVED_INPUT               : E10       :        :                   :         
 RESERVED_INPUT               : E11       :        :                   :         : 8         :                
 RESERVED_INPUT               : E12       :        :                   :         : 7         :                
 RESERVED_INPUT               : E13       :        :                   :         : 7         :                
-RX_Byte[1]                   : E14       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : E14       :        :                   :         : 7         :                
 SSG1[1]                      : E15       : output : 2.5 V             :         : 7         : Y              
 SSG1[4]                      : E16       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT               : E17       :        :                   :         : 6         :                

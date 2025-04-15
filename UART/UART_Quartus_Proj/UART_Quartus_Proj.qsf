@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY UART_toplevel
+set_global_assignment -name TOP_LEVEL_ENTITY UART_Tx_toplevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:10:06  FEBRUARY 04, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -51,9 +51,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
@@ -67,7 +64,6 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_P11 -to clk
-set_location_assignment PIN_D15 -to RX_DV
 set_location_assignment PIN_C17 -to SSG1[6]
 set_location_assignment PIN_D17 -to SSG1[5]
 set_location_assignment PIN_E16 -to SSG1[4]
@@ -82,16 +78,21 @@ set_location_assignment PIN_B16 -to SSG2[3]
 set_location_assignment PIN_E18 -to SSG2[2]
 set_location_assignment PIN_D18 -to SSG2[1]
 set_location_assignment PIN_C18 -to SSG2[0]
-set_location_assignment PIN_AB20 -to RX_Serial
-set_location_assignment PIN_A8 -to RX_Byte[7]
-set_location_assignment PIN_A9 -to RX_Byte[6]
-set_location_assignment PIN_A10 -to RX_Byte[5]
-set_location_assignment PIN_B10 -to RX_Byte[4]
-set_location_assignment PIN_D13 -to RX_Byte[3]
-set_location_assignment PIN_C13 -to RX_Byte[2]
-set_location_assignment PIN_E14 -to RX_Byte[1]
-set_location_assignment PIN_D14 -to RX_Byte[0]
-set_global_assignment -name SYSTEMVERILOG_FILE ../UART_toplevel.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../UART_Rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../UART_Tx_toplevel.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../UART_Tx.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../BCD_conv.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_B8 -to rst
+set_location_assignment PIN_A7 -to TX_DV
+set_location_assignment PIN_C10 -to TX_Byte[0]
+set_location_assignment PIN_C11 -to TX_Byte[1]
+set_location_assignment PIN_D12 -to TX_Byte[2]
+set_location_assignment PIN_C12 -to TX_Byte[3]
+set_location_assignment PIN_A12 -to TX_Byte[4]
+set_location_assignment PIN_B12 -to TX_Byte[5]
+set_location_assignment PIN_A13 -to TX_Byte[6]
+set_location_assignment PIN_A14 -to TX_Byte[7]
+set_location_assignment PIN_A8 -to Transmit_Done
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
