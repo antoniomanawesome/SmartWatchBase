@@ -23,7 +23,7 @@ UART_Tx #(
     .CLKS_PER_BIT()) UART_TX_INST_l
     (
         .clk(clk),
-        .rst(rst),
+        .rst(~rst),
         .i_TX_DV(TX_DV),
         .i_TX_Byte(TX_Byte),
         .o_TX_Active(TX_Active),
