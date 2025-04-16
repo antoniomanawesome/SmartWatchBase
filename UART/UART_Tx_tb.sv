@@ -9,7 +9,7 @@ localparam int c_BIT_PERIOD = 8680;
 
 logic clk = 1'b0, rst = 1'b0;
 logic TX_DV = 1'b0, RX_DV;
-logic TX_Active, UART_Line, TX_Serial;
+logic TX_Active, UART_Line, TX_Serial, TX_Done;
 logic [7:0] TX_Byte = '0, RX_Byte;
 
 UART_Rx #(
@@ -33,7 +33,7 @@ UART_Tx #(
         .i_TX_Byte(TX_Byte),
         .o_TX_Active(TX_Active),
         .o_TX_Serial(TX_Serial),
-        .o_TX_Done()
+        .o_TX_Done(TX_Done)
     );
 
 assign UART_Line = TX_Active ? TX_Serial : 1'b1; // keeps UART line high when transmitter is not active

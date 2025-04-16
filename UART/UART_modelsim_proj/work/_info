@@ -115,7 +115,7 @@ R6
 n@u@a@r@t_toplevel
 vUART_Tx
 R0
-R7
+!s110 1744750677
 !i10b 1
 !s100 _9k16Kh7XP8<7<Tmk`?1V1
 R1
@@ -123,16 +123,16 @@ IVLU>;Gm2^LL==NaT3=@m>3
 R2
 S1
 R3
-w1744651928
+w1744742849
 8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv
 FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv
-!i122 70
+!i122 72
 L0 1 107
 R4
 r1
 !s85 0
 31
-R8
+!s108 1744750677.000000
 !s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv|
 !i113 1
@@ -141,24 +141,24 @@ R6
 n@u@a@r@t_@tx
 vUART_Tx_tb
 R0
-R7
+!s110 1744752165
 !i10b 1
-!s100 I6YGMaX8Yid8X^R`^I?@T0
+!s100 Da@PkJI@R[?T[HTDQn=S91
 R1
-IVUX;BfgXz8<I=C_DYo1=o1
+IoF?<c]I05F3E:=5EzL>RN1
 R2
 S1
 R3
-w1744651081
+w1744752161
 8C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv
 FC:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv
-!i122 71
-L0 3 62
+!i122 74
+L0 3 63
 R4
 r1
 !s85 0
 31
-R8
+!s108 1744752165.000000
 !s107 C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv|
 !i113 1

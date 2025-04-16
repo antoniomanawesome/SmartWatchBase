@@ -3,6 +3,7 @@ module UART_Tx_toplevel (
     input logic         rst,
     input logic         TX_DV,
     input logic [7:0]   TX_Byte,
+    output logic        UART_Line,
     output logic        Transmit_Done,
     output logic [6:0]  SSG1,
     output logic [6:0]  SSG2
@@ -16,6 +17,7 @@ module UART_Tx_toplevel (
 
 logic TX_Done, TX_Active, TX_Serial;
 assign Transmit_Done = TX_Done;
+assign UART_Line = TX_Active ? TX_Serial : 1'b1;
 
 UART_Tx #(
     .CLKS_PER_BIT()) UART_TX_INST_l

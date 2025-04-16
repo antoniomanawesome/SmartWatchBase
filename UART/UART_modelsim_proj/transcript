@@ -1,6 +1,7 @@
+# Compile of UART_Tx.sv was successful.
 vsim -gui work.UART_Tx_tb
 # vsim -gui work.UART_Tx_tb 
-# Start time: 14:05:48 on Apr 15,2025
+# Start time: 16:58:07 on Apr 15,2025
 # Loading sv_std.std
 # Loading work.UART_Tx_tb
 # Loading work.UART_Rx
@@ -16,9 +17,9 @@ add wave -position end  sim:/UART_Tx_tb/TX_Byte
 add wave -position end  sim:/UART_Tx_tb/RX_Byte
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Antonio  Hostname: DESKTOP-VG1816S  ProcessID: 17696
-#           Attempting to use alternate WLF file "./wlftiesnc2".
+#           Attempting to use alternate WLF file "./wlftwan2zv".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftiesnc2
+#           Using alternate file: ./wlftwan2zv
 add wave -position end  sim:/UART_Tx_tb/UART_TX_INST_l/state_r
 run -all
 # Test Passed - Correct Byte Received
@@ -26,5 +27,45 @@ run -all
 #    Time: 82550 ns  Iteration: 2  Instance: /UART_Tx_tb
 # 1
 # Break in Module UART_Tx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv line 55
-# End time: 14:49:53 on Apr 15,2025, Elapsed time: 0:44:05
-# Errors: 0, Warnings: 3
+# Compile of UART_Tx_tb.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Tx_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Passed - Correct Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv(55)
+#    Time: 82550 ns  Iteration: 2  Instance: /UART_Tx_tb
+# 1
+# Break in Module UART_Tx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv line 55
+add wave -position end  sim:/UART_Tx_tb/TX_Done
+restart
+# Closing VCD file "dump.vcd"
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Passed - Correct Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv(55)
+#    Time: 82550 ns  Iteration: 2  Instance: /UART_Tx_tb
+# 1
+# Break in Module UART_Tx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv line 55
+# Compile of UART_Tx_tb.sv was successful.
+restart
+# Closing VCD file "dump.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.UART_Tx_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test Passed - Correct Byte Received
+# ** Note: $finish    : C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv(56)
+#    Time: 86850 ns  Iteration: 2  Instance: /UART_Tx_tb
+# 1
+# Break in Module UART_Tx_tb at C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv line 56
+# End time: 21:31:03 on Apr 15,2025, Elapsed time: 4:32:56
+# Errors: 0, Warnings: 1
