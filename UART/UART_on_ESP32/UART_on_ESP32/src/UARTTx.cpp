@@ -17,6 +17,7 @@ void loop() {
     receivedChar = Serial2.read();
 
     Serial.println(receivedChar);  // Print the received message in the Serial monitor
+
   }
   Serial.println("Loop Done lol");
   delay(500);
