@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "UART_Line",
+					"strict" : false
+				},
+				{
 					"name" : "Transmit_Done",
 					"strict" : false
 				},
@@ -96,11 +100,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rst",
 					"strict" : false
 				},
 				{

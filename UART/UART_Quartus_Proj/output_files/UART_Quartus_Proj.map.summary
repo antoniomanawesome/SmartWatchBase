@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Apr 15 15:34:03 2025
+Analysis & Synthesis Status : Successful - Wed Apr 16 09:59:36 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : UART_Quartus_Proj
 Top-level Entity Name : UART_Tx_toplevel
 Family : MAX 10
-Total logic elements : 58
-    Total combinational functions : 58
-    Dedicated logic registers : 19
-Total registers : 19
-Total pins : 26
+Total logic elements : 70
+    Total combinational functions : 70
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 27
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

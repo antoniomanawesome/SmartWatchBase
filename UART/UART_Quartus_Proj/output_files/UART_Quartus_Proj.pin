@@ -133,7 +133,7 @@ RESERVED_INPUT               : AB16      :        :                   :         
 RESERVED_INPUT               : AB17      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB18      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB19      :        :                   :         : 4         :                
-RESERVED_INPUT               : AB20      :        :                   :         : 4         :                
+UART_Line                    : AB20      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AB21      :        :                   :         : 4         :                
 GND                          : AB22      : gnd    :                   :         :           :                
 RESERVED_INPUT               : B1        :        :                   :         : 8         :                

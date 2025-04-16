@@ -10,21 +10,22 @@ TX_Byte[4] => TX_Byte[4].IN2
 TX_Byte[5] => TX_Byte[5].IN2
 TX_Byte[6] => TX_Byte[6].IN2
 TX_Byte[7] => TX_Byte[7].IN2
-Transmit_Done <= UART_Tx:UART_TX_INST_l.o_TX_Done
-SSG1[0] <= BCD_conv:SevenSeg1_l.number_out
-SSG1[1] <= BCD_conv:SevenSeg1_l.number_out
-SSG1[2] <= BCD_conv:SevenSeg1_l.number_out
-SSG1[3] <= BCD_conv:SevenSeg1_l.number_out
-SSG1[4] <= BCD_conv:SevenSeg1_l.number_out
-SSG1[5] <= BCD_conv:SevenSeg1_l.number_out
-SSG1[6] <= BCD_conv:SevenSeg1_l.number_out
-SSG2[0] <= BCD_conv:SevenSeg0_l.number_out
-SSG2[1] <= BCD_conv:SevenSeg0_l.number_out
-SSG2[2] <= BCD_conv:SevenSeg0_l.number_out
-SSG2[3] <= BCD_conv:SevenSeg0_l.number_out
-SSG2[4] <= BCD_conv:SevenSeg0_l.number_out
-SSG2[5] <= BCD_conv:SevenSeg0_l.number_out
-SSG2[6] <= BCD_conv:SevenSeg0_l.number_out
+UART_Line << UART_Line.DB_MAX_OUTPUT_PORT_TYPE
+Transmit_Done << UART_Tx:UART_TX_INST_l.o_TX_Done
+SSG1[0] << BCD_conv:SevenSeg1_l.number_out
+SSG1[1] << BCD_conv:SevenSeg1_l.number_out
+SSG1[2] << BCD_conv:SevenSeg1_l.number_out
+SSG1[3] << BCD_conv:SevenSeg1_l.number_out
+SSG1[4] << BCD_conv:SevenSeg1_l.number_out
+SSG1[5] << BCD_conv:SevenSeg1_l.number_out
+SSG1[6] << BCD_conv:SevenSeg1_l.number_out
+SSG2[0] << BCD_conv:SevenSeg0_l.number_out
+SSG2[1] << BCD_conv:SevenSeg0_l.number_out
+SSG2[2] << BCD_conv:SevenSeg0_l.number_out
+SSG2[3] << BCD_conv:SevenSeg0_l.number_out
+SSG2[4] << BCD_conv:SevenSeg0_l.number_out
+SSG2[5] << BCD_conv:SevenSeg0_l.number_out
+SSG2[6] << BCD_conv:SevenSeg0_l.number_out
 
 
 |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l
