@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_Quartus_Proj
-Wed Apr 16 09:59:36 2025
+Wed Apr 16 11:57:17 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 16 09:59:36 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 16 11:57:17 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; UART_Quartus_Proj                           ;
 ; Top-level Entity Name              ; UART_Tx_toplevel                            ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 70                                          ;
-;     Total combinational functions  ; 70                                          ;
+; Total logic elements               ; 73                                          ;
+;     Total combinational functions  ; 73                                          ;
 ;     Dedicated logic registers      ; 29                                          ;
 ; Total registers                    ; 29                                          ;
 ; Total pins                         ; 27                                          ;
@@ -157,7 +157,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
+; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -169,15 +169,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; ../UART_Tx_toplevel.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_toplevel.sv ;         ;
-; ../UART_Tx.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv          ;         ;
-; ../BCD_conv.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/BCD_conv.sv         ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; ../UART_Tx_toplevel.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv ;         ;
+; ../UART_Tx.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv          ;         ;
+; ../BCD_conv.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv         ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -185,16 +185,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 70        ;
+; Estimated Total logic elements              ; 73        ;
 ;                                             ;           ;
-; Total combinational functions               ; 70        ;
+; Total combinational functions               ; 73        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 41        ;
-;     -- 3 input functions                    ; 7         ;
-;     -- <=2 input functions                  ; 22        ;
+;     -- 4 input functions                    ; 42        ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 23        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 61        ;
+;     -- normal mode                          ; 64        ;
 ;     -- arithmetic mode                      ; 9         ;
 ;                                             ;           ;
 ; Total registers                             ; 29        ;
@@ -207,8 +207,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 29        ;
-; Total fan-out                               ; 363       ;
-; Average fan-out                             ; 2.37      ;
+; Total fan-out                               ; 372       ;
+; Average fan-out                             ; 2.38      ;
 +---------------------------------------------+-----------+
 
 
@@ -217,10 +217,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                      ; Entity Name      ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+------------------+--------------+
-; |UART_Tx_toplevel           ; 70 (1)              ; 29 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 27   ; 0            ; 0          ; |UART_Tx_toplevel                        ; UART_Tx_toplevel ; work         ;
+; |UART_Tx_toplevel           ; 73 (1)              ; 29 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 27   ; 0            ; 0          ; |UART_Tx_toplevel                        ; UART_Tx_toplevel ; work         ;
 ;    |BCD_conv:SevenSeg0_l|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|BCD_conv:SevenSeg0_l   ; BCD_conv         ; work         ;
 ;    |BCD_conv:SevenSeg1_l|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|BCD_conv:SevenSeg1_l   ; BCD_conv         ; work         ;
-;    |UART_Tx:UART_TX_INST_l| ; 55 (55)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l ; UART_Tx          ; work         ;
+;    |UART_Tx:UART_TX_INST_l| ; 58 (58)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l ; UART_Tx          ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -277,8 +277,8 @@ Encoding Type:  One-Hot
 ; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|Clock_Count_r[6] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|Bit_Index_r      ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UART_Tx_toplevel|UART_Tx:UART_TX_INST_l|state_r          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -304,17 +304,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 5                           ;
 ;     plain             ; 5                           ;
-; cycloneiii_lcell_comb ; 72                          ;
+; cycloneiii_lcell_comb ; 75                          ;
 ;     arith             ; 9                           ;
 ;         2 data inputs ; 9                           ;
-;     normal            ; 63                          ;
+;     normal            ; 66                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 41                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 42                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.00                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,35 +333,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 16 09:59:32 2025
+    Info: Processing started: Wed Apr 16 11:57:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_Quartus_Proj -c UART_Quartus_Proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/senior design/smartwatchbase/uart/uart_tx_toplevel.sv
-    Info (12023): Found entity 1: UART_Tx_toplevel File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/senior design/smartwatchbase/uart/uart_tx.sv
-    Info (12023): Found entity 1: UART_Tx File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/senior design/smartwatchbase/uart/bcd_conv.sv
-    Info (12023): Found entity 1: BCD_conv File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/BCD_conv.sv Line: 1
+Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/uart_tx_toplevel.sv
+    Info (12023): Found entity 1: UART_Tx_toplevel File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/uart_tx.sv
+    Info (12023): Found entity 1: UART_Tx File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/antonio/documents/github/smartwatchbase/uart/bcd_conv.sv
+    Info (12023): Found entity 1: BCD_conv File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/BCD_conv.sv Line: 1
 Info (12127): Elaborating entity "UART_Tx_toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx:UART_TX_INST_l" File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 32
-Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(58): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv Line: 58
-Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(68): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv Line: 68
-Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(71): truncated value with size 32 to match size of target (3) File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv Line: 71
-Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(82): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv Line: 82
-Info (12128): Elaborating entity "BCD_conv" for hierarchy "BCD_conv:SevenSeg0_l" File: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 37
+Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx:UART_TX_INST_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(58): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(68): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(71): truncated value with size 32 to match size of target (3) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at UART_Tx.sv(82): truncated value with size 32 to match size of target (10) File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv Line: 82
+Info (12128): Elaborating entity "BCD_conv" for hierarchy "BCD_conv:SevenSeg0_l" File: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_toplevel.sv Line: 36
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 70 logic cells
+    Info (21061): Implemented 73 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Wed Apr 16 09:59:36 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Wed Apr 16 11:57:17 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 

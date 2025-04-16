@@ -16,6 +16,7 @@ module UART_Tx_toplevel (
 //clk is tied to 50 MHz clock on board
 
 logic TX_Done, TX_Active, TX_Serial;
+assign Transmit_Done = TX_Done;
 assign UART_Line = TX_Active ? TX_Serial : 1'b1;
 
 UART_Tx #(
@@ -23,11 +24,11 @@ UART_Tx #(
     (
         .clk(clk),
         .rst(~rst),
-        .i_TX_DV(~TX_DV),
+        .i_TX_DV(TX_DV),
         .i_TX_Byte(TX_Byte),
         .o_TX_Active(TX_Active),
         .o_TX_Serial(TX_Serial),
-        .o_TX_Done(Transmit_Done)
+        .o_TX_Done(TX_Done)
     );
 
 BCD_conv SevenSeg0_l(
