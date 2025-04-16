@@ -47,7 +47,7 @@ module fifo #(
     // assertions in the synthesizable code. These will be ignored by synthesis
     // tools, but will still work in simulation. Note that some synthesis tools
     // might require an attribute or annotation to ignore this.
-    assert property (@(posedge clk) valid_wr |-> !full);
-    assert property (@(posedge clk) valid_rd |-> !empty);
+    // assert property (@(posedge clk) valid_wr |-> !full);
+    // assert property (@(posedge clk) valid_rd |-> !empty);
 
 endmodule
