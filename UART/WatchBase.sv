@@ -7,7 +7,7 @@ module WatchBase #(
     parameter int FPGA_clk_freq = 50000000,
     parameter int baudrate = 115200,
     parameter int WIDTH = 8,
-    parameter int DEPTH = 16
+    parameter int DEPTH = 4
 ) (
     input logic         clk,
     input logic         rst,
@@ -19,7 +19,6 @@ module WatchBase #(
     output logic        UART_Line,
 
     // Signals required for testbench
-    input logic [WIDTH-1:0] wr_data,
     output logic o_TX_Serial,
     output logic o_TX_Done
 
@@ -30,7 +29,7 @@ module WatchBase #(
 logic             fifo_rst;
 logic             full;
 logic             wr_en;
-//logic [WIDTH-1:0] wr_data,
+logic [WIDTH-1:0] wr_data;
 logic             empty;
 logic             rd_en;
 logic [WIDTH-1:0] rd_data;

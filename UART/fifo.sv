@@ -1,11 +1,7 @@
-// Greg Stitt
-// University of Florida
-// This file provides a basic FIFO module with a 1-cycle read latency. Note that
-// it includes assertions at the bottom of the module.
 
 module fifo #(
-    parameter int WIDTH = 16,
-    parameter int DEPTH = 32
+    parameter int WIDTH = 8,
+    parameter int DEPTH = 4
 ) (
     input  logic             clk,
     input  logic             rst,
@@ -42,12 +38,5 @@ module fifo #(
 
     assign full = rd_addr_r[ADDR_WIDTH-2:0] == wr_addr_r[ADDR_WIDTH-2:0] && rd_addr_r[ADDR_WIDTH-1] != wr_addr_r[ADDR_WIDTH-1];
     assign empty = rd_addr_r == wr_addr_r;
-
-    // For important properties of a module, it is often a good idea to include
-    // assertions in the synthesizable code. These will be ignored by synthesis
-    // tools, but will still work in simulation. Note that some synthesis tools
-    // might require an attribute or annotation to ignore this.
-    // assert property (@(posedge clk) valid_wr |-> !full);
-    // assert property (@(posedge clk) valid_rd |-> !empty);
 
 endmodule

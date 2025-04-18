@@ -1,41 +1,20 @@
-C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/WatchBase_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/WatchBase_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module WatchBase_tb
-
-Top level modules:
-	WatchBase_tb
-
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module UART_Tx
-
-Top level modules:
-	UART_Tx
-
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo.sv
+{C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module fifo
 
 Top level modules:
 	fifo
 
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Tx_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module UART_Tx_tb
-
-Top level modules:
-	UART_Tx_tb
-
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo_tb.sv {2 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo_tb.sv
+} {} {}} {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo_tb.sv} {2 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo_tb.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module fifo_tb1
-** Warning: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo_tb.sv(74): (vlog-2186) SystemVerilog testbench feature
+** Warning: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo_tb.sv(74): (vlog-2186) SystemVerilog testbench feature
 (randomization, coverage or assertion) detected in the design.
 These features are only supported in Questasim.
-** Warning: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo_tb.sv(75): (vlog-2186) SystemVerilog testbench feature
+** Warning: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo_tb.sv(75): (vlog-2186) SystemVerilog testbench feature
 (randomization, coverage or assertion) detected in the design.
 These features are only supported in Questasim.
-** Warning: C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/fifo_tb.sv(76): (vlog-2186) SystemVerilog testbench feature
+** Warning: C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/fifo_tb.sv(76): (vlog-2186) SystemVerilog testbench feature
 (randomization, coverage or assertion) detected in the design.
 These features are only supported in Questasim.
 -- Compiling module fifo_tb2_bad
@@ -48,25 +27,32 @@ Top level modules:
 	fifo_tb3
 	fifo_tb4
 
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx.sv
+} {} {}} {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Rx.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module UART_Rx
 
 Top level modules:
 	UART_Rx
 
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/WatchBase.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/WatchBase.sv
+} {} {}} {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/WatchBase.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/WatchBase.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module WatchBase
 
 Top level modules:
 	WatchBase
 
-} {} {}} C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Antonio/Documents/GitHub/SmartWatchBase/UART/UART_Rx_tb.sv
+} {} {}} {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/UART_Tx.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module UART_Rx_tb
+-- Compiling module UART_Tx
 
 Top level modules:
-	UART_Rx_tb
+	UART_Tx
+
+} {} {}} {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/WatchBase_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Senior Design/SmartWatchBase/UART/WatchBase_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module WatchBase_tb
+
+Top level modules:
+	WatchBase_tb
 
 } {} {}}
